@@ -63,16 +63,11 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "I "
             },
             {
               "type": "dialogue",
               "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "I "
-                },
                 {
                   "type": "italic",
                   "children": [],
@@ -84,7 +79,7 @@
                   "text": " don't know what you're talking about."
                 }
               ],
-              "text": "I *really* don't know what you're talking about.\n"
+              "text": " *really* don't know what you're talking about.\n"
             }
           ],
           "text": "SUSPECT\nI *really* don't know what you're talking about.\n"

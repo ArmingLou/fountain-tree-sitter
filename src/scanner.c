@@ -206,9 +206,12 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
 
   // Try dialogue_line_start - matches if we're at the start of a non-blank line
   // This prevents dialogue from matching blank lines or lines after blank lines
+  // Consumes ALL leading whitespace so dialogue starts at the actual content
   if (valid_symbols[DIALOGUE_LINE_START]) {
-    // Skip any whitespace (spaces/tabs)
+    // Count leading whitespace
+    int space_count = 0;
     while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
+      space_count++;
       lexer->advance(lexer, false);
     }
 
@@ -217,29 +220,34 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
       return false;
     }
 
-    // Otherwise, it's a valid dialogue line start
+    // Otherwise, it's a valid dialogue line start - all whitespace consumed
+    // Dialogue will match from current position (after whitespace)
     lexer->result_symbol = DIALOGUE_LINE_START;
     lexer->mark_end(lexer);
     return true;
   }
 
-  // Try blank line - detects when we're at the start of an empty line (or EOF)
-  // This ends dialogue blocks
-  if (valid_symbols[BLANK_LINE]) {
-    // Skip any whitespace (spaces/tabs)
+// Try blank line - detects when we're at the start of an empty line (or EOF)
+// This ends dialogue blocks. Only 0 or 1 space ends dialogue (truly empty or single space).
+// 2+ spaces means indented line (continuation or title continuation)
+if (valid_symbols[BLANK_LINE]) {
+    // Count leading whitespace (spaces/tabs)
+    int space_count = 0;
     while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
+      space_count++;
       lexer->advance(lexer, false);
     }
 
-    // If we're at a newline or EOF, this is a blank line
-    if (lexer->lookahead == '\n') {
+    // Only 0 or 1 spaces is a blank line (ends dialogue)
+    // 2+ spaces means indented line, not blank
+    if (space_count < 2 && lexer->lookahead == '\n') {
       lexer->advance(lexer, false);  // Consume the newline
       lexer->result_symbol = BLANK_LINE;
       lexer->mark_end(lexer);
       return true;
     }
 
-    if (lexer->lookahead == '\0') {
+    if (space_count < 2 && lexer->lookahead == '\0') {
       lexer->result_symbol = BLANK_LINE;
       lexer->mark_end(lexer);
       return true;

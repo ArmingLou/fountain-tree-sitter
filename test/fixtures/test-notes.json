@@ -59,41 +59,25 @@
               "type": "character",
               "children": [],
               "text": "STEEL\n"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "[[whisper this line]]"
-                }
-              ],
-              "text": "[[whisper this line]]\n"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Anyone home?"
-                }
-              ],
-              "text": "Anyone home?\n"
             }
           ],
-          "text": "STEEL\n[[whisper this line]]\nAnyone home?\n"
+          "text": "STEEL\n"
+        },
+        {
+          "type": "note",
+          "children": [
+            {
+              "type": "note_start",
+              "children": [],
+              "text": "[["
+            },
+            {
+              "type": "note_content",
+              "children": [],
+              "text": "whisper this line"
+            }
+          ],
+          "text": "[[whisper this line]]\n"
         },
         {
           "type": "action",
@@ -101,12 +85,23 @@
             {
               "type": "text",
               "children": [],
+              "text": "Anyone home?"
+            }
+          ],
+          "text": "Anyone home?\n\n"
+        },
+        {
+          "type": "note",
+          "children": [
+            {
+              "type": "note_start",
+              "children": [],
               "text": "[["
             },
             {
-              "type": "text",
+              "type": "note_content",
               "children": [],
-              "text": "Remember to add sound effects here]]"
+              "text": "Remember to add sound effects here"
             }
           ],
           "text": "[[Remember to add sound effects here]]\n\n"

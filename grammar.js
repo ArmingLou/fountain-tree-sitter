@@ -164,11 +164,14 @@ module.exports = grammar({
       )
     ),
 
-    dialogue_block: $ => prec(4, seq(
+    dialogue_block: $ => prec(5, seq(
       $.character,
-      repeat1(seq(
+      repeat(seq(
         $.dialogue_line_start,  // Must be a non-blank line
-        choice($.parenthetical, $.dialogue)  // Check parenthetical first
+        choice(
+          prec(10, $.parenthetical),  // Higher precedence: parenthetical first
+          prec(5, $.dialogue)          // Normal precedence: dialogue
+        )
       ))
     )),
 
@@ -186,7 +189,7 @@ module.exports = grammar({
       '\n'
     )),
 
-    action: $ => prec(1, choice(
+    action: $ => prec(6, choice(
       seq(
         $.forced_action_start,
         /[^\n]+/,
@@ -216,7 +219,7 @@ module.exports = grammar({
       '\n'
     )),
 
-    note: $ => prec(5, seq(
+    note: $ => prec(1, seq(  // Lower precedence so dialogue takes priority inside dialogue_block
       $.note_start,
       $.note_content,
       ']]',

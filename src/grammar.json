@@ -549,7 +549,7 @@
     },
     "dialogue_block": {
       "type": "PREC",
-      "value": 4,
+      "value": 5,
       "content": {
         "type": "SEQ",
         "members": [
@@ -558,7 +558,7 @@
             "name": "character"
           },
           {
-            "type": "REPEAT1",
+            "type": "REPEAT",
             "content": {
               "type": "SEQ",
               "members": [
@@ -570,12 +570,20 @@
                   "type": "CHOICE",
                   "members": [
                     {
-                      "type": "SYMBOL",
-                      "name": "parenthetical"
+                      "type": "PREC",
+                      "value": 10,
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "parenthetical"
+                      }
                     },
                     {
-                      "type": "SYMBOL",
-                      "name": "dialogue"
+                      "type": "PREC",
+                      "value": 5,
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "dialogue"
+                      }
                     }
                   ]
                 }
@@ -659,7 +667,7 @@
     },
     "action": {
       "type": "PREC",
-      "value": 1,
+      "value": 6,
       "content": {
         "type": "CHOICE",
         "members": [
@@ -781,7 +789,7 @@
     },
     "note": {
       "type": "PREC",
-      "value": 5,
+      "value": 1,
       "content": {
         "type": "SEQ",
         "members": [
