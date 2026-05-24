@@ -1,0 +1,108 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "title_page",
+      "children": [
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key_with_space",
+              "children": [],
+              "text": "Title: "
+            },
+            {
+              "type": "description",
+              "children": [],
+              "text": "SCREENPLAY WITH MULTIPLE AUTHORS"
+            }
+          ],
+          "text": "Title: SCREENPLAY WITH MULTIPLE AUTHORS\n"
+        },
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key",
+              "children": [],
+              "text": "Authors:"
+            },
+            {
+              "type": "title_continuation",
+              "children": [],
+              "text": "    Jane Smith"
+            },
+            {
+              "type": "title_continuation",
+              "children": [],
+              "text": "    John Doe"
+            },
+            {
+              "type": "title_continuation",
+              "children": [],
+              "text": "    Alice Johnson"
+            }
+          ],
+          "text": "Authors:\n    Jane Smith\n    John Doe\n    Alice Johnson\n"
+        },
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key_with_space",
+              "children": [],
+              "text": "Draft date: "
+            },
+            {
+              "type": "description",
+              "children": [],
+              "text": "3/15/2023"
+            }
+          ],
+          "text": "Draft date: 3/15/2023\n\n"
+        }
+      ],
+      "text": "Title: SCREENPLAY WITH MULTIPLE AUTHORS\nAuthors:\n    Jane Smith\n    John Doe\n    Alice Johnson\nDraft date: 3/15/2023\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "OFFICE "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "INT. OFFICE - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Work happens."
+            }
+          ],
+          "text": "Work happens.\n"
+        }
+      ],
+      "text": "INT. OFFICE - DAY\n\nWork happens.\n"
+    }
+  ],
+  "text": "Title: SCREENPLAY WITH MULTIPLE AUTHORS\nAuthors:\n    Jane Smith\n    John Doe\n    Alice Johnson\nDraft date: 3/15/2023\n\nINT. OFFICE - DAY\n\nWork happens.\n"
+}

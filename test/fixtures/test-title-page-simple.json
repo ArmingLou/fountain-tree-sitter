@@ -1,0 +1,87 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "title_page",
+      "children": [
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key_with_space",
+              "children": [],
+              "text": "Title: "
+            },
+            {
+              "type": "description",
+              "children": [],
+              "text": "THE BIG LEBOWSKI"
+            }
+          ],
+          "text": "Title: THE BIG LEBOWSKI\n"
+        },
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key_with_space",
+              "children": [],
+              "text": "Author: "
+            },
+            {
+              "type": "description",
+              "children": [],
+              "text": "Joel Coen & Ethan Coen"
+            }
+          ],
+          "text": "Author: Joel Coen & Ethan Coen\n\n"
+        }
+      ],
+      "text": "Title: THE BIG LEBOWSKI\nAuthor: Joel Coen & Ethan Coen\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "BOWLING ALLEY "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " NIGHT"
+            }
+          ],
+          "text": "INT. BOWLING ALLEY - NIGHT\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "The "
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "Dude bowls."
+            }
+          ],
+          "text": "The Dude bowls.\n"
+        }
+      ],
+      "text": "INT. BOWLING ALLEY - NIGHT\n\nThe Dude bowls.\n"
+    }
+  ],
+  "text": "Title: THE BIG LEBOWSKI\nAuthor: Joel Coen & Ethan Coen\n\nINT. BOWLING ALLEY - NIGHT\n\nThe Dude bowls.\n"
+}

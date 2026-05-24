@@ -1,0 +1,144 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "STREET "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "EXT. STREET - DAY\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "MAYA\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(frustrated!)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Perfect!"
+                }
+              ],
+              "text": "Perfect!\n"
+            }
+          ],
+          "text": "MAYA\n(frustrated!)\nPerfect!\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "JAMES\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(laughing!)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "What happened?"
+                }
+              ],
+              "text": "What happened?\n"
+            }
+          ],
+          "text": "JAMES\n(laughing!)\nWhat happened?\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "MAYA\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(suddenly decisive!)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Let's go!"
+                }
+              ],
+              "text": "Let's go!\n"
+            }
+          ],
+          "text": "MAYA\n(suddenly decisive!)\nLet's go!\n"
+        }
+      ],
+      "text": "EXT. STREET - DAY\n\nMAYA\n(frustrated!)\nPerfect!\n\nJAMES\n(laughing!)\nWhat happened?\n\nMAYA\n(suddenly decisive!)\nLet's go!\n"
+    }
+  ],
+  "text": "EXT. STREET - DAY\n\nMAYA\n(frustrated!)\nPerfect!\n\nJAMES\n(laughing!)\nWhat happened?\n\nMAYA\n(suddenly decisive!)\nLet's go!\n"
+}

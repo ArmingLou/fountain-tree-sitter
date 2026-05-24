@@ -1,0 +1,106 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "STREET "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "EXT. STREET - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "uppercase_text",
+              "children": [],
+              "text": "MAYA"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": " "
+            },
+            {
+              "type": "paren_text",
+              "children": [],
+              "text": "(28)"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": " stands alone at the bus stop."
+            }
+          ],
+          "text": "MAYA (28) stands alone at the bus stop.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "uppercase_text",
+              "children": [],
+              "text": "JAMES"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": " "
+            },
+            {
+              "type": "paren_text",
+              "children": [],
+              "text": "(30)"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": " jogs up, equally soaked."
+            }
+          ],
+          "text": "JAMES (30) jogs up, equally soaked.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "The bus "
+            },
+            {
+              "type": "uppercase_text",
+              "children": [],
+              "text": "ROARS"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": " past without stopping."
+            }
+          ],
+          "text": "The bus ROARS past without stopping.\n"
+        }
+      ],
+      "text": "EXT. STREET - DAY\n\nMAYA (28) stands alone at the bus stop.\n\nJAMES (30) jogs up, equally soaked.\n\nThe bus ROARS past without stopping.\n"
+    }
+  ],
+  "text": "EXT. STREET - DAY\n\nMAYA (28) stands alone at the bus stop.\n\nJAMES (30) jogs up, equally soaked.\n\nThe bus ROARS past without stopping.\n"
+}

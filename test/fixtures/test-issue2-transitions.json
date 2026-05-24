@@ -1,0 +1,91 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "ROOM "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "INT. ROOM - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Some action."
+            }
+          ],
+          "text": "Some action.\n\n"
+        },
+        {
+          "type": "transition",
+          "children": [],
+          "text": "CUT TO:\n\n"
+        },
+        {
+          "type": "transition",
+          "children": [],
+          "text": "FADE TO:\n\n"
+        },
+        {
+          "type": "transition",
+          "children": [],
+          "text": "SMASH CUT TO:\n\n"
+        },
+        {
+          "type": "transition",
+          "children": [],
+          "text": "DISSOLVE TO:\n\n"
+        }
+      ],
+      "text": "INT. ROOM - DAY\n\nSome action.\n\nCUT TO:\n\nFADE TO:\n\nSMASH CUT TO:\n\nDISSOLVE TO:\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "ANOTHER ROOM "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "INT. ANOTHER ROOM - DAY\n"
+        }
+      ],
+      "text": "INT. ANOTHER ROOM - DAY\n"
+    }
+  ],
+  "text": "INT. ROOM - DAY\n\nSome action.\n\nCUT TO:\n\nFADE TO:\n\nSMASH CUT TO:\n\nDISSOLVE TO:\n\nINT. ANOTHER ROOM - DAY\n"
+}

@@ -1,0 +1,65 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "boneyard",
+      "children": [
+        {
+          "type": "boneyard_start",
+          "children": [],
+          "text": "/*"
+        },
+        {
+          "type": "boneyard_content",
+          "children": [],
+          "text": " do we have a boneyard "
+        }
+      ],
+      "text": "/* do we have a boneyard */\n\n"
+    },
+    {
+      "type": "boneyard",
+      "children": [
+        {
+          "type": "boneyard_start",
+          "children": [],
+          "text": "/*"
+        },
+        {
+          "type": "boneyard_content",
+          "children": [],
+          "text": " yes, we do "
+        }
+      ],
+      "text": "/* yes, we do */\n\n"
+    },
+    {
+      "type": "dialogue_block",
+      "children": [
+        {
+          "type": "character",
+          "children": [],
+          "text": "COGNITO\n"
+        },
+        {
+          "type": "dialogue_line_start",
+          "children": [],
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Hello there."
+            }
+          ],
+          "text": "Hello there.\n"
+        }
+      ],
+      "text": "COGNITO\nHello there.\n"
+    }
+  ],
+  "text": "/* do we have a boneyard */\n\n/* yes, we do */\n\nCOGNITO\nHello there.\n"
+}

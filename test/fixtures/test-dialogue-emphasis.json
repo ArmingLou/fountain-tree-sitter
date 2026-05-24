@@ -1,0 +1,223 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "INTERROGATION ROOM "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " NIGHT"
+            }
+          ],
+          "text": "INT. INTERROGATION ROOM - NIGHT\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "DETECTIVE\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "You're going to tell me everything."
+                }
+              ],
+              "text": "You're going to tell me everything.\n"
+            }
+          ],
+          "text": "DETECTIVE\nYou're going to tell me everything.\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "SUSPECT\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "I "
+                },
+                {
+                  "type": "italic",
+                  "children": [],
+                  "text": "*really*"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": " don't know what you're talking about."
+                }
+              ],
+              "text": "I *really* don't know what you're talking about.\n"
+            }
+          ],
+          "text": "SUSPECT\nI *really* don't know what you're talking about.\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "DETECTIVE\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(**firmly**)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Don't lie to me."
+                }
+              ],
+              "text": "Don't lie to me.\n"
+            }
+          ],
+          "text": "DETECTIVE\n(**firmly**)\nDon't lie to me.\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "SUSPECT\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(standing up)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": "I "
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "want my "
+                },
+                {
+                  "type": "underline",
+                  "children": [],
+                  "text": "_lawyer_"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "."
+                }
+              ],
+              "text": "want my _lawyer_.\n"
+            }
+          ],
+          "text": "SUSPECT\n(standing up)\nI want my _lawyer_.\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "DETECTIVE\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Fine. "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "But you'll "
+                },
+                {
+                  "type": "bold",
+                  "children": [],
+                  "text": "**regret**"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": " this."
+                }
+              ],
+              "text": "Fine. But you'll **regret** this.\n"
+            }
+          ],
+          "text": "DETECTIVE\nFine. But you'll **regret** this.\n"
+        }
+      ],
+      "text": "INT. INTERROGATION ROOM - NIGHT\n\nDETECTIVE\nYou're going to tell me everything.\n\nSUSPECT\nI *really* don't know what you're talking about.\n\nDETECTIVE\n(**firmly**)\nDon't lie to me.\n\nSUSPECT\n(standing up)\nI want my _lawyer_.\n\nDETECTIVE\nFine. But you'll **regret** this.\n"
+    }
+  ],
+  "text": "INT. INTERROGATION ROOM - NIGHT\n\nDETECTIVE\nYou're going to tell me everything.\n\nSUSPECT\nI *really* don't know what you're talking about.\n\nDETECTIVE\n(**firmly**)\nDon't lie to me.\n\nSUSPECT\n(standing up)\nI want my _lawyer_.\n\nDETECTIVE\nFine. But you'll **regret** this.\n"
+}

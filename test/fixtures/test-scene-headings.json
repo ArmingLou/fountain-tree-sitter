@@ -1,0 +1,357 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "MANSION "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "INT. MANSION - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "The door opens."
+            }
+          ],
+          "text": "The door opens.\n\n"
+        }
+      ],
+      "text": "INT. MANSION - DAY\n\nThe door opens.\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "MANSION "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " NIGHT"
+            }
+          ],
+          "text": "EXT. MANSION - NIGHT\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "A car pulls up."
+            }
+          ],
+          "text": "A car pulls up.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "uppercase_text",
+              "children": [],
+              "text": "EST"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": ". "
+            },
+            {
+              "type": "uppercase_text",
+              "children": [],
+              "text": "MANSION"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": " - "
+            },
+            {
+              "type": "uppercase_text",
+              "children": [],
+              "text": "DAY"
+            }
+          ],
+          "text": "EST. MANSION - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Establishing shot."
+            }
+          ],
+          "text": "Establishing shot.\n\n"
+        }
+      ],
+      "text": "EXT. MANSION - NIGHT\n\nA car pulls up.\n\nEST. MANSION - DAY\n\nEstablishing shot.\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "/EXT. CAR "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "INT./EXT. CAR - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Driving through the city."
+            }
+          ],
+          "text": "Driving through the city.\n\n"
+        }
+      ],
+      "text": "INT./EXT. CAR - DAY\n\nDriving through the city.\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "SNIPER SCOPE POV"
+            }
+          ],
+          "text": ".SNIPER SCOPE POV\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Forced scene heading without standard prefix."
+            }
+          ],
+          "text": "Forced scene heading without standard prefix.\n\n"
+        }
+      ],
+      "text": ".SNIPER SCOPE POV\n\nForced scene heading without standard prefix.\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "ANOTHER FORCED SCENE"
+            }
+          ],
+          "text": ".ANOTHER FORCED SCENE\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Another forced heading."
+            }
+          ],
+          "text": "Another forced heading.\n\n"
+        }
+      ],
+      "text": ".ANOTHER FORCED SCENE\n\nAnother forced heading.\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "HOUSE "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY "
+            },
+            {
+              "type": "scene_number",
+              "children": [],
+              "text": "#1#"
+            }
+          ],
+          "text": "INT. HOUSE - DAY #1#\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Scene with number."
+            }
+          ],
+          "text": "Scene with number.\n\n"
+        }
+      ],
+      "text": "INT. HOUSE - DAY #1#\n\nScene with number.\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "HOUSE "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY "
+            },
+            {
+              "type": "scene_number",
+              "children": [],
+              "text": "#1A#"
+            }
+          ],
+          "text": "INT. HOUSE - DAY #1A#\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Scene with alphanumeric number."
+            }
+          ],
+          "text": "Scene with alphanumeric number.\n\n"
+        }
+      ],
+      "text": "INT. HOUSE - DAY #1A#\n\nScene with alphanumeric number.\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "HOUSE "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY - FLASHBACK (1944) "
+            },
+            {
+              "type": "scene_number",
+              "children": [],
+              "text": "#110A#"
+            }
+          ],
+          "text": "INT. HOUSE - DAY - FLASHBACK (1944) #110A#\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Complex scene with number."
+            }
+          ],
+          "text": "Complex scene with number.\n"
+        }
+      ],
+      "text": "INT. HOUSE - DAY - FLASHBACK (1944) #110A#\n\nComplex scene with number.\n"
+    }
+  ],
+  "text": "INT. MANSION - DAY\n\nThe door opens.\n\nEXT. MANSION - NIGHT\n\nA car pulls up.\n\nEST. MANSION - DAY\n\nEstablishing shot.\n\nINT./EXT. CAR - DAY\n\nDriving through the city.\n\n.SNIPER SCOPE POV\n\nForced scene heading without standard prefix.\n\n.ANOTHER FORCED SCENE\n\nAnother forced heading.\n\nINT. HOUSE - DAY #1#\n\nScene with number.\n\nINT. HOUSE - DAY #1A#\n\nScene with alphanumeric number.\n\nINT. HOUSE - DAY - FLASHBACK (1944) #110A#\n\nComplex scene with number.\n"
+}

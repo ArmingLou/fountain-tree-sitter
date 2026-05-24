@@ -1,0 +1,185 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "action",
+      "children": [
+        {
+          "type": "text",
+          "children": [],
+          "text": "An explosion of sound…"
+        }
+      ],
+      "text": "An explosion of sound…\n\n"
+    },
+    {
+      "type": "action",
+      "children": [
+        {
+          "type": "text",
+          "children": [],
+          "text": "As it rises like an avenging angel …"
+        }
+      ],
+      "text": "As it rises like an avenging angel …\n\n"
+    },
+    {
+      "type": "action",
+      "children": [
+        {
+          "type": "text",
+          "children": [],
+          "text": "Hovers, shattering the air with turbo-throb…"
+        }
+      ],
+      "text": "Hovers, shattering the air with turbo-throb…\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "CASINO "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " NIGHT"
+            }
+          ],
+          "text": "INT. CASINO - NIGHT\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "DEALER\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Ten."
+                }
+              ],
+              "text": "Ten.\n"
+            }
+          ],
+          "text": "DEALER\nTen.\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Four."
+            }
+          ],
+          "text": "Four.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Hit or stand sir?"
+            }
+          ],
+          "text": "Hit or stand sir?\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "GAMBLER\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(nervous)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Stand."
+                }
+              ],
+              "text": "Stand.\n"
+            }
+          ],
+          "text": "GAMBLER\n(nervous)\nStand.\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "They look at each other in silence."
+            }
+          ],
+          "text": "They look at each other in silence.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "The tension builds."
+            }
+          ],
+          "text": "The tension builds.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "The dealer reveals the card."
+            }
+          ],
+          "text": "The dealer reveals the card.\n"
+        }
+      ],
+      "text": "INT. CASINO - NIGHT\n\nDEALER\nTen.\n\nFour.\n\nHit or stand sir?\n\nGAMBLER\n(nervous)\nStand.\n\nThey look at each other in silence.\n\nThe tension builds.\n\nThe dealer reveals the card.\n"
+    }
+  ],
+  "text": "An explosion of sound…\n\nAs it rises like an avenging angel …\n\nHovers, shattering the air with turbo-throb…\n\nINT. CASINO - NIGHT\n\nDEALER\nTen.\n\nFour.\n\nHit or stand sir?\n\nGAMBLER\n(nervous)\nStand.\n\nThey look at each other in silence.\n\nThe tension builds.\n\nThe dealer reveals the card.\n"
+}

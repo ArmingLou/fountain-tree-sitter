@@ -1,0 +1,355 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "OFFICE "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "INT. OFFICE - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Jack begins to argue vociferously in "
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "Vietnamese."
+            }
+          ],
+          "text": "Jack begins to argue vociferously in Vietnamese.\n\n"
+        },
+        {
+          "type": "transition",
+          "children": [],
+          "text": "CUT TO:\n\n"
+        }
+      ],
+      "text": "INT. OFFICE - DAY\n\nJack begins to argue vociferously in Vietnamese.\n\nCUT TO:\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "BRICK'S POOL "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "EXT. BRICK'S POOL - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Brick and "
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "Steel regard one another."
+            }
+          ],
+          "text": "Brick and Steel regard one another.\n\n"
+        },
+        {
+          "type": "transition",
+          "children": [],
+          "text": "FADE TO:\n\n"
+        }
+      ],
+      "text": "EXT. BRICK'S POOL - DAY\n\nBrick and Steel regard one another.\n\nFADE TO:\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "HOSPITAL "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " NIGHT"
+            }
+          ],
+          "text": "INT. HOSPITAL - NIGHT\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "The doctor walks down the corridor."
+            }
+          ],
+          "text": "The doctor walks down the corridor.\n\n"
+        },
+        {
+          "type": "transition",
+          "children": [],
+          "text": "DISSOLVE TO:\n\n"
+        }
+      ],
+      "text": "INT. HOSPITAL - NIGHT\n\nThe doctor walks down the corridor.\n\nDISSOLVE TO:\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "CEMETERY "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "EXT. CEMETERY - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "A funeral procession."
+            }
+          ],
+          "text": "A funeral procession.\n\n"
+        },
+        {
+          "type": "transition",
+          "children": [],
+          "text": "SMASH CUT TO:\n\n"
+        }
+      ],
+      "text": "EXT. CEMETERY - DAY\n\nA funeral procession.\n\nSMASH CUT TO:\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "CAR CRASH "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " NIGHT"
+            }
+          ],
+          "text": "EXT. CAR CRASH - NIGHT\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Metal twists and glass shatters."
+            }
+          ],
+          "text": "Metal twists and glass shatters.\n\n"
+        },
+        {
+          "type": "transition",
+          "children": [],
+          "text": "MATCH CUT TO:\n\n"
+        }
+      ],
+      "text": "EXT. CAR CRASH - NIGHT\n\nMetal twists and glass shatters.\n\nMATCH CUT TO:\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "THEATER "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "INT. THEATER - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "The final scene ends."
+            }
+          ],
+          "text": "The final scene ends.\n\n"
+        },
+        {
+          "type": "transition",
+          "children": [],
+          "text": "FADE OUT TO:\n\n"
+        }
+      ],
+      "text": "INT. THEATER - DAY\n\nThe final scene ends.\n\nFADE OUT TO:\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "SUNSET BEACH "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DUSK"
+            }
+          ],
+          "text": "EXT. SUNSET BEACH - DUSK\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Waves crash on the shore."
+            }
+          ],
+          "text": "Waves crash on the shore.\n\n"
+        },
+        {
+          "type": "transition",
+          "children": [],
+          "text": "WIPE TO:\n\n"
+        }
+      ],
+      "text": "EXT. SUNSET BEACH - DUSK\n\nWaves crash on the shore.\n\nWIPE TO:\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "BEDROOM "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " NIGHT"
+            }
+          ],
+          "text": "INT. BEDROOM - NIGHT\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "She opens the letter."
+            }
+          ],
+          "text": "She opens the letter.\n"
+        }
+      ],
+      "text": "INT. BEDROOM - NIGHT\n\nShe opens the letter.\n"
+    }
+  ],
+  "text": "INT. OFFICE - DAY\n\nJack begins to argue vociferously in Vietnamese.\n\nCUT TO:\n\nEXT. BRICK'S POOL - DAY\n\nBrick and Steel regard one another.\n\nFADE TO:\n\nINT. HOSPITAL - NIGHT\n\nThe doctor walks down the corridor.\n\nDISSOLVE TO:\n\nEXT. CEMETERY - DAY\n\nA funeral procession.\n\nSMASH CUT TO:\n\nEXT. CAR CRASH - NIGHT\n\nMetal twists and glass shatters.\n\nMATCH CUT TO:\n\nINT. THEATER - DAY\n\nThe final scene ends.\n\nFADE OUT TO:\n\nEXT. SUNSET BEACH - DUSK\n\nWaves crash on the shore.\n\nWIPE TO:\n\nINT. BEDROOM - NIGHT\n\nShe opens the letter.\n"
+}

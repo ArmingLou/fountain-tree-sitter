@@ -1,0 +1,194 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "STREET "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "EXT. STREET - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "This has a "
+            },
+            {
+              "type": "escaped_char",
+              "children": [],
+              "text": "\\*"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "literal asterisk"
+            },
+            {
+              "type": "escaped_char",
+              "children": [],
+              "text": "\\*"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": " not italic."
+            }
+          ],
+          "text": "This has a \\*literal asterisk\\* not italic.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Also "
+            },
+            {
+              "type": "escaped_char",
+              "children": [],
+              "text": "\\*"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "one asterisk is literal."
+            }
+          ],
+          "text": "Also \\*one asterisk is literal.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Escaped underscore: "
+            },
+            {
+              "type": "escaped_char",
+              "children": [],
+              "text": "\\_"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "not underlined"
+            },
+            {
+              "type": "escaped_char",
+              "children": [],
+              "text": "\\_"
+            }
+          ],
+          "text": "Escaped underscore: \\_not underlined\\_\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Escaped parens: "
+            },
+            {
+              "type": "escaped_char",
+              "children": [],
+              "text": "\\("
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "not a paren"
+            },
+            {
+              "type": "escaped_char",
+              "children": [],
+              "text": "\\)"
+            }
+          ],
+          "text": "Escaped parens: \\(not a paren\\)\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "LINGUIST\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(explaining)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": "I"
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "n "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "PIE"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": ": "
+                },
+                {
+                  "type": "escaped_char",
+                  "children": [],
+                  "text": "\\*"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Wékʷos kleutōr!"
+                }
+              ],
+              "text": "n PIE: \\*Wékʷos kleutōr!\n"
+            }
+          ],
+          "text": "LINGUIST\n(explaining)\nIn PIE: \\*Wékʷos kleutōr!\n"
+        }
+      ],
+      "text": "EXT. STREET - DAY\n\nThis has a \\*literal asterisk\\* not italic.\n\nAlso \\*one asterisk is literal.\n\nEscaped underscore: \\_not underlined\\_\n\nEscaped parens: \\(not a paren\\)\n\nLINGUIST\n(explaining)\nIn PIE: \\*Wékʷos kleutōr!\n"
+    }
+  ],
+  "text": "EXT. STREET - DAY\n\nThis has a \\*literal asterisk\\* not italic.\n\nAlso \\*one asterisk is literal.\n\nEscaped underscore: \\_not underlined\\_\n\nEscaped parens: \\(not a paren\\)\n\nLINGUIST\n(explaining)\nIn PIE: \\*Wékʷos kleutōr!\n"
+}

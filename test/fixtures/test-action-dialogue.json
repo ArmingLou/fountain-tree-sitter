@@ -1,0 +1,237 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "CITY STREET "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "EXT. CITY STREET - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Steel walks down the street, hands in his pockets."
+            }
+          ],
+          "text": "Steel walks down the street, hands in his pockets.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "He stops at a corner."
+            }
+          ],
+          "text": "He stops at a corner.\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Looks both ways."
+            }
+          ],
+          "text": "Looks both ways.\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Crosses carefully."
+            }
+          ],
+          "text": "Crosses carefully.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "forced_action_start",
+              "children": [],
+              "text": "!"
+            }
+          ],
+          "text": "!STEEL TRIPS OVER A CRACK\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "He catches himself and looks around embarrassed."
+            }
+          ],
+          "text": "He catches himself and looks around embarrassed.\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "BRICK\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(appearing from nowhere)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Nice reflexes."
+                }
+              ],
+              "text": "Nice reflexes.\n"
+            }
+          ],
+          "text": "BRICK\n(appearing from nowhere)\nNice reflexes.\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "STEEL\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(defensive)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": "I "
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "wasn't paying attention."
+                }
+              ],
+              "text": "wasn't paying attention.\n"
+            }
+          ],
+          "text": "STEEL\n(defensive)\nI wasn't paying attention.\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "BRICK\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Sure you weren't."
+                }
+              ],
+              "text": "Sure you weren't.\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(grinning)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Let's get coffee."
+                }
+              ],
+              "text": "Let's get coffee.\n"
+            }
+          ],
+          "text": "BRICK\nSure you weren't.\n(grinning)\nLet's get coffee.\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "They walk off together, leaving the empty street behind."
+            }
+          ],
+          "text": "They walk off together, leaving the empty street behind.\n"
+        }
+      ],
+      "text": "EXT. CITY STREET - DAY\n\nSteel walks down the street, hands in his pockets.\n\nHe stops at a corner.\nLooks both ways.\nCrosses carefully.\n\n!STEEL TRIPS OVER A CRACK\n\nHe catches himself and looks around embarrassed.\n\nBRICK\n(appearing from nowhere)\nNice reflexes.\n\nSTEEL\n(defensive)\nI wasn't paying attention.\n\nBRICK\nSure you weren't.\n(grinning)\nLet's get coffee.\n\nThey walk off together, leaving the empty street behind.\n"
+    }
+  ],
+  "text": "EXT. CITY STREET - DAY\n\nSteel walks down the street, hands in his pockets.\n\nHe stops at a corner.\nLooks both ways.\nCrosses carefully.\n\n!STEEL TRIPS OVER A CRACK\n\nHe catches himself and looks around embarrassed.\n\nBRICK\n(appearing from nowhere)\nNice reflexes.\n\nSTEEL\n(defensive)\nI wasn't paying attention.\n\nBRICK\nSure you weren't.\n(grinning)\nLet's get coffee.\n\nThey walk off together, leaving the empty street behind.\n"
+}

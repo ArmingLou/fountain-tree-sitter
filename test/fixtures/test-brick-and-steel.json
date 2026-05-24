@@ -1,0 +1,1754 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "title_page",
+      "children": [
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key",
+              "children": [],
+              "text": "Title:"
+            },
+            {
+              "type": "title_continuation",
+              "children": [],
+              "text": "    BRICK & STEEL"
+            },
+            {
+              "type": "title_continuation",
+              "children": [],
+              "text": "    FULL RETIRED"
+            }
+          ],
+          "text": "Title:\n    BRICK & STEEL\n    FULL RETIRED\n"
+        },
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key_with_space",
+              "children": [],
+              "text": "Credit: "
+            },
+            {
+              "type": "description",
+              "children": [],
+              "text": "Written by"
+            }
+          ],
+          "text": "Credit: Written by\n"
+        },
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key_with_space",
+              "children": [],
+              "text": "Author: "
+            },
+            {
+              "type": "description",
+              "children": [],
+              "text": "Stu Maschwitz"
+            }
+          ],
+          "text": "Author: Stu Maschwitz\n"
+        },
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key_with_space",
+              "children": [],
+              "text": "Source: "
+            },
+            {
+              "type": "description",
+              "children": [],
+              "text": "Story by KTM"
+            }
+          ],
+          "text": "Source: Story by KTM\n"
+        },
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key_with_space",
+              "children": [],
+              "text": "Draft date: "
+            },
+            {
+              "type": "description",
+              "children": [],
+              "text": "1/20/2012"
+            }
+          ],
+          "text": "Draft date: 1/20/2012\n"
+        },
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key",
+              "children": [],
+              "text": "Contact:"
+            },
+            {
+              "type": "title_continuation",
+              "children": [],
+              "text": "    Next Level Productions"
+            },
+            {
+              "type": "title_continuation",
+              "children": [],
+              "text": "    1588 Mission Dr."
+            },
+            {
+              "type": "title_continuation",
+              "children": [],
+              "text": "    Solvang, CA 93463"
+            }
+          ],
+          "text": "Contact:\n    Next Level Productions\n    1588 Mission Dr.\n    Solvang, CA 93463\n\n"
+        }
+      ],
+      "text": "Title:\n    BRICK & STEEL\n    FULL RETIRED\nCredit: Written by\nAuthor: Stu Maschwitz\nSource: Story by KTM\nDraft date: 1/20/2012\nContact:\n    Next Level Productions\n    1588 Mission Dr.\n    Solvang, CA 93463\n\n"
+    },
+    {
+      "type": "section_block",
+      "children": [
+        {
+          "type": "section_heading",
+          "children": [
+            {
+              "type": "section_start",
+              "children": [],
+              "text": "#"
+            },
+            {
+              "type": "description",
+              "children": [],
+              "text": "ACT I"
+            }
+          ],
+          "text": "# ACT I\n\n"
+        },
+        {
+          "type": "scene_block",
+          "children": [
+            {
+              "type": "scene_heading",
+              "children": [
+                {
+                  "type": "scene_start",
+                  "children": [],
+                  "text": "EXT."
+                },
+                {
+                  "type": "scene_location",
+                  "children": [],
+                  "text": "BRICK'S PATIO "
+                },
+                {
+                  "type": "scene_time",
+                  "children": [],
+                  "text": " DAY"
+                }
+              ],
+              "text": "EXT. BRICK'S PATIO - DAY\n\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "A gorgeous day. "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "The sun is shining. "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "But "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "BRICK BRADDOCK"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": ", retired police detective, is sitting quietly, contemplating -- something."
+                }
+              ],
+              "text": "A gorgeous day. The sun is shining. But BRICK BRADDOCK, retired police detective, is sitting quietly, contemplating -- something.\n\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "The "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "SCREEN DOOR"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": " slides open and "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "DICK STEEL"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": ", his former partner and fellow retiree, emerges with two cold beers."
+                }
+              ],
+              "text": "The SCREEN DOOR slides open and DICK STEEL, his former partner and fellow retiree, emerges with two cold beers.\n\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "STEEL\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Beer’s ready!"
+                    }
+                  ],
+                  "text": "Beer’s ready!\n"
+                }
+              ],
+              "text": "STEEL\nBeer’s ready!\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "BRICK\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Are they cold?"
+                    }
+                  ],
+                  "text": "Are they cold?\n"
+                }
+              ],
+              "text": "BRICK\nAre they cold?\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "STEEL\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Does a bear crap in the woods?"
+                    }
+                  ],
+                  "text": "Does a bear crap in the woods?\n"
+                }
+              ],
+              "text": "STEEL\nDoes a bear crap in the woods?\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Steel sits. "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "They laugh at the dumb joke."
+                }
+              ],
+              "text": "Steel sits. They laugh at the dumb joke.\n\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "STEEL\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "parenthetical",
+                  "children": [],
+                  "text": "(beer raised)\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "To retirement."
+                    }
+                  ],
+                  "text": "To retirement.\n"
+                }
+              ],
+              "text": "STEEL\n(beer raised)\nTo retirement.\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "BRICK\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "To retirement."
+                    }
+                  ],
+                  "text": "To retirement.\n"
+                }
+              ],
+              "text": "BRICK\nTo retirement.\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "They drink long and well from the beers."
+                }
+              ],
+              "text": "They drink long and well from the beers.\n\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "And then there’s a long beat."
+                }
+              ],
+              "text": "And then there’s a long beat.\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Longer than is funny."
+                }
+              ],
+              "text": "Longer than is funny.\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Long enough to be depressing."
+                }
+              ],
+              "text": "Long enough to be depressing.\n\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "The men look at each other."
+                }
+              ],
+              "text": "The men look at each other.\n\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "STEEL\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Screw retirement."
+                    }
+                  ],
+                  "text": "Screw retirement.\n"
+                }
+              ],
+              "text": "STEEL\nScrew retirement.\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "BRICK ^\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Screw retirement."
+                    }
+                  ],
+                  "text": "Screw retirement.\n"
+                }
+              ],
+              "text": "BRICK ^\nScrew retirement.\n"
+            },
+            {
+              "type": "transition",
+              "children": [],
+              "text": "SMASH CUT TO:\n\n"
+            }
+          ],
+          "text": "EXT. BRICK'S PATIO - DAY\n\nA gorgeous day. The sun is shining. But BRICK BRADDOCK, retired police detective, is sitting quietly, contemplating -- something.\n\nThe SCREEN DOOR slides open and DICK STEEL, his former partner and fellow retiree, emerges with two cold beers.\n\nSTEEL\nBeer’s ready!\n\nBRICK\nAre they cold?\n\nSTEEL\nDoes a bear crap in the woods?\n\nSteel sits. They laugh at the dumb joke.\n\nSTEEL\n(beer raised)\nTo retirement.\n\nBRICK\nTo retirement.\n\nThey drink long and well from the beers.\n\nAnd then there’s a long beat.\nLonger than is funny.\nLong enough to be depressing.\n\nThe men look at each other.\n\nSTEEL\nScrew retirement.\n\nBRICK ^\nScrew retirement.\n\nSMASH CUT TO:\n\n"
+        },
+        {
+          "type": "scene_block",
+          "children": [
+            {
+              "type": "scene_heading",
+              "children": [
+                {
+                  "type": "scene_start",
+                  "children": [],
+                  "text": "INT."
+                },
+                {
+                  "type": "scene_location",
+                  "children": [],
+                  "text": "TRAILER HOME "
+                },
+                {
+                  "type": "scene_time",
+                  "children": [],
+                  "text": " DAY"
+                }
+              ],
+              "text": "INT. TRAILER HOME - DAY\n\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "This is the home of "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "THE BOY BAND"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": ", "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "AKA DAN"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": " and "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "JACK"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": ". "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "They too are drinking beer, and counting the take from their last smash-and-grab. "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Money, drugs, and ridiculous props are strewn about the table."
+                }
+              ],
+              "text": "This is the home of THE BOY BAND, AKA DAN and JACK. They too are drinking beer, and counting the take from their last smash-and-grab. Money, drugs, and ridiculous props are strewn about the table.\n\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "JACK\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "parenthetical",
+                  "children": [],
+                  "text": "(in Vietnamese, subtitled)\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "italic",
+                      "children": [],
+                      "text": "*Did you know Brick and Steel are retired?*"
+                    }
+                  ],
+                  "text": "*Did you know Brick and Steel are retired?*\n"
+                }
+              ],
+              "text": "JACK\n(in Vietnamese, subtitled)\n*Did you know Brick and Steel are retired?*\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "DAN\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Then let’s retire them."
+                    }
+                  ],
+                  "text": "Then let’s retire them.\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "underline",
+                      "children": [],
+                      "text": "_Permanently_"
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "."
+                    }
+                  ],
+                  "text": "_Permanently_.\n"
+                }
+              ],
+              "text": "DAN\nThen let’s retire them.\n_Permanently_.\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Jack begins to argue vociferously in "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Vietnamese "
+                },
+                {
+                  "type": "paren_text",
+                  "children": [],
+                  "text": "(?)"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": ", "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "But mercifully we…"
+                }
+              ],
+              "text": "Jack begins to argue vociferously in Vietnamese (?), But mercifully we…\n\n"
+            },
+            {
+              "type": "transition",
+              "children": [],
+              "text": "CUT TO:\n\n"
+            }
+          ],
+          "text": "INT. TRAILER HOME - DAY\n\nThis is the home of THE BOY BAND, AKA DAN and JACK. They too are drinking beer, and counting the take from their last smash-and-grab. Money, drugs, and ridiculous props are strewn about the table.\n\nJACK\n(in Vietnamese, subtitled)\n*Did you know Brick and Steel are retired?*\n\nDAN\nThen let’s retire them.\n_Permanently_.\n\nJack begins to argue vociferously in Vietnamese (?), But mercifully we…\n\nCUT TO:\n\n"
+        },
+        {
+          "type": "scene_block",
+          "children": [
+            {
+              "type": "scene_heading",
+              "children": [
+                {
+                  "type": "scene_start",
+                  "children": [],
+                  "text": "EXT."
+                },
+                {
+                  "type": "scene_location",
+                  "children": [],
+                  "text": "BRICK’S POOL - "
+                },
+                {
+                  "type": "scene_time",
+                  "children": [],
+                  "text": "AY"
+                }
+              ],
+              "text": "EXT. BRICK’S POOL - DAY\n\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Steel, in the middle of a heated phone call:"
+                }
+              ],
+              "text": "Steel, in the middle of a heated phone call:\n\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "STEEL\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "They’re coming out of the woodwork!"
+                    }
+                  ],
+                  "text": "They’re coming out of the woodwork!\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "parenthetical",
+                  "children": [],
+                  "text": "(pause)\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "No, everybody we’ve put away!"
+                    }
+                  ],
+                  "text": "No, everybody we’ve put away!\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "parenthetical",
+                  "children": [],
+                  "text": "(pause)\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Point "
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Blank "
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Sniper?"
+                    }
+                  ],
+                  "text": "Point Blank Sniper?\n"
+                }
+              ],
+              "text": "STEEL\nThey’re coming out of the woodwork!\n(pause)\nNo, everybody we’ve put away!\n(pause)\nPoint Blank Sniper?\n"
+            }
+          ],
+          "text": "EXT. BRICK’S POOL - DAY\n\nSteel, in the middle of a heated phone call:\n\nSTEEL\nThey’re coming out of the woodwork!\n(pause)\nNo, everybody we’ve put away!\n(pause)\nPoint Blank Sniper?\n"
+        },
+        {
+          "type": "scene_block",
+          "children": [
+            {
+              "type": "scene_heading",
+              "children": [
+                {
+                  "type": "scene_location",
+                  "children": [],
+                  "text": "SNIPER SCOPE POV"
+                }
+              ],
+              "text": ".SNIPER SCOPE POV\n\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "From what seems like only "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "INCHES AWAY"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": ". "
+                },
+                {
+                  "type": "underline",
+                  "children": [],
+                  "text": "_Steel’s face FILLS the *Leupold Mark 4* scope_."
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": ""
+                }
+              ],
+              "text": "From what seems like only INCHES AWAY. _Steel’s face FILLS the *Leupold Mark 4* scope_.\n\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "STEEL\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "The man’s a myth!"
+                    }
+                  ],
+                  "text": "The man’s a myth!\n"
+                }
+              ],
+              "text": "STEEL\nThe man’s a myth!\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Steel turns and looks straight into the cross-hairs."
+                }
+              ],
+              "text": "Steel turns and looks straight into the cross-hairs.\n\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "STEEL\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "parenthetical",
+                  "children": [],
+                  "text": "(oh crap)\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Hello…"
+                    }
+                  ],
+                  "text": "Hello…\n"
+                }
+              ],
+              "text": "STEEL\n(oh crap)\nHello…\n"
+            },
+            {
+              "type": "transition",
+              "children": [],
+              "text": "CUT TO:\n\n"
+            }
+          ],
+          "text": ".SNIPER SCOPE POV\n\nFrom what seems like only INCHES AWAY. _Steel’s face FILLS the *Leupold Mark 4* scope_.\n\nSTEEL\nThe man’s a myth!\n\nSteel turns and looks straight into the cross-hairs.\n\nSTEEL\n(oh crap)\nHello…\n\nCUT TO:\n\n"
+        },
+        {
+          "type": "scene_block",
+          "children": [
+            {
+              "type": "scene_heading",
+              "children": [
+                {
+                  "type": "scene_start",
+                  "children": [],
+                  "text": "."
+                },
+                {
+                  "type": "scene_location",
+                  "children": [],
+                  "text": "OPENING TITLES"
+                }
+              ],
+              "text": ".OPENING TITLES\n\n"
+            },
+            {
+              "type": "centered",
+              "children": [
+                {
+                  "type": "centered_start",
+                  "children": [],
+                  "text": ">"
+                },
+                {
+                  "type": "centered_text",
+                  "children": [],
+                  "text": " BRICK BRADDOCK "
+                },
+                {
+                  "type": "centered_end",
+                  "children": [],
+                  "text": "<"
+                }
+              ],
+              "text": "> BRICK BRADDOCK <\n"
+            },
+            {
+              "type": "centered",
+              "children": [
+                {
+                  "type": "centered_start",
+                  "children": [],
+                  "text": ">"
+                },
+                {
+                  "type": "centered_text",
+                  "children": [],
+                  "text": " & DICK STEEL IN "
+                },
+                {
+                  "type": "centered_end",
+                  "children": [],
+                  "text": "<"
+                }
+              ],
+              "text": "> & DICK STEEL IN <\n\n"
+            },
+            {
+              "type": "centered",
+              "children": [
+                {
+                  "type": "centered_start",
+                  "children": [],
+                  "text": ">"
+                },
+                {
+                  "type": "centered_text",
+                  "children": [],
+                  "text": " BRICK & STEEL "
+                },
+                {
+                  "type": "centered_end",
+                  "children": [],
+                  "text": "<"
+                }
+              ],
+              "text": "> BRICK & STEEL <\n"
+            },
+            {
+              "type": "centered",
+              "children": [
+                {
+                  "type": "centered_start",
+                  "children": [],
+                  "text": ">"
+                },
+                {
+                  "type": "centered_text",
+                  "children": [],
+                  "text": " FULL RETIRED "
+                },
+                {
+                  "type": "centered_end",
+                  "children": [],
+                  "text": "<"
+                }
+              ],
+              "text": "> FULL RETIRED <\n\n"
+            },
+            {
+              "type": "transition",
+              "children": [],
+              "text": "SMASH CUT TO:\n\n"
+            }
+          ],
+          "text": ".OPENING TITLES\n\n> BRICK BRADDOCK <\n> & DICK STEEL IN <\n\n> BRICK & STEEL <\n> FULL RETIRED <\n\nSMASH CUT TO:\n\n"
+        },
+        {
+          "type": "scene_block",
+          "children": [
+            {
+              "type": "scene_heading",
+              "children": [
+                {
+                  "type": "scene_start",
+                  "children": [],
+                  "text": "EXT."
+                },
+                {
+                  "type": "scene_location",
+                  "children": [],
+                  "text": "WOODEN SHACK "
+                },
+                {
+                  "type": "scene_time",
+                  "children": [],
+                  "text": " DAY"
+                }
+              ],
+              "text": "EXT. WOODEN SHACK - DAY\n\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "COGNITO"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": ", the criminal mastermind, is "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "SLAMMED"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": " against the wall."
+                }
+              ],
+              "text": "COGNITO, the criminal mastermind, is SLAMMED against the wall.\n\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "COGNITO\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Woah woah woah, "
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Brick and "
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Steel!"
+                    }
+                  ],
+                  "text": "Woah woah woah, Brick and Steel!\n"
+                }
+              ],
+              "text": "COGNITO\nWoah woah woah, Brick and Steel!\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Sure enough, it’s Br"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "ick and St"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "eel, roughing up their favorite usual suspect."
+                }
+              ],
+              "text": "Sure enough, it’s Brick and Steel, roughing up their favorite usual suspect.\n\n"
+            },
+            {
+              "type": "boneyard",
+              "children": [
+                {
+                  "type": "boneyard_start",
+                  "children": [],
+                  "text": "/*"
+                },
+                {
+                  "type": "boneyard_content",
+                  "children": [],
+                  "text": " do we have a boneyard "
+                }
+              ],
+              "text": "/* do we have a boneyard */\n\n"
+            },
+            {
+              "type": "boneyard",
+              "children": [
+                {
+                  "type": "boneyard_start",
+                  "children": [],
+                  "text": "/*"
+                },
+                {
+                  "type": "boneyard_content",
+                  "children": [],
+                  "text": " yes, we do "
+                }
+              ],
+              "text": "/* yes, we do */\n\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "COGNITO\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "What is it you want with me, "
+                    },
+                    {
+                      "type": "uppercase_text",
+                      "children": [],
+                      "text": "DICK"
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "?"
+                    }
+                  ],
+                  "text": "What is it you want with me, DICK?\n"
+                }
+              ],
+              "text": "COGNITO\nWhat is it you want with me, DICK?\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Steel "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "SMACKS"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": " him."
+                }
+              ],
+              "text": "Steel SMACKS him.\n\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "STEEL\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Who’s coming after us?"
+                    }
+                  ],
+                  "text": "Who’s coming after us?\n"
+                }
+              ],
+              "text": "STEEL\nWho’s coming after us?\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "COGNITO\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Everyone’s coming after you mate! Sc"
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "orpio, Th"
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "e Bo"
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "y Ba"
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "nd, Sp"
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "arrow, Po"
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "int Bl"
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "ank Sn"
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "iper…"
+                    }
+                  ],
+                  "text": "Everyone’s coming after you mate! Scorpio, The Boy Band, Sparrow, Point Blank Sniper…\n"
+                }
+              ],
+              "text": "COGNITO\nEveryone’s coming after you mate! Scorpio, The Boy Band, Sparrow, Point Blank Sniper…\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "As he rattles off the long list, "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Brick and "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Steel share a look. "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "This is going to be "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "BAD"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "."
+                }
+              ],
+              "text": "As he rattles off the long list, Brick and Steel share a look. This is going to be BAD.\n\n"
+            },
+            {
+              "type": "transition",
+              "children": [],
+              "text": "CUT TO:\n\n"
+            }
+          ],
+          "text": "EXT. WOODEN SHACK - DAY\n\nCOGNITO, the criminal mastermind, is SLAMMED against the wall.\n\nCOGNITO\nWoah woah woah, Brick and Steel!\n\nSure enough, it’s Brick and Steel, roughing up their favorite usual suspect.\n\n/* do we have a boneyard */\n\n/* yes, we do */\n\nCOGNITO\nWhat is it you want with me, DICK?\n\nSteel SMACKS him.\n\nSTEEL\nWho’s coming after us?\n\nCOGNITO\nEveryone’s coming after you mate! Scorpio, The Boy Band, Sparrow, Point Blank Sniper…\n\nAs he rattles off the long list, Brick and Steel share a look. This is going to be BAD.\n\nCUT TO:\n\n"
+        },
+        {
+          "type": "scene_block",
+          "children": [
+            {
+              "type": "scene_heading",
+              "children": [
+                {
+                  "type": "scene_start",
+                  "children": [],
+                  "text": "INT."
+                },
+                {
+                  "type": "scene_location",
+                  "children": [],
+                  "text": "GARAGE "
+                },
+                {
+                  "type": "scene_time",
+                  "children": [],
+                  "text": " DAY"
+                }
+              ],
+              "text": "INT. GARAGE - DAY\n\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "BRICK"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": " and "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "STEEL"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": " get into "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Mom’s PO"
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "RSCHE, "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "St"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "eel at the wheel. Th"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "ey pause for a beat, the gravity of the situation catching up with them."
+                }
+              ],
+              "text": "BRICK and STEEL get into Mom’s PORSCHE, Steel at the wheel. They pause for a beat, the gravity of the situation catching up with them.\n\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "BRICK\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "This is everybody we’ve ever put away."
+                    }
+                  ],
+                  "text": "This is everybody we’ve ever put away.\n"
+                }
+              ],
+              "text": "BRICK\nThis is everybody we’ve ever put away.\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "STEEL\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "parenthetical",
+                  "children": [],
+                  "text": "(starting the engine)\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "So much for retirement!"
+                    }
+                  ],
+                  "text": "So much for retirement!\n"
+                }
+              ],
+              "text": "STEEL\n(starting the engine)\nSo much for retirement!\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "They speed off. "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "To destiny!"
+                }
+              ],
+              "text": "They speed off. To destiny!\n\n"
+            },
+            {
+              "type": "transition",
+              "children": [],
+              "text": "CUT TO:\n\n"
+            }
+          ],
+          "text": "INT. GARAGE - DAY\n\nBRICK and STEEL get into Mom’s PORSCHE, Steel at the wheel. They pause for a beat, the gravity of the situation catching up with them.\n\nBRICK\nThis is everybody we’ve ever put away.\n\nSTEEL\n(starting the engine)\nSo much for retirement!\n\nThey speed off. To destiny!\n\nCUT TO:\n\n"
+        },
+        {
+          "type": "scene_block",
+          "children": [
+            {
+              "type": "scene_heading",
+              "children": [
+                {
+                  "type": "scene_start",
+                  "children": [],
+                  "text": "EXT."
+                },
+                {
+                  "type": "scene_location",
+                  "children": [],
+                  "text": "PALATIAL MANSION "
+                },
+                {
+                  "type": "scene_time",
+                  "children": [],
+                  "text": " DAY"
+                }
+              ],
+              "text": "EXT. PALATIAL MANSION - DAY\n\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "An "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "EXTREMELY HANDSOME MAN"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": " drinks a beer. "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Shirtless, unfortunately."
+                }
+              ],
+              "text": "An EXTREMELY HANDSOME MAN drinks a beer. Shirtless, unfortunately.\n\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "His minion approaches offscreen:"
+                }
+              ],
+              "text": "His minion approaches offscreen:\n\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "MINION\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "We found "
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Brick and "
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "Steel!"
+                    }
+                  ],
+                  "text": "We found Brick and Steel!\n"
+                }
+              ],
+              "text": "MINION\nWe found Brick and Steel!\n"
+            },
+            {
+              "type": "dialogue_block",
+              "children": [
+                {
+                  "type": "character",
+                  "children": [],
+                  "text": "HANDSOME MAN\n"
+                },
+                {
+                  "type": "dialogue_line_start",
+                  "children": [],
+                  "text": ""
+                },
+                {
+                  "type": "dialogue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "I want them dead. "
+                    },
+                    {
+                      "type": "uppercase_text",
+                      "children": [],
+                      "text": "DEAD"
+                    },
+                    {
+                      "type": "text",
+                      "children": [],
+                      "text": "!"
+                    }
+                  ],
+                  "text": "I want them dead. DEAD!\n"
+                }
+              ],
+              "text": "HANDSOME MAN\nI want them dead. DEAD!\n"
+            },
+            {
+              "type": "action",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Beer flies."
+                }
+              ],
+              "text": "Beer flies.\n\n"
+            },
+            {
+              "type": "transition",
+              "children": [
+                {
+                  "type": "forced_transition_start",
+                  "children": [],
+                  "text": ">"
+                }
+              ],
+              "text": "> BURN TO PINK.\n\n"
+            },
+            {
+              "type": "centered",
+              "children": [
+                {
+                  "type": "centered_start",
+                  "children": [],
+                  "text": ">"
+                },
+                {
+                  "type": "centered_text",
+                  "children": [],
+                  "text": " THE END "
+                },
+                {
+                  "type": "centered_end",
+                  "children": [],
+                  "text": "<"
+                }
+              ],
+              "text": "> THE END <\n"
+            }
+          ],
+          "text": "EXT. PALATIAL MANSION - DAY\n\nAn EXTREMELY HANDSOME MAN drinks a beer. Shirtless, unfortunately.\n\nHis minion approaches offscreen:\n\nMINION\nWe found Brick and Steel!\n\nHANDSOME MAN\nI want them dead. DEAD!\n\nBeer flies.\n\n> BURN TO PINK.\n\n> THE END <\n"
+        }
+      ],
+      "text": "# ACT I\n\nEXT. BRICK'S PATIO - DAY\n\nA gorgeous day. The sun is shining. But BRICK BRADDOCK, retired police detective, is sitting quietly, contemplating -- something.\n\nThe SCREEN DOOR slides open and DICK STEEL, his former partner and fellow retiree, emerges with two cold beers.\n\nSTEEL\nBeer’s ready!\n\nBRICK\nAre they cold?\n\nSTEEL\nDoes a bear crap in the woods?\n\nSteel sits. They laugh at the dumb joke.\n\nSTEEL\n(beer raised)\nTo retirement.\n\nBRICK\nTo retirement.\n\nThey drink long and well from the beers.\n\nAnd then there’s a long beat.\nLonger than is funny.\nLong enough to be depressing.\n\nThe men look at each other.\n\nSTEEL\nScrew retirement.\n\nBRICK ^\nScrew retirement.\n\nSMASH CUT TO:\n\nINT. TRAILER HOME - DAY\n\nThis is the home of THE BOY BAND, AKA DAN and JACK. They too are drinking beer, and counting the take from their last smash-and-grab. Money, drugs, and ridiculous props are strewn about the table.\n\nJACK\n(in Vietnamese, subtitled)\n*Did you know Brick and Steel are retired?*\n\nDAN\nThen let’s retire them.\n_Permanently_.\n\nJack begins to argue vociferously in Vietnamese (?), But mercifully we…\n\nCUT TO:\n\nEXT. BRICK’S POOL - DAY\n\nSteel, in the middle of a heated phone call:\n\nSTEEL\nThey’re coming out of the woodwork!\n(pause)\nNo, everybody we’ve put away!\n(pause)\nPoint Blank Sniper?\n\n.SNIPER SCOPE POV\n\nFrom what seems like only INCHES AWAY. _Steel’s face FILLS the *Leupold Mark 4* scope_.\n\nSTEEL\nThe man’s a myth!\n\nSteel turns and looks straight into the cross-hairs.\n\nSTEEL\n(oh crap)\nHello…\n\nCUT TO:\n\n.OPENING TITLES\n\n> BRICK BRADDOCK <\n> & DICK STEEL IN <\n\n> BRICK & STEEL <\n> FULL RETIRED <\n\nSMASH CUT TO:\n\nEXT. WOODEN SHACK - DAY\n\nCOGNITO, the criminal mastermind, is SLAMMED against the wall.\n\nCOGNITO\nWoah woah woah, Brick and Steel!\n\nSure enough, it’s Brick and Steel, roughing up their favorite usual suspect.\n\n/* do we have a boneyard */\n\n/* yes, we do */\n\nCOGNITO\nWhat is it you want with me, DICK?\n\nSteel SMACKS him.\n\nSTEEL\nWho’s coming after us?\n\nCOGNITO\nEveryone’s coming after you mate! Scorpio, The Boy Band, Sparrow, Point Blank Sniper…\n\nAs he rattles off the long list, Brick and Steel share a look. This is going to be BAD.\n\nCUT TO:\n\nINT. GARAGE - DAY\n\nBRICK and STEEL get into Mom’s PORSCHE, Steel at the wheel. They pause for a beat, the gravity of the situation catching up with them.\n\nBRICK\nThis is everybody we’ve ever put away.\n\nSTEEL\n(starting the engine)\nSo much for retirement!\n\nThey speed off. To destiny!\n\nCUT TO:\n\nEXT. PALATIAL MANSION - DAY\n\nAn EXTREMELY HANDSOME MAN drinks a beer. Shirtless, unfortunately.\n\nHis minion approaches offscreen:\n\nMINION\nWe found Brick and Steel!\n\nHANDSOME MAN\nI want them dead. DEAD!\n\nBeer flies.\n\n> BURN TO PINK.\n\n> THE END <\n"
+    }
+  ],
+  "text": "Title:\n    BRICK & STEEL\n    FULL RETIRED\nCredit: Written by\nAuthor: Stu Maschwitz\nSource: Story by KTM\nDraft date: 1/20/2012\nContact:\n    Next Level Productions\n    1588 Mission Dr.\n    Solvang, CA 93463\n\n# ACT I\n\nEXT. BRICK'S PATIO - DAY\n\nA gorgeous day. The sun is shining. But BRICK BRADDOCK, retired police detective, is sitting quietly, contemplating -- something.\n\nThe SCREEN DOOR slides open and DICK STEEL, his former partner and fellow retiree, emerges with two cold beers.\n\nSTEEL\nBeer’s ready!\n\nBRICK\nAre they cold?\n\nSTEEL\nDoes a bear crap in the woods?\n\nSteel sits. They laugh at the dumb joke.\n\nSTEEL\n(beer raised)\nTo retirement.\n\nBRICK\nTo retirement.\n\nThey drink long and well from the beers.\n\nAnd then there’s a long beat.\nLonger than is funny.\nLong enough to be depressing.\n\nThe men look at each other.\n\nSTEEL\nScrew retirement.\n\nBRICK ^\nScrew retirement.\n\nSMASH CUT TO:\n\nINT. TRAILER HOME - DAY\n\nThis is the home of THE BOY BAND, AKA DAN and JACK. They too are drinking beer, and counting the take from their last smash-and-grab. Money, drugs, and ridiculous props are strewn about the table.\n\nJACK\n(in Vietnamese, subtitled)\n*Did you know Brick and Steel are retired?*\n\nDAN\nThen let’s retire them.\n_Permanently_.\n\nJack begins to argue vociferously in Vietnamese (?), But mercifully we…\n\nCUT TO:\n\nEXT. BRICK’S POOL - DAY\n\nSteel, in the middle of a heated phone call:\n\nSTEEL\nThey’re coming out of the woodwork!\n(pause)\nNo, everybody we’ve put away!\n(pause)\nPoint Blank Sniper?\n\n.SNIPER SCOPE POV\n\nFrom what seems like only INCHES AWAY. _Steel’s face FILLS the *Leupold Mark 4* scope_.\n\nSTEEL\nThe man’s a myth!\n\nSteel turns and looks straight into the cross-hairs.\n\nSTEEL\n(oh crap)\nHello…\n\nCUT TO:\n\n.OPENING TITLES\n\n> BRICK BRADDOCK <\n> & DICK STEEL IN <\n\n> BRICK & STEEL <\n> FULL RETIRED <\n\nSMASH CUT TO:\n\nEXT. WOODEN SHACK - DAY\n\nCOGNITO, the criminal mastermind, is SLAMMED against the wall.\n\nCOGNITO\nWoah woah woah, Brick and Steel!\n\nSure enough, it’s Brick and Steel, roughing up their favorite usual suspect.\n\n/* do we have a boneyard */\n\n/* yes, we do */\n\nCOGNITO\nWhat is it you want with me, DICK?\n\nSteel SMACKS him.\n\nSTEEL\nWho’s coming after us?\n\nCOGNITO\nEveryone’s coming after you mate! Scorpio, The Boy Band, Sparrow, Point Blank Sniper…\n\nAs he rattles off the long list, Brick and Steel share a look. This is going to be BAD.\n\nCUT TO:\n\nINT. GARAGE - DAY\n\nBRICK and STEEL get into Mom’s PORSCHE, Steel at the wheel. They pause for a beat, the gravity of the situation catching up with them.\n\nBRICK\nThis is everybody we’ve ever put away.\n\nSTEEL\n(starting the engine)\nSo much for retirement!\n\nThey speed off. To destiny!\n\nCUT TO:\n\nEXT. PALATIAL MANSION - DAY\n\nAn EXTREMELY HANDSOME MAN drinks a beer. Shirtless, unfortunately.\n\nHis minion approaches offscreen:\n\nMINION\nWe found Brick and Steel!\n\nHANDSOME MAN\nI want them dead. DEAD!\n\nBeer flies.\n\n> BURN TO PINK.\n\n> THE END <\n"
+}

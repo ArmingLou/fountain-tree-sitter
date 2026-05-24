@@ -1,0 +1,168 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "POLICE STATION "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "INT. POLICE STATION - DAY\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [
+                {
+                  "type": "forced_character_start",
+                  "children": [],
+                  "text": "@"
+                }
+              ],
+              "text": "@McCLANE\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Yippee-ki-yay!"
+                }
+              ],
+              "text": "Yippee-ki-yay!\n"
+            }
+          ],
+          "text": "@McCLANE\nYippee-ki-yay!\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "HANS GRUBER\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Mr. "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Mc"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Clane, how nice to hear from you."
+                }
+              ],
+              "text": "Mr. McClane, how nice to hear from you.\n"
+            }
+          ],
+          "text": "HANS GRUBER\nMr. McClane, how nice to hear from you.\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "@"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "R2-"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "D2"
+            }
+          ],
+          "text": "@R2-D2\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Beep boop beep!"
+            }
+          ],
+          "text": "Beep boop beep!\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [
+                {
+                  "type": "forced_character_start",
+                  "children": [],
+                  "text": "@"
+                }
+              ],
+              "text": "@3PO\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Oh my, what did you say?"
+                }
+              ],
+              "text": "Oh my, what did you say?\n"
+            }
+          ],
+          "text": "@3PO\nOh my, what did you say?\n"
+        }
+      ],
+      "text": "INT. POLICE STATION - DAY\n\n@McCLANE\nYippee-ki-yay!\n\nHANS GRUBER\nMr. McClane, how nice to hear from you.\n\n@R2-D2\nBeep boop beep!\n\n@3PO\nOh my, what did you say?\n"
+    }
+  ],
+  "text": "INT. POLICE STATION - DAY\n\n@McCLANE\nYippee-ki-yay!\n\nHANS GRUBER\nMr. McClane, how nice to hear from you.\n\n@R2-D2\nBeep boop beep!\n\n@3PO\nOh my, what did you say?\n"
+}

@@ -1,0 +1,130 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "ABANDONED WAREHOUSE "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " NIGHT"
+            }
+          ],
+          "text": "EXT. ABANDONED WAREHOUSE - NIGHT\n\n"
+        },
+        {
+          "type": "note",
+          "children": [
+            {
+              "type": "note_start",
+              "children": [],
+              "text": "[["
+            },
+            {
+              "type": "note_content",
+              "children": [],
+              "text": "This scene should feel tense and claustrophobic"
+            }
+          ],
+          "text": "[[This scene should feel tense and claustrophobic]]\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Steel approaches the door cautiously."
+            }
+          ],
+          "text": "Steel approaches the door cautiously.\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "STEEL\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "[[whisper this line]]"
+                }
+              ],
+              "text": "[[whisper this line]]\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Anyone home?"
+                }
+              ],
+              "text": "Anyone home?\n"
+            }
+          ],
+          "text": "STEEL\n[[whisper this line]]\nAnyone home?\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "[["
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "Remember to add sound effects here]]"
+            }
+          ],
+          "text": "[[Remember to add sound effects here]]\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "The door creaks open."
+            }
+          ],
+          "text": "The door creaks open.\n"
+        }
+      ],
+      "text": "EXT. ABANDONED WAREHOUSE - NIGHT\n\n[[This scene should feel tense and claustrophobic]]\n\nSteel approaches the door cautiously.\n\nSTEEL\n[[whisper this line]]\nAnyone home?\n\n[[Remember to add sound effects here]]\n\nThe door creaks open.\n"
+    }
+  ],
+  "text": "EXT. ABANDONED WAREHOUSE - NIGHT\n\n[[This scene should feel tense and claustrophobic]]\n\nSteel approaches the door cautiously.\n\nSTEEL\n[[whisper this line]]\nAnyone home?\n\n[[Remember to add sound effects here]]\n\nThe door creaks open.\n"
+}

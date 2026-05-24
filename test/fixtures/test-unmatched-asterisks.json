@@ -1,0 +1,204 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "CLASSROOM "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "EXT. CLASSROOM - DAY\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "ELENA\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(tracing verb forms on whiteboard)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "escaped_char",
+                  "children": [],
+                  "text": "\\*"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Leǵ-, \\"
+                },
+                {
+                  "type": "escaped_char",
+                  "children": [],
+                  "text": "*b"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "ʰer-, *h"
+                },
+                {
+                  "type": "literal_char",
+                  "children": [],
+                  "text": "₁"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "es-... We'v"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "e been teaching PIE "
+                },
+                {
+                  "type": "uppercase_text",
+                  "children": [],
+                  "text": "sin"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "ce yesterday's breakthrough. No p"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "ermission requested."
+                }
+              ],
+              "text": "\\*Leǵ-, \\*bʰer-, *h₁es-... We've been teaching PIE since yesterday's breakthrough. No permission requested.\n"
+            }
+          ],
+          "text": "ELENA\n(tracing verb forms on whiteboard)\n\\*Leǵ-, \\*bʰer-, *h₁es-... We've been teaching PIE since yesterday's breakthrough. No permission requested.\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "JAMES\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "This is "
+                },
+                {
+                  "type": "literal_char",
+                  "children": [],
+                  "text": "*"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "amazing. "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "The asterisk here has no closing pair."
+                }
+              ],
+              "text": "This is *amazing. The asterisk here has no closing pair.\n"
+            }
+          ],
+          "text": "JAMES\nThis is *amazing. The asterisk here has no closing pair.\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "MAYA\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "But "
+                },
+                {
+                  "type": "italic",
+                  "children": [],
+                  "text": "*this is italic*"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": " while "
+                },
+                {
+                  "type": "literal_char",
+                  "children": [],
+                  "text": "*"
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "that was literal."
+                }
+              ],
+              "text": "But *this is italic* while *that was literal.\n"
+            }
+          ],
+          "text": "MAYA\nBut *this is italic* while *that was literal.\n"
+        }
+      ],
+      "text": "EXT. CLASSROOM - DAY\n\nELENA\n(tracing verb forms on whiteboard)\n\\*Leǵ-, \\*bʰer-, *h₁es-... We've been teaching PIE since yesterday's breakthrough. No permission requested.\n\nJAMES\nThis is *amazing. The asterisk here has no closing pair.\n\nMAYA\nBut *this is italic* while *that was literal.\n"
+    }
+  ],
+  "text": "EXT. CLASSROOM - DAY\n\nELENA\n(tracing verb forms on whiteboard)\n\\*Leǵ-, \\*bʰer-, *h₁es-... We've been teaching PIE since yesterday's breakthrough. No permission requested.\n\nJAMES\nThis is *amazing. The asterisk here has no closing pair.\n\nMAYA\nBut *this is italic* while *that was literal.\n"
+}

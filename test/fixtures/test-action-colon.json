@@ -1,0 +1,96 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "STREET "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "EXT. STREET - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "She checks her phone: 7:28 "
+            },
+            {
+              "type": "uppercase_text",
+              "children": [],
+              "text": "AM"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "."
+            }
+          ],
+          "text": "She checks her phone: 7:28 AM.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "He arrives with supplies: coffee, donuts, and newspapers."
+            }
+          ],
+          "text": "He arrives with supplies: coffee, donuts, and newspapers.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "The screen displays a message: "
+            },
+            {
+              "type": "uppercase_text",
+              "children": [],
+              "text": "DELAYED"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": " 20 "
+            },
+            {
+              "type": "uppercase_text",
+              "children": [],
+              "text": "MIN"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "."
+            }
+          ],
+          "text": "The screen displays a message: DELAYED 20 MIN.\n"
+        }
+      ],
+      "text": "EXT. STREET - DAY\n\nShe checks her phone: 7:28 AM.\n\nHe arrives with supplies: coffee, donuts, and newspapers.\n\nThe screen displays a message: DELAYED 20 MIN.\n"
+    }
+  ],
+  "text": "EXT. STREET - DAY\n\nShe checks her phone: 7:28 AM.\n\nHe arrives with supplies: coffee, donuts, and newspapers.\n\nThe screen displays a message: DELAYED 20 MIN.\n"
+}

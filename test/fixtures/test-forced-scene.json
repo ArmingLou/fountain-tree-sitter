@@ -1,0 +1,144 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "OPENING TITLES"
+            }
+          ],
+          "text": ".OPENING TITLES\n\n"
+        },
+        {
+          "type": "centered",
+          "children": [
+            {
+              "type": "centered_start",
+              "children": [],
+              "text": ">"
+            },
+            {
+              "type": "centered_text",
+              "children": [],
+              "text": " BRICK BRADDOCK "
+            },
+            {
+              "type": "centered_end",
+              "children": [],
+              "text": "<"
+            }
+          ],
+          "text": "> BRICK BRADDOCK <\n"
+        },
+        {
+          "type": "centered",
+          "children": [
+            {
+              "type": "centered_start",
+              "children": [],
+              "text": ">"
+            },
+            {
+              "type": "centered_text",
+              "children": [],
+              "text": " & DICK STEEL IN "
+            },
+            {
+              "type": "centered_end",
+              "children": [],
+              "text": "<"
+            }
+          ],
+          "text": "> & DICK STEEL IN <\n\n"
+        },
+        {
+          "type": "centered",
+          "children": [
+            {
+              "type": "centered_start",
+              "children": [],
+              "text": ">"
+            },
+            {
+              "type": "centered_text",
+              "children": [],
+              "text": " BRICK & STEEL "
+            },
+            {
+              "type": "centered_end",
+              "children": [],
+              "text": "<"
+            }
+          ],
+          "text": "> BRICK & STEEL <\n"
+        },
+        {
+          "type": "centered",
+          "children": [
+            {
+              "type": "centered_start",
+              "children": [],
+              "text": ">"
+            },
+            {
+              "type": "centered_text",
+              "children": [],
+              "text": " FULL RETIRED "
+            },
+            {
+              "type": "centered_end",
+              "children": [],
+              "text": "<"
+            }
+          ],
+          "text": "> FULL RETIRED <\n\n"
+        },
+        {
+          "type": "transition",
+          "children": [],
+          "text": "SMASH CUT TO:\n\n"
+        }
+      ],
+      "text": ".OPENING TITLES\n\n> BRICK BRADDOCK <\n> & DICK STEEL IN <\n\n> BRICK & STEEL <\n> FULL RETIRED <\n\nSMASH CUT TO:\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "WOODEN SHACK "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "EXT. WOODEN SHACK - DAY\n"
+        }
+      ],
+      "text": "EXT. WOODEN SHACK - DAY\n"
+    }
+  ],
+  "text": ".OPENING TITLES\n\n> BRICK BRADDOCK <\n> & DICK STEEL IN <\n\n> BRICK & STEEL <\n> FULL RETIRED <\n\nSMASH CUT TO:\n\nEXT. WOODEN SHACK - DAY\n"
+}

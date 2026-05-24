@@ -1,0 +1,272 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "COFFEE SHOP "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "INT. COFFEE SHOP - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "A typical coffee shop scene."
+            }
+          ],
+          "text": "A typical coffee shop scene.\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "SARAH\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "I can't believe you did that!"
+                }
+              ],
+              "text": "I can't believe you did that!\n"
+            }
+          ],
+          "text": "SARAH\nI can't believe you did that!\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "JOHN\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "What was "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "I supposed to do?"
+                }
+              ],
+              "text": "What was I supposed to do?\n"
+            }
+          ],
+          "text": "JOHN\nWhat was I supposed to do?\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "SARAH\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(angry)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "Tell the truth!"
+                }
+              ],
+              "text": "Tell the truth!\n"
+            }
+          ],
+          "text": "SARAH\n(angry)\nTell the truth!\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "JOHN\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(defensively)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": "I "
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "was trying to protect you."
+                }
+              ],
+              "text": "was trying to protect you.\n"
+            }
+          ],
+          "text": "JOHN\n(defensively)\nI was trying to protect you.\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "SARAH\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "You always say that."
+                }
+              ],
+              "text": "You always say that.\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(softening)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "But "
+                },
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "I appreciate it."
+                }
+              ],
+              "text": "But I appreciate it.\n"
+            }
+          ],
+          "text": "SARAH\nYou always say that.\n(softening)\nBut I appreciate it.\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
+            {
+              "type": "character",
+              "children": [],
+              "text": "JOHN\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": ""
+            },
+            {
+              "type": "parenthetical",
+              "children": [],
+              "text": "(smiling)\n"
+            },
+            {
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": "I "
+            },
+            {
+              "type": "dialogue",
+              "children": [
+                {
+                  "type": "text",
+                  "children": [],
+                  "text": "know you do."
+                }
+              ],
+              "text": "know you do.\n"
+            }
+          ],
+          "text": "JOHN\n(smiling)\nI know you do.\n"
+        }
+      ],
+      "text": "INT. COFFEE SHOP - DAY\n\nA typical coffee shop scene.\n\nSARAH\nI can't believe you did that!\n\nJOHN\nWhat was I supposed to do?\n\nSARAH\n(angry)\nTell the truth!\n\nJOHN\n(defensively)\nI was trying to protect you.\n\nSARAH\nYou always say that.\n(softening)\nBut I appreciate it.\n\nJOHN\n(smiling)\nI know you do.\n"
+    }
+  ],
+  "text": "INT. COFFEE SHOP - DAY\n\nA typical coffee shop scene.\n\nSARAH\nI can't believe you did that!\n\nJOHN\nWhat was I supposed to do?\n\nSARAH\n(angry)\nTell the truth!\n\nJOHN\n(defensively)\nI was trying to protect you.\n\nSARAH\nYou always say that.\n(softening)\nBut I appreciate it.\n\nJOHN\n(smiling)\nI know you do.\n"
+}

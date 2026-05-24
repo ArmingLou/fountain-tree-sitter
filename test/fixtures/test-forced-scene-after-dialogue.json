@@ -1,0 +1,71 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "dialogue_block",
+      "children": [
+        {
+          "type": "character",
+          "children": [],
+          "text": "STEEL\n"
+        },
+        {
+          "type": "dialogue_line_start",
+          "children": [],
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "They're coming out of the woodwork!"
+            }
+          ],
+          "text": "They're coming out of the woodwork!\n"
+        }
+      ],
+      "text": "STEEL\nThey're coming out of the woodwork!\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "SNIPER SCOPE POV"
+            }
+          ],
+          "text": ".SNIPER SCOPE POV\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "From what seems like only "
+            },
+            {
+              "type": "uppercase_text",
+              "children": [],
+              "text": "INCHES AWAY"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "."
+            }
+          ],
+          "text": "From what seems like only INCHES AWAY.\n"
+        }
+      ],
+      "text": ".SNIPER SCOPE POV\n\nFrom what seems like only INCHES AWAY.\n"
+    }
+  ],
+  "text": "STEEL\nThey're coming out of the woodwork!\n\n.SNIPER SCOPE POV\n\nFrom what seems like only INCHES AWAY.\n"
+}

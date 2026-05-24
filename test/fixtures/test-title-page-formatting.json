@@ -1,0 +1,103 @@
+{
+  "type": "document",
+  "children": [
+    {
+      "type": "title_page",
+      "children": [
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key",
+              "children": [],
+              "text": "Title:"
+            },
+            {
+              "type": "title_continuation",
+              "children": [],
+              "text": "    _**BRICK & STEEL**_"
+            },
+            {
+              "type": "title_continuation",
+              "children": [],
+              "text": "    _**FULL RETIRED**_"
+            }
+          ],
+          "text": "Title:\n    _**BRICK & STEEL**_\n    _**FULL RETIRED**_\n"
+        },
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key_with_space",
+              "children": [],
+              "text": "Credit: "
+            },
+            {
+              "type": "description",
+              "children": [],
+              "text": "Written by"
+            }
+          ],
+          "text": "Credit: Written by\n"
+        },
+        {
+          "type": "title_page_field",
+          "children": [
+            {
+              "type": "title_key_with_space",
+              "children": [],
+              "text": "Author: "
+            },
+            {
+              "type": "description",
+              "children": [],
+              "text": "Stu Maschwitz"
+            }
+          ],
+          "text": "Author: Stu Maschwitz\n\n"
+        }
+      ],
+      "text": "Title:\n    _**BRICK & STEEL**_\n    _**FULL RETIRED**_\nCredit: Written by\nAuthor: Stu Maschwitz\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "INT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "HOUSE "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " DAY"
+            }
+          ],
+          "text": "INT. HOUSE - DAY\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "A scene begins."
+            }
+          ],
+          "text": "A scene begins.\n"
+        }
+      ],
+      "text": "INT. HOUSE - DAY\n\nA scene begins.\n"
+    }
+  ],
+  "text": "Title:\n    _**BRICK & STEEL**_\n    _**FULL RETIRED**_\nCredit: Written by\nAuthor: Stu Maschwitz\n\nINT. HOUSE - DAY\n\nA scene begins.\n"
+}
