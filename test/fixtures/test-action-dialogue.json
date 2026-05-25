@@ -102,31 +102,15 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(appearing from nowhere)\n"
+              "text": "(appearing from nowhere)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Nice reflexes."
-                }
-              ],
-              "text": "Nice reflexes.\n"
+              "text": "Nice reflexes."
             }
           ],
-          "text": "BRICK\n(appearing from nowhere)\nNice reflexes.\n"
+          "text": "BRICK\n(appearing from nowhere)\nNice reflexes.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -139,31 +123,15 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(defensive)\n"
+              "text": "(defensive)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": "I "
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "wasn't paying attention."
-                }
-              ],
-              "text": "wasn't paying attention.\n"
+              "text": "I wasn't paying attention."
             }
           ],
-          "text": "STEEL\n(defensive)\nI wasn't paying attention.\n"
+          "text": "STEEL\n(defensive)\nI wasn't paying attention.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -176,58 +144,25 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Sure you weren't."
-                }
-              ],
-              "text": "Sure you weren't.\n"
+              "text": "Sure you weren't."
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(grinning)\n"
+              "text": "(grinning)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "Let's get coffee."
             },
             {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Let's get coffee."
-                }
-              ],
-              "text": "Let's get coffee.\n"
-            }
-          ],
-          "text": "BRICK\nSure you weren't.\n(grinning)\nLet's get coffee.\n"
-        },
-        {
-          "type": "action",
-          "children": [
-            {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "They walk off together, leaving the empty street behind."
             }
           ],
-          "text": "They walk off together, leaving the empty street behind.\n"
+          "text": "BRICK\nSure you weren't.\n(grinning)\nLet's get coffee.\n\nThey walk off together, leaving the empty street behind.\n"
         }
       ],
       "text": "EXT. CITY STREET - DAY\n\nSteel walks down the street, hands in his pockets.\n\nHe stops at a corner.\nLooks both ways.\nCrosses carefully.\n\n!STEEL TRIPS OVER A CRACK\n\nHe catches himself and looks around embarrassed.\n\nBRICK\n(appearing from nowhere)\nNice reflexes.\n\nSTEEL\n(defensive)\nI wasn't paying attention.\n\nBRICK\nSure you weren't.\n(grinning)\nLet's get coffee.\n\nThey walk off together, leaving the empty street behind.\n"

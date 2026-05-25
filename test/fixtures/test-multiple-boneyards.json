@@ -44,18 +44,7 @@
         {
           "type": "dialogue_line_start",
           "children": [],
-          "text": ""
-        },
-        {
-          "type": "dialogue",
-          "children": [
-            {
-              "type": "text",
-              "children": [],
-              "text": "Hello there."
-            }
-          ],
-          "text": "Hello there.\n"
+          "text": "Hello there."
         }
       ],
       "text": "COGNITO\nHello there.\n"

@@ -140,48 +140,12 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(explaining)\n"
+              "text": "(explaining)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": "I"
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "n "
-                },
-                {
-                  "type": "uppercase_text",
-                  "children": [],
-                  "text": "PIE"
-                },
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": ": "
-                },
-                {
-                  "type": "escaped_char",
-                  "children": [],
-                  "text": "\\*"
-                },
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Wékʷos kleutōr!"
-                }
-              ],
-              "text": "n PIE: \\*Wékʷos kleutōr!\n"
+              "text": "In PIE: \\*Wékʷos kleutōr!"
             }
           ],
           "text": "LINGUIST\n(explaining)\nIn PIE: \\*Wékʷos kleutōr!\n"

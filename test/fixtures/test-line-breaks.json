@@ -69,43 +69,20 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "Ten."
             },
             {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Ten."
-                }
-              ],
-              "text": "Ten.\n"
-            }
-          ],
-          "text": "DEALER\nTen.\n"
-        },
-        {
-          "type": "action",
-          "children": [
-            {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "Four."
-            }
-          ],
-          "text": "Four.\n\n"
-        },
-        {
-          "type": "action",
-          "children": [
+            },
             {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "Hit or stand sir?"
             }
           ],
-          "text": "Hit or stand sir?\n\n"
+          "text": "DEALER\nTen.\n\nFour.\n\nHit or stand sir?\n\n"
         },
         {
           "type": "dialogue_block",
@@ -118,64 +95,30 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(nervous)\n"
+              "text": "(nervous)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "Stand."
             },
             {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Stand."
-                }
-              ],
-              "text": "Stand.\n"
-            }
-          ],
-          "text": "GAMBLER\n(nervous)\nStand.\n"
-        },
-        {
-          "type": "action",
-          "children": [
-            {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "They look at each other in silence."
-            }
-          ],
-          "text": "They look at each other in silence.\n\n"
-        },
-        {
-          "type": "action",
-          "children": [
+            },
             {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "The tension builds."
-            }
-          ],
-          "text": "The tension builds.\n\n"
-        },
-        {
-          "type": "action",
-          "children": [
+            },
             {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "The dealer reveals the card."
             }
           ],
-          "text": "The dealer reveals the card.\n"
+          "text": "GAMBLER\n(nervous)\nStand.\n\nThey look at each other in silence.\n\nThe tension builds.\n\nThe dealer reveals the card.\n"
         }
       ],
       "text": "INT. CASINO - NIGHT\n\nDEALER\nTen.\n\nFour.\n\nHit or stand sir?\n\nGAMBLER\n(nervous)\nStand.\n\nThey look at each other in silence.\n\nThe tension builds.\n\nThe dealer reveals the card.\n"

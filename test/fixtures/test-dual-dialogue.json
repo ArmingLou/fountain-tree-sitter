@@ -36,86 +36,35 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Where were you on the night of the 15th?"
-                }
-              ],
-              "text": "Where were you on the night of the 15th?\n"
-            }
-          ],
-          "text": "DETECTIVE MORSE\nWhere were you on the night of the 15th?\n"
-        },
-        {
-          "type": "dialogue_block",
-          "children": [
-            {
-              "type": "character",
-              "children": [],
-              "text": "SUSPECT ^\n"
+              "text": "Where were you on the night of the 15th?"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "I was at home."
-                }
-              ],
-              "text": "I was at home.\n"
-            }
-          ],
-          "text": "SUSPECT ^\nI was at home.\n"
-        },
-        {
-          "type": "dialogue_block",
-          "children": [
-            {
-              "type": "character",
-              "children": [],
-              "text": "DETECTIVE MORSE ^\n"
+              "text": "SUSPECT ^"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "I was at home."
             },
             {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "That's not what your neighbor said."
-                }
-              ],
-              "text": "That's not what your neighbor said.\n"
-            }
-          ],
-          "text": "DETECTIVE MORSE ^\nThat's not what your neighbor said.\n"
-        },
-        {
-          "type": "action",
-          "children": [
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": "DETECTIVE MORSE ^"
+            },
             {
-              "type": "text",
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": "That's not what your neighbor said."
+            },
+            {
+              "type": "dialogue_line_start",
               "children": [],
               "text": "They lock eyes, neither backing down."
             }
           ],
-          "text": "They lock eyes, neither backing down.\n\n"
+          "text": "DETECTIVE MORSE\nWhere were you on the night of the 15th?\n\nSUSPECT ^\nI was at home.\n\nDETECTIVE MORSE ^\nThat's not what your neighbor said.\n\nThey lock eyes, neither backing down.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -128,59 +77,25 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Screw retirement."
-                }
-              ],
-              "text": "Screw retirement.\n"
-            }
-          ],
-          "text": "BRICK\nScrew retirement.\n"
-        },
-        {
-          "type": "dialogue_block",
-          "children": [
-            {
-              "type": "character",
-              "children": [],
-              "text": "STEEL ^\n"
+              "text": "Screw retirement."
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "STEEL ^"
             },
             {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Screw retirement."
-                }
-              ],
-              "text": "Screw retirement.\n"
-            }
-          ],
-          "text": "STEEL ^\nScrew retirement.\n"
-        },
-        {
-          "type": "action",
-          "children": [
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": "Screw retirement."
+            },
             {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "The room falls silent."
             }
           ],
-          "text": "The room falls silent.\n"
+          "text": "BRICK\nScrew retirement.\n\nSTEEL ^\nScrew retirement.\n\nThe room falls silent.\n"
         }
       ],
       "text": "INT. INTERROGATION ROOM - NIGHT\n\nDETECTIVE MORSE\nWhere were you on the night of the 15th?\n\nSUSPECT ^\nI was at home.\n\nDETECTIVE MORSE ^\nThat's not what your neighbor said.\n\nThey lock eyes, neither backing down.\n\nBRICK\nScrew retirement.\n\nSTEEL ^\nScrew retirement.\n\nThe room falls silent.\n"

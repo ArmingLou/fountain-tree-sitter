@@ -12,21 +12,10 @@
         {
           "type": "dialogue_line_start",
           "children": [],
-          "text": ""
-        },
-        {
-          "type": "dialogue",
-          "children": [
-            {
-              "type": "text",
-              "children": [],
-              "text": "They're coming out of the woodwork!"
-            }
-          ],
-          "text": "They're coming out of the woodwork!\n"
+          "text": "They're coming out of the woodwork!"
         }
       ],
-      "text": "STEEL\nThey're coming out of the woodwork!\n"
+      "text": "STEEL\nThey're coming out of the woodwork!\n\n"
     },
     {
       "type": "scene_block",
@@ -34,6 +23,11 @@
         {
           "type": "scene_heading",
           "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "."
+            },
             {
               "type": "scene_location",
               "children": [],

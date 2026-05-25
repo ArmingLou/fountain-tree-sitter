@@ -1,7 +1,7 @@
-[
- (action)
- (dialogue)
-] @spell
+;; Fountain 语法高亮定义
+
+(dialogue) @string
+(action) @text
 
 ;; Emphasis in dialogue and action (bold but same color)
 (italic) @emphasis.strong
@@ -13,52 +13,55 @@
 (uppercase_text) @emphasis.strong
 (action (uppercase_text) @emphasis.strong)
 
-(parenthetical) @comment.doc
+(parenthetical) @type
 
 ;; Title page - subtle highlighting
 (title_key) @keyword
 
 ;; Character names
-(character) @label
+(character) @number
 
 ;; Transitions (normal and forced >)
-(transition) @keyword
-(forced_transition_start) @keyword
+(transition) @attribute
+(forced_transition_start) @comment
 
 ;; Scene headings with scene numbers
-(scene_start) @keyword
-(scene_location) @emphasis.strong
-(scene_time) @string.special
-(scene_number) @number
+(scene_heading) @keyword
+(scene_start) @function
+(scene_location) @keyword
+(scene_time) @function
+(scene_number) @attribute
 
 ;; Section headings (# markers)
-(section_start) @punctuation.special
-(section_heading (description) @emphasis.strong)
+(section_heading) @constant
+(section_start) @comment
 
 ;; Notes [[text]]
-(note_start) @punctuation.bracket
+(note) @comment
+(note_start) @comment
 (note_content) @comment
 
 ;; Forced elements
-(forced_action_start) @operator
-(forced_character_start) @operator
+(forced_action_start) @comment
+(forced_character_start) @comment
 
 ;; Lyrics ~text
-(lyric_start) @operator
+(lyric_start) @type
 (lyric) @string.special
 
 ;; Centered text >text<
-(centered_start) @operator
-(centered) @emphasis
+(centered_start) @comment
+(centered) @type
+(centered_end) @comment
 
 ;; Page breaks ===
-(page_break) @punctuation.special
-(page_break_marker) @punctuation.special
+(page_break) @keyword
+(page_break_marker) @keyword
 
 ;; Synopses = text
-(synopsis_start) @operator
+(synopsis_start) @comment
 (synopsis) @comment.doc
 
 ;; Boneyard /* ... */
-(boneyard_start) @comment
 (boneyard) @comment
+(boneyard_start) @comment

@@ -36,31 +36,15 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(frustrated!)\n"
+              "text": "(frustrated!)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Perfect!"
-                }
-              ],
-              "text": "Perfect!\n"
+              "text": "Perfect!"
             }
           ],
-          "text": "MAYA\n(frustrated!)\nPerfect!\n"
+          "text": "MAYA\n(frustrated!)\nPerfect!\n\n"
         },
         {
           "type": "dialogue_block",
@@ -73,31 +57,15 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(laughing!)\n"
+              "text": "(laughing!)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "What happened?"
-                }
-              ],
-              "text": "What happened?\n"
+              "text": "What happened?"
             }
           ],
-          "text": "JAMES\n(laughing!)\nWhat happened?\n"
+          "text": "JAMES\n(laughing!)\nWhat happened?\n\n"
         },
         {
           "type": "dialogue_block",
@@ -110,28 +78,12 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(suddenly decisive!)\n"
+              "text": "(suddenly decisive!)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Let's go!"
-                }
-              ],
-              "text": "Let's go!\n"
+              "text": "Let's go!"
             }
           ],
           "text": "MAYA\n(suddenly decisive!)\nLet's go!\n"

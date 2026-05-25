@@ -36,64 +36,25 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Screw retirement."
-                }
-              ],
-              "text": "Screw retirement.\n"
-            }
-          ],
-          "text": "BRICK ^\nScrew retirement.\n"
-        },
-        {
-          "type": "dialogue_block",
-          "children": [
-            {
-              "type": "character",
-              "children": [],
-              "text": "STEEL ^\n"
+              "text": "Screw retirement."
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "STEEL ^"
             },
             {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "That's what "
-                },
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "I've been saying!"
-                }
-              ],
-              "text": "That's what I've been saying!\n"
-            }
-          ],
-          "text": "STEEL ^\nThat's what I've been saying!\n"
-        },
-        {
-          "type": "action",
-          "children": [
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": "That's what I've been saying!"
+            },
             {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "Regular action line here."
             }
           ],
-          "text": "Regular action line here.\n"
+          "text": "BRICK ^\nScrew retirement.\n\nSTEEL ^\nThat's what I've been saying!\n\nRegular action line here.\n"
         }
       ],
       "text": "INT. APARTMENT - DAY\n\nBRICK ^\nScrew retirement.\n\nSTEEL ^\nThat's what I've been saying!\n\nRegular action line here.\n"

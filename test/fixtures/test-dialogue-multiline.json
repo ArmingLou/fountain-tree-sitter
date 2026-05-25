@@ -36,58 +36,20 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "When "
-                },
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "I was young, things were different."
-                }
-              ],
-              "text": "When I was young, things were different.\n"
+              "text": "When I was young, things were different."
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "We didn't have all these gadgets."
-                }
-              ],
-              "text": "We didn't have all these gadgets.\n"
+              "text": "We didn't have all these gadgets."
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "We talked to each other, face to face."
-                }
-              ],
-              "text": "We talked to each other, face to face.\n"
+              "text": "We talked to each other, face to face."
             }
           ],
-          "text": "ELDERLY MAN\nWhen I was young, things were different.\nWe didn't have all these gadgets.\nWe talked to each other, face to face.\n"
+          "text": "ELDERLY MAN\nWhen I was young, things were different.\nWe didn't have all these gadgets.\nWe talked to each other, face to face.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -100,31 +62,15 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(listening intently)\n"
+              "text": "(listening intently)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Tell me more about that time."
-                }
-              ],
-              "text": "Tell me more about that time.\n"
+              "text": "Tell me more about that time."
             }
           ],
-          "text": "YOUNG WOMAN\n(listening intently)\nTell me more about that time.\n"
+          "text": "YOUNG WOMAN\n(listening intently)\nTell me more about that time.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -137,69 +83,25 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Well, for starters..."
-                }
-              ],
-              "text": "Well, for starters...\n"
+              "text": "Well, for starters..."
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "We used to write letters."
-                }
-              ],
-              "text": "We used to write letters.\n"
+              "text": "We used to write letters."
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Real letters, with pen and paper."
-                }
-              ],
-              "text": "Real letters, with pen and paper.\n"
+              "text": "Real letters, with pen and paper."
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Can you imagine that?"
-                }
-              ],
-              "text": "Can you imagine that?\n"
+              "text": "Can you imagine that?"
             }
           ],
-          "text": "ELDERLY MAN\nWell, for starters...\nWe used to write letters.\nReal letters, with pen and paper.\nCan you imagine that?\n"
+          "text": "ELDERLY MAN\nWell, for starters...\nWe used to write letters.\nReal letters, with pen and paper.\nCan you imagine that?\n\n"
         },
         {
           "type": "dialogue_block",
@@ -212,18 +114,7 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "That sounds lovely."
-                }
-              ],
-              "text": "That sounds lovely.\n"
+              "text": "That sounds lovely."
             }
           ],
           "text": "YOUNG WOMAN\nThat sounds lovely.\n"

@@ -29,31 +29,34 @@ module.exports = grammar({
   rules: {
     document: $ => seq(
       optional($.title_page),
-      repeat($._element)
+      repeat(seq(
+        optional($.blank_line),
+        $._element
+      ))
     ),
 
     // Title page: consume all key:value pairs and indented lines
     // until we hit a blank line or EOF or a scene/section start
     title_page: $ => prec(20, repeat1($.title_page_field)),
 
-    // Top-level elements: sections, scenes, and standalone items
+    // Top-level elements: order matters! scene/section/character/transition before action
     _element: $ => choice(
       $.section_block,
       $.scene_block,
       $.dialogue_block,
-      $.action,
       $.transition,
-      $.centered,
+      $.note,
+      $.synopsis,
       $.lyric,
+      $.centered,
       $.boneyard,
       $.page_break,
-      $.synopsis,
-      $.note
+      $.action  // Action LAST - it's the fallback
     ),
 
     // Section block: section heading followed by scenes and content
     // Continues until the next section heading or EOF
-    section_block: $ => prec.right(seq(
+    section_block: $ => prec(8, seq(  // Highest precedence for top-level elements
       $.section_heading,
       repeat(choice(
         $.scene_block,
@@ -77,6 +80,7 @@ module.exports = grammar({
 
     // Content that can appear within a scene
     _scene_content: $ => choice(
+      $.blank_line,
       $.dialogue_block,
       $.action,
       $.transition,
@@ -115,7 +119,7 @@ module.exports = grammar({
       ' '
     ))),
 
-    scene_heading: $ => prec(5, choice(
+    scene_heading: $ => prec(7, choice(  // Higher precedence than action (4)
       seq(
         $.scene_start,
         optional(' '),
@@ -151,11 +155,13 @@ module.exports = grammar({
     ),
 
     character: $ => choice(
+      // Standard character: uppercase name, must be after blank line (handled by grammar context)
       token(seq(
-        /[A-Z][A-Z0-9 \(\)\.']*[A-Z0-9\)\.]/,  // Character name - all caps, can have spaces, must end with letter/digit/paren/period
-        optional(/ \^/),  // optional dual dialogue marker with single space
-        /\n/  // Must be immediately followed by newline (no colon allowed)
+        /[A-Z][A-Z0-9 \(\)\.']*[A-Z0-9\)\.]/,
+        optional(/ \^/),
+        /\n/
       )),
+      // Forced character (@): must follow blank line for proper parsing
       seq(
         $.forced_character_start,
         /[^\n]+/,
@@ -166,13 +172,7 @@ module.exports = grammar({
 
     dialogue_block: $ => prec(5, seq(
       $.character,
-      repeat(seq(
-        $.dialogue_line_start,  // Must be a non-blank line
-        choice(
-          prec(10, $.parenthetical),  // Higher precedence: parenthetical first
-          prec(5, $.dialogue)          // Normal precedence: dialogue
-        )
-      ))
+      repeat(seq($.dialogue_line_start, '\n'))
     )),
 
     dialogue: $ => prec.right(seq(
@@ -189,7 +189,7 @@ module.exports = grammar({
       '\n'
     )),
 
-    action: $ => prec(6, choice(
+    action: $ => prec(1, choice(  // Lowest precedence - action is fallback
       seq(
         $.forced_action_start,
         /[^\n]+/,
@@ -201,7 +201,7 @@ module.exports = grammar({
       )
     )),
 
-    transition: $ => prec(3, choice(
+    transition: $ => prec(6, choice(  // Higher than action (1), lower than scene_heading (7)
       seq(
         $.forced_transition_start,
         /[^\n]+/,
@@ -213,13 +213,13 @@ module.exports = grammar({
       )
     )),
 
-    section_heading: $ => prec(5, seq(
+    section_heading: $ => prec(7, seq(
       $.section_start,
       optional(seq(' ', $.description)),
       '\n'
     )),
 
-    note: $ => prec(1, seq(  // Lower precedence so dialogue takes priority inside dialogue_block
+    note: $ => prec(2, seq(  // Higher precedence than action (prec 1)
       $.note_start,
       $.note_content,
       ']]',
@@ -346,8 +346,8 @@ module.exports = grammar({
 
     // Regular text - everything else
     // Matches: lowercase, digits, punctuation, title-case words (capital + lowercase+)
-    // Excludes: parentheses (for parentheticals), emphasis markers, backslash (for escaped chars)
-    text: $ => /[^A-Z*_\n()\\]+|[A-Z][^A-Z*_\n()\\]+/,
+    // Excludes: parentheses, emphasis markers, backslash, @ (for forced character)
+    text: $ => /[^A-Z*_\n()\\@]+|[A-Z][^A-Z*_\n()\\@]+/,
 
     line: $ => token(prec(-1, /[^\n]+/)),  // Lower precedence so specific patterns match first
 

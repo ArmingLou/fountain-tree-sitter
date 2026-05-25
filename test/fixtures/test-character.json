@@ -47,32 +47,15 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "Hello, world!"
             },
             {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Hello, world!"
-                }
-              ],
-              "text": "Hello, world!\n"
-            }
-          ],
-          "text": "JOHN\nHello, world!\n"
-        },
-        {
-          "type": "action",
-          "children": [
-            {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "Character with extension."
             }
           ],
-          "text": "Character with extension.\n\n"
+          "text": "JOHN\nHello, world!\n\nCharacter with extension.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -85,32 +68,15 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "Dinner's ready!"
             },
             {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Dinner's ready!"
-                }
-              ],
-              "text": "Dinner's ready!\n"
-            }
-          ],
-          "text": "MOM (O.S.)\nDinner's ready!\n"
-        },
-        {
-          "type": "action",
-          "children": [
-            {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "Character with parenthetical."
             }
           ],
-          "text": "Character with parenthetical.\n\n"
+          "text": "MOM (O.S.)\nDinner's ready!\n\nCharacter with parenthetical.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -123,42 +89,20 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(whispering)\n"
+              "text": "(whispering)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "Don't tell anyone."
             },
             {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Don't tell anyone."
-                }
-              ],
-              "text": "Don't tell anyone.\n"
-            }
-          ],
-          "text": "SARAH\n(whispering)\nDon't tell anyone.\n"
-        },
-        {
-          "type": "action",
-          "children": [
-            {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "Multiple characters in sequence."
             }
           ],
-          "text": "Multiple characters in sequence.\n\n"
+          "text": "SARAH\n(whispering)\nDon't tell anyone.\n\nMultiple characters in sequence.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -171,21 +115,10 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "What happened here?"
-                }
-              ],
-              "text": "What happened here?\n"
+              "text": "What happened here?"
             }
           ],
-          "text": "DETECTIVE\nWhat happened here?\n"
+          "text": "DETECTIVE\nWhat happened here?\n\n"
         },
         {
           "type": "dialogue_block",
@@ -198,32 +131,15 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "I saw everything."
             },
             {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "I saw everything."
-                }
-              ],
-              "text": "I saw everything.\n"
-            }
-          ],
-          "text": "WITNESS\nI saw everything.\n"
-        },
-        {
-          "type": "action",
-          "children": [
-            {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "Character with mixed case forced."
             }
           ],
-          "text": "Character with mixed case forced.\n\n"
+          "text": "WITNESS\nI saw everything.\n\nCharacter with mixed case forced.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -242,42 +158,15 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "Yippee-ki-yay!"
             },
             {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Yippee-ki-yay!"
-                }
-              ],
-              "text": "Yippee-ki-yay!\n"
+              "type": "dialogue_line_start",
+              "children": [],
+              "text": "Character must be uppercase (testing R2D2)."
             }
           ],
-          "text": "@McCLANE\nYippee-ki-yay!\n"
-        },
-        {
-          "type": "action",
-          "children": [
-            {
-              "type": "text",
-              "children": [],
-              "text": "Character must be uppercase "
-            },
-            {
-              "type": "paren_text",
-              "children": [],
-              "text": "(testing R2D2)"
-            },
-            {
-              "type": "text",
-              "children": [],
-              "text": "."
-            }
-          ],
-          "text": "Character must be uppercase (testing R2D2).\n\n"
+          "text": "@McCLANE\nYippee-ki-yay!\n\nCharacter must be uppercase (testing R2D2).\n\n"
         },
         {
           "type": "dialogue_block",
@@ -290,32 +179,15 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "Beep boop!"
             },
             {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Beep boop!"
-                }
-              ],
-              "text": "Beep boop!\n"
-            }
-          ],
-          "text": "R2D2\nBeep boop!\n"
-        },
-        {
-          "type": "action",
-          "children": [
-            {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "Character with uppercase extension."
             }
           ],
-          "text": "Character with uppercase extension.\n\n"
+          "text": "R2D2\nBeep boop!\n\nCharacter with uppercase extension.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -328,32 +200,15 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
+              "text": "Everything is going according to plan."
             },
             {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Everything is going according to plan."
-                }
-              ],
-              "text": "Everything is going according to plan.\n"
-            }
-          ],
-          "text": "HANS (ON THE RADIO)\nEverything is going according to plan.\n"
-        },
-        {
-          "type": "action",
-          "children": [
-            {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "Character with voice over extension."
             }
           ],
-          "text": "Character with voice over extension.\n\n"
+          "text": "HANS (ON THE RADIO)\nEverything is going according to plan.\n\nCharacter with voice over extension.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -366,18 +221,7 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "This is your captain speaking."
-                }
-              ],
-              "text": "This is your captain speaking.\n"
+              "text": "This is your captain speaking."
             }
           ],
           "text": "CAPTAIN (V.O.)\nThis is your captain speaking.\n"

@@ -177,7 +177,7 @@ for (const testName of fountainFiles) {
 
     // Parse the fountain file using tree-sitter CLI
     // Use an explicit tree-sitter CLI package to avoid local PNPM path issues
-    const { stdout } = await execAsync(`npx --yes tree-sitter-cli@0.25.10 parse "${fountainPath}" 2>&1`);
+    const { stdout } = await execAsync(`npx tree-sitter parse "${fountainPath}" 2>&1`);
 
     // Parse the tree-sitter output into AST with text content
     const actual = parseTreeSitterOutput(stdout, sourceText);

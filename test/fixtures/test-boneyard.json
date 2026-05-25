@@ -68,28 +68,12 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(sipping coffee)\n"
+              "text": "(sipping coffee)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "This is good."
-                }
-              ],
-              "text": "This is good.\n"
+              "text": "This is good."
             }
           ],
           "text": "BRICK\n(sipping coffee)\nThis is good.\n"

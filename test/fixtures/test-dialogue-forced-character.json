@@ -42,21 +42,10 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Yippee-ki-yay!"
-                }
-              ],
-              "text": "Yippee-ki-yay!\n"
+              "text": "Yippee-ki-yay!"
             }
           ],
-          "text": "@McCLANE\nYippee-ki-yay!\n"
+          "text": "@McCLANE\nYippee-ki-yay!\n\n"
         },
         {
           "type": "dialogue_block",
@@ -69,63 +58,32 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
+              "text": "Mr. McClane, how nice to hear from you."
+            }
+          ],
+          "text": "HANS GRUBER\nMr. McClane, how nice to hear from you.\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
             {
-              "type": "dialogue",
+              "type": "character",
               "children": [
                 {
-                  "type": "text",
+                  "type": "forced_character_start",
                   "children": [],
-                  "text": "Mr. "
-                },
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Mc"
-                },
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Clane, how nice to hear from you."
+                  "text": "@"
                 }
               ],
-              "text": "Mr. McClane, how nice to hear from you.\n"
-            }
-          ],
-          "text": "HANS GRUBER\nMr. McClane, how nice to hear from you.\n"
-        },
-        {
-          "type": "action",
-          "children": [
-            {
-              "type": "text",
-              "children": [],
-              "text": "@"
+              "text": "@R2-D2\n"
             },
             {
-              "type": "text",
-              "children": [],
-              "text": "R2-"
-            },
-            {
-              "type": "text",
-              "children": [],
-              "text": "D2"
-            }
-          ],
-          "text": "@R2-D2\n"
-        },
-        {
-          "type": "action",
-          "children": [
-            {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "Beep boop beep!"
             }
           ],
-          "text": "Beep boop beep!\n\n"
+          "text": "@R2-D2\nBeep boop beep!\n\n"
         },
         {
           "type": "dialogue_block",
@@ -144,18 +102,7 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Oh my, what did you say?"
-                }
-              ],
-              "text": "Oh my, what did you say?\n"
+              "text": "Oh my, what did you say?"
             }
           ],
           "text": "@3PO\nOh my, what did you say?\n"

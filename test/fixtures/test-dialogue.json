@@ -47,21 +47,10 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "I can't believe you did that!"
-                }
-              ],
-              "text": "I can't believe you did that!\n"
+              "text": "I can't believe you did that!"
             }
           ],
-          "text": "SARAH\nI can't believe you did that!\n"
+          "text": "SARAH\nI can't believe you did that!\n\n"
         },
         {
           "type": "dialogue_block",
@@ -74,26 +63,10 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "What was "
-                },
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "I supposed to do?"
-                }
-              ],
-              "text": "What was I supposed to do?\n"
+              "text": "What was I supposed to do?"
             }
           ],
-          "text": "JOHN\nWhat was I supposed to do?\n"
+          "text": "JOHN\nWhat was I supposed to do?\n\n"
         },
         {
           "type": "dialogue_block",
@@ -106,31 +79,15 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(angry)\n"
+              "text": "(angry)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Tell the truth!"
-                }
-              ],
-              "text": "Tell the truth!\n"
+              "text": "Tell the truth!"
             }
           ],
-          "text": "SARAH\n(angry)\nTell the truth!\n"
+          "text": "SARAH\n(angry)\nTell the truth!\n\n"
         },
         {
           "type": "dialogue_block",
@@ -143,31 +100,15 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(defensively)\n"
+              "text": "(defensively)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": "I "
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "was trying to protect you."
-                }
-              ],
-              "text": "was trying to protect you.\n"
+              "text": "I was trying to protect you."
             }
           ],
-          "text": "JOHN\n(defensively)\nI was trying to protect you.\n"
+          "text": "JOHN\n(defensively)\nI was trying to protect you.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -180,52 +121,20 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "You always say that."
-                }
-              ],
-              "text": "You always say that.\n"
+              "text": "You always say that."
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(softening)\n"
+              "text": "(softening)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "But "
-                },
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "I appreciate it."
-                }
-              ],
-              "text": "But I appreciate it.\n"
+              "text": "But I appreciate it."
             }
           ],
-          "text": "SARAH\nYou always say that.\n(softening)\nBut I appreciate it.\n"
+          "text": "SARAH\nYou always say that.\n(softening)\nBut I appreciate it.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -238,28 +147,12 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(smiling)\n"
+              "text": "(smiling)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": "I "
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "know you do."
-                }
-              ],
-              "text": "know you do.\n"
+              "text": "I know you do."
             }
           ],
           "text": "JOHN\n(smiling)\nI know you do.\n"

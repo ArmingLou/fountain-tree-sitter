@@ -52,47 +52,47 @@
             }
           ],
           "text": "= Steel and Brick meet for the first time.\n\n"
-        },
-        {
-          "type": "scene_block",
-          "children": [
-            {
-              "type": "scene_heading",
-              "children": [
-                {
-                  "type": "scene_start",
-                  "children": [],
-                  "text": "EXT."
-                },
-                {
-                  "type": "scene_location",
-                  "children": [],
-                  "text": "COFFEE SHOP "
-                },
-                {
-                  "type": "scene_time",
-                  "children": [],
-                  "text": " MORNING"
-                }
-              ],
-              "text": "EXT. COFFEE SHOP - MORNING\n\n"
-            },
-            {
-              "type": "action",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Steel walks in nervously."
-                }
-              ],
-              "text": "Steel walks in nervously.\n\n"
-            }
-          ],
-          "text": "EXT. COFFEE SHOP - MORNING\n\nSteel walks in nervously.\n\n"
         }
       ],
-      "text": "## THE BEGINNING\n\n= Steel and Brick meet for the first time.\n\nEXT. COFFEE SHOP - MORNING\n\nSteel walks in nervously.\n\n"
+      "text": "## THE BEGINNING\n\n= Steel and Brick meet for the first time.\n\n"
+    },
+    {
+      "type": "scene_block",
+      "children": [
+        {
+          "type": "scene_heading",
+          "children": [
+            {
+              "type": "scene_start",
+              "children": [],
+              "text": "EXT."
+            },
+            {
+              "type": "scene_location",
+              "children": [],
+              "text": "COFFEE SHOP "
+            },
+            {
+              "type": "scene_time",
+              "children": [],
+              "text": " MORNING"
+            }
+          ],
+          "text": "EXT. COFFEE SHOP - MORNING\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Steel walks in nervously."
+            }
+          ],
+          "text": "Steel walks in nervously.\n\n"
+        }
+      ],
+      "text": "EXT. COFFEE SHOP - MORNING\n\nSteel walks in nervously.\n\n"
     },
     {
       "type": "section_block",
@@ -123,86 +123,55 @@
             }
           ],
           "text": "= The tension builds as they size each other up.\n\n"
+        }
+      ],
+      "text": "### First Encounter\n\n= The tension builds as they size each other up.\n\n"
+    },
+    {
+      "type": "dialogue_block",
+      "children": [
+        {
+          "type": "character",
+          "children": [],
+          "text": "STEEL\n"
         },
         {
-          "type": "dialogue_block",
-          "children": [
-            {
-              "type": "character",
-              "children": [],
-              "text": "STEEL\n"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "You must be "
-                },
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Brick."
-                }
-              ],
-              "text": "You must be Brick.\n"
-            }
-          ],
-          "text": "STEEL\nYou must be Brick.\n"
+          "type": "dialogue_line_start",
+          "children": [],
+          "text": "You must be Brick."
+        }
+      ],
+      "text": "STEEL\nYou must be Brick.\n\n"
+    },
+    {
+      "type": "dialogue_block",
+      "children": [
+        {
+          "type": "character",
+          "children": [],
+          "text": "BRICK\n"
         },
         {
-          "type": "dialogue_block",
-          "children": [
-            {
-              "type": "character",
-              "children": [],
-              "text": "BRICK\n"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "And you're "
-                },
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Steel. "
-                },
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "I've heard about you."
-                }
-              ],
-              "text": "And you're Steel. I've heard about you.\n"
-            }
-          ],
-          "text": "BRICK\nAnd you're Steel. I've heard about you.\n"
-        },
+          "type": "dialogue_line_start",
+          "children": [],
+          "text": "And you're Steel. I've heard about you."
+        }
+      ],
+      "text": "BRICK\nAnd you're Steel. I've heard about you.\n\n"
+    },
+    {
+      "type": "section_block",
+      "children": [
         {
-          "type": "action",
+          "type": "section_heading",
           "children": [
             {
-              "type": "text",
+              "type": "section_start",
               "children": [],
-              "text": "# "
+              "text": "#"
             },
             {
-              "type": "uppercase_text",
+              "type": "description",
               "children": [],
               "text": "ACT II"
             }
@@ -221,7 +190,7 @@
           "text": "= The partnership is tested.\n\n"
         }
       ],
-      "text": "### First Encounter\n\n= The tension builds as they size each other up.\n\nSTEEL\nYou must be Brick.\n\nBRICK\nAnd you're Steel. I've heard about you.\n\n# ACT II\n\n= The partnership is tested.\n\n"
+      "text": "# ACT II\n\n= The partnership is tested.\n\n"
     },
     {
       "type": "section_block",

@@ -47,80 +47,27 @@
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "They're coming out of the woodwork!"
-                }
-              ],
-              "text": "They're coming out of the woodwork!\n"
+              "text": "They're coming out of the woodwork!"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(pause)\n"
+              "text": "(pause)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "No, everybody we've put away!"
-                }
-              ],
-              "text": "No, everybody we've put away!\n"
+              "text": "No, everybody we've put away!"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "parenthetical",
-              "children": [],
-              "text": "(pause)\n"
+              "text": "(pause)"
             },
             {
               "type": "dialogue_line_start",
               "children": [],
-              "text": ""
-            },
-            {
-              "type": "dialogue",
-              "children": [
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Point "
-                },
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Blank "
-                },
-                {
-                  "type": "text",
-                  "children": [],
-                  "text": "Sniper?"
-                }
-              ],
-              "text": "Point Blank Sniper?\n"
+              "text": "Point Blank Sniper?"
             }
           ],
           "text": "STEEL\nThey're coming out of the woodwork!\n(pause)\nNo, everybody we've put away!\n(pause)\nPoint Blank Sniper?\n"

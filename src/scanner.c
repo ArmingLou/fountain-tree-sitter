@@ -137,7 +137,7 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
   }
 
   // Try forced transition or centered (>)
-  if (lexer->lookahead == '>') {
+  if ((valid_symbols[FORCED_TRANSITION_START] || valid_symbols[CENTERED_START]) && lexer->lookahead == '>') {
     lexer->advance(lexer, false);
     // Mark the end right after the '>' symbol
     lexer->mark_end(lexer);
@@ -206,12 +206,10 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
 
   // Try dialogue_line_start - matches if we're at the start of a non-blank line
   // This prevents dialogue from matching blank lines or lines after blank lines
-  // Consumes ALL leading whitespace so dialogue starts at the actual content
+  // Consumes the entire line content so the dialogue block can't extend past non-dialogue markers
   if (valid_symbols[DIALOGUE_LINE_START]) {
     // Count leading whitespace
-    int space_count = 0;
     while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-      space_count++;
       lexer->advance(lexer, false);
     }
 
@@ -220,8 +218,55 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
       return false;
     }
 
-    // Otherwise, it's a valid dialogue line start - all whitespace consumed
-    // Dialogue will match from current position (after whitespace)
+    // Check if this is a potential scene heading, section, or forced character
+    if (lexer->lookahead == '.' || lexer->lookahead == '#' || lexer->lookahead == '@') {
+      return false;
+    }
+
+    // Check if this line looks like a character name (all uppercase with valid chars)
+    // Character pattern: [A-Z][A-Z0-9 ()\\.']*[A-Z0-9)\\.]
+    // Reject so parent grammar can handle it as a new character starting a dialogue_block
+    {
+      int32_t first = lexer->lookahead;
+      if (first >= 'A' && first <= 'Z') {
+        // Scan the rest of the line to check character name pattern
+        // Must contain only character-valid chars and end with character-valid ending
+        bool all_valid_chars = true;
+        int32_t last_char = first;
+        int32_t ch;
+
+        // We need to peek ahead without permanently consuming
+        // Tree-sitter will rollback lexer position if we return false
+        lexer->advance(lexer, false);
+
+        while ((ch = lexer->lookahead) != '\n' && ch != '\0') {
+          last_char = ch;
+          if (!((ch >= 'A' && ch <= 'Z') ||
+                (ch >= '0' && ch <= '9') ||
+                ch == ' ' || ch == '(' || ch == ')' ||
+                ch == '.' || ch == '\'')) {
+            all_valid_chars = false;
+            break;
+          }
+          lexer->advance(lexer, false);
+        }
+
+        // Must end with uppercase letter, digit, ) or .
+        if (all_valid_chars &&
+            ((last_char >= 'A' && last_char <= 'Z') ||
+             (last_char >= '0' && last_char <= '9') ||
+             last_char == ')' || last_char == '.')) {
+          return false;  // Looks like a character name, reject
+        }
+      }
+    }
+
+    // Consume the entire line (but NOT the newline - grammar handles that)
+    while (lexer->lookahead != '\n' && lexer->lookahead != '\0') {
+      lexer->advance(lexer, false);
+    }
+
+    // It's a valid dialogue line - return the entire line content
     lexer->result_symbol = DIALOGUE_LINE_START;
     lexer->mark_end(lexer);
     return true;
@@ -242,12 +287,6 @@ if (valid_symbols[BLANK_LINE]) {
     // 2+ spaces means indented line, not blank
     if (space_count < 2 && lexer->lookahead == '\n') {
       lexer->advance(lexer, false);  // Consume the newline
-      lexer->result_symbol = BLANK_LINE;
-      lexer->mark_end(lexer);
-      return true;
-    }
-
-    if (space_count < 2 && lexer->lookahead == '\0') {
       lexer->result_symbol = BLANK_LINE;
       lexer->mark_end(lexer);
       return true;
