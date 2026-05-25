@@ -260,7 +260,7 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
     return true;
   }
 
-  // Try parenthetical_line - matches standalone (text) lines within dialogue blocks
+  // Try parenthetical_line - matches standalone (text) or （中文括号） lines within dialogue blocks
   // 如果空白行标志已设置，拒绝匹配以终止对话块
   if (valid_symbols[PARENTHETICAL_LINE]) {
     if (scanner->blank_seen_in_dialogue) {
@@ -271,17 +271,28 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
       lexer->advance(lexer, false);
     }
 
-    // Must start with '('
-    if (lexer->lookahead == '(') {
-      lexer->advance(lexer, false);  // consume '('
+    int32_t open_paren = 0;
+    int32_t close_paren = 0;
 
-      // Scan to find closing ')'
-      while (lexer->lookahead != ')' && lexer->lookahead != '\n' && lexer->lookahead != '\0') {
+    // 检查英文 () 或中文 （）
+    if (lexer->lookahead == '(') {
+      open_paren = '(';
+      close_paren = ')';
+    } else if (lexer->lookahead == 0xFF08) {  // U+FF08
+      open_paren = 0xFF08;
+      close_paren = 0xFF09;  // U+FF09
+    }
+
+    if (open_paren != 0) {
+      lexer->advance(lexer, false);  // consume open paren
+
+      // Scan to find closing paren
+      while (lexer->lookahead != close_paren && lexer->lookahead != '\n' && lexer->lookahead != '\0') {
         lexer->advance(lexer, false);
       }
 
-      if (lexer->lookahead == ')') {
-        lexer->advance(lexer, false);  // consume ')'
+      if (lexer->lookahead == close_paren) {
+        lexer->advance(lexer, false);  // consume close paren
 
         // Skip trailing whitespace
         while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
@@ -341,32 +352,43 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
         return false;
       }
 
-      // 检查是否是独立括号行：排除纯插入语 `(text)` 开头且行尾无其他内容的行
+      // 检查是否是独立括号行：排除纯插入语 `(text)` 或中文 `（text）` 开头且行尾无其他内容的行
       // 纯粹的插入语应由 parenthetical_line 规则匹配
       // 括号后有其他文字的行（如 `(停顿) 继续说话`）仍作为对话行处理
-      if (lexer->lookahead == '(') {
-        lexer->advance(lexer, false);  // 跳过 '('
-
-        // 扫描寻找匹配的 ')'
-        while (lexer->lookahead != ')' && lexer->lookahead != '\n' && lexer->lookahead != '\0') {
-          lexer->advance(lexer, false);
+      {
+        int32_t open_paren = 0;
+        int32_t close_paren = 0;
+        if (lexer->lookahead == '(') {
+          open_paren = '(';
+          close_paren = ')';
+    } else if (lexer->lookahead == 0xFF08) {  // fullwidth left parenthesis U+FF08
+      open_paren = 0xFF08;
+      close_paren = 0xFF09;  // fullwidth right parenthesis U+FF09
         }
+        if (open_paren != 0) {
+          lexer->advance(lexer, false);  // 跳过开括号
 
-        if (lexer->lookahead == ')') {
-          lexer->advance(lexer, false);  // 跳过 ')'
-
-          // 跳过尾部空格
-          while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
+          // 扫描寻找匹配的闭括号
+          while (lexer->lookahead != close_paren && lexer->lookahead != '\n' && lexer->lookahead != '\0') {
             lexer->advance(lexer, false);
           }
 
-          // 如果到行尾（\n 或 \0），这是纯插入语，拒绝以让语法层匹配 parenthetical
-          if (lexer->lookahead == '\n' || lexer->lookahead == '\0') {
-            return false;
+          if (lexer->lookahead == close_paren) {
+            lexer->advance(lexer, false);  // 跳过闭括号
+
+            // 跳过尾部空格
+            while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
+              lexer->advance(lexer, false);
+            }
+
+            // 如果到行尾（\n 或 \0），这是纯插入语，拒绝以让语法层匹配 parenthetical
+            if (lexer->lookahead == '\n' || lexer->lookahead == '\0') {
+              return false;
+            }
           }
+          // 不是纯插入语：括号后有其他内容 或 没有找到闭合括号
+          // 此时 lexer 已前进了若干字符，继续 fall through 消费剩余行
         }
-        // 不是纯插入语：括号后有其他内容 或 没有找到闭合括号
-        // 此时 lexer 已前进了若干字符，继续 fall through 消费剩余行
       }
 
       // Check if this line looks like a character name (all uppercase with valid chars)
