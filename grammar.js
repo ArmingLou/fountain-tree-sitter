@@ -152,7 +152,7 @@ module.exports = grammar({
 
     scene_number: $ => seq(
       '#',
-      /[A-Za-z0-9\-\.]+/,
+      /[^#\n]+/,
       '#'
     ),
 

@@ -87,9 +87,55 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
 
   // Try scene start (INT., EXT., etc. or forced scene heading with .) - this ends title page
   if (valid_symbols[SCENE_START]) {
-    // Check for forced scene heading (. followed by alphanumeric)
+    // Check for forced scene heading (. followed by alphanumeric or Chinese patterns)
     if (lexer->lookahead == '.') {
       lexer->advance(lexer, false);
+
+      // 检查中文特例：.(外景)、.(内景)、.(内外景)
+      if (lexer->lookahead == '(') {
+        lexer->advance(lexer, false);  // 消费 '('
+
+        if (lexer->lookahead == 0x5185) {  // '内'
+          lexer->advance(lexer, false);
+          if (lexer->lookahead == 0x5916) {  // '外' → 内外景
+            lexer->advance(lexer, false);
+            if (lexer->lookahead == 0x666F) {  // '景'
+              lexer->advance(lexer, false);
+              if (lexer->lookahead == ')') {
+                lexer->advance(lexer, false);
+                scanner->in_title_page = false;
+                lexer->result_symbol = SCENE_START;
+                lexer->mark_end(lexer);
+                return true;
+              }
+            }
+          } else if (lexer->lookahead == 0x666F) {  // '景' → 内景
+            lexer->advance(lexer, false);
+            if (lexer->lookahead == ')') {
+              lexer->advance(lexer, false);
+              scanner->in_title_page = false;
+              lexer->result_symbol = SCENE_START;
+              lexer->mark_end(lexer);
+              return true;
+            }
+          }
+        } else if (lexer->lookahead == 0x5916) {  // '外'
+          lexer->advance(lexer, false);
+          if (lexer->lookahead == 0x666F) {  // '景' → 外景
+            lexer->advance(lexer, false);
+            if (lexer->lookahead == ')') {
+              lexer->advance(lexer, false);
+              scanner->in_title_page = false;
+              lexer->result_symbol = SCENE_START;
+              lexer->mark_end(lexer);
+              return true;
+            }
+          }
+        }
+        // 非中文场景头，无法匹配
+        return false;
+      }
+
       // Must be followed by an alphanumeric character to be a forced scene heading
       if (iswalnum(lexer->lookahead)) {
         scanner->in_title_page = false;
@@ -97,8 +143,7 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
         lexer->mark_end(lexer);
         return true;
       }
-      // Not a forced scene heading, backtrack would be needed but we can't,
-      // so this will just fail to match
+      // Not a forced scene heading, cannot backtrack
       return false;
     }
 

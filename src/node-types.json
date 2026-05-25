@@ -331,6 +331,11 @@
     "fields": {}
   },
   {
+    "type": "scene_time",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "section_block",
     "named": true,
     "fields": {},
@@ -598,10 +603,6 @@
   },
   {
     "type": "scene_start",
-    "named": true
-  },
-  {
-    "type": "scene_time",
     "named": true
   },
   {

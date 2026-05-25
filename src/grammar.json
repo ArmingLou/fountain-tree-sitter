@@ -502,7 +502,7 @@
         },
         {
           "type": "PATTERN",
-          "value": "[A-Za-z0-9\\-\\.]+"
+          "value": "[^#\\n]+"
         },
         {
           "type": "STRING",
