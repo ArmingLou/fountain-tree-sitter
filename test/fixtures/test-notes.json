@@ -59,36 +59,30 @@
               "type": "character",
               "children": [],
               "text": "STEEL\n"
-            }
-          ],
-          "text": "STEEL\n"
-        },
-        {
-          "type": "note",
-          "children": [
-            {
-              "type": "note_start",
-              "children": [],
-              "text": "[["
             },
             {
-              "type": "note_content",
-              "children": [],
-              "text": "whisper this line"
-            }
-          ],
-          "text": "[[whisper this line]]\n"
-        },
-        {
-          "type": "action",
-          "children": [
+              "type": "note",
+              "children": [
+                {
+                  "type": "note_start",
+                  "children": [],
+                  "text": "[["
+                },
+                {
+                  "type": "note_content",
+                  "children": [],
+                  "text": "whisper this line"
+                }
+              ],
+              "text": "[[whisper this line]]\n"
+            },
             {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "Anyone home?"
             }
           ],
-          "text": "Anyone home?\n\n"
+          "text": "STEEL\n[[whisper this line]]\nAnyone home?\n\n"
         },
         {
           "type": "note",

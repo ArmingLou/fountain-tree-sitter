@@ -32,9 +32,25 @@ test4
 @阿过
 test5
 
-action bug
+我应该是action
 
 @阿空
 test6
-  
+
 @我还是对话
+
+
+@阿咯
+test5
+
+(我应该是action)
+我是action
+
+@阿莫
+/* 我是注释 */
+我应该是对话
+
+
+@阿婆
+[[ 我是note ]]
+我应该是对话

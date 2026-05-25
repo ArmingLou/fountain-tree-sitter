@@ -588,6 +588,14 @@
               "type": "CHOICE",
               "members": [
                 {
+                  "type": "SYMBOL",
+                  "name": "note"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "boneyard"
+                },
+                {
                   "type": "SEQ",
                   "members": [
                     {
@@ -1216,6 +1224,9 @@
     ],
     [
       "section_block"
+    ],
+    [
+      "dialogue_block"
     ]
   ],
   "precedences": [],

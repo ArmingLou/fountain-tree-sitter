@@ -7,7 +7,8 @@ module.exports = grammar({
   conflicts: $ => [
     [$.title_page_field, $.action],
     [$.scene_block],
-    [$.section_block]
+    [$.section_block],
+    [$.dialogue_block]
   ],
 
   externals: $ => [
@@ -176,6 +177,8 @@ module.exports = grammar({
     dialogue_block: $ => prec(5, seq(
       $.character,
       repeat(choice(
+        $.note,
+        $.boneyard,
         seq($.parenthetical_line, '\n'),
         seq($.dialogue_line_start, '\n')
       ))

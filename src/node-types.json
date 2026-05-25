@@ -116,11 +116,19 @@
       "required": true,
       "types": [
         {
+          "type": "boneyard",
+          "named": true
+        },
+        {
           "type": "character",
           "named": true
         },
         {
           "type": "dialogue_line_start",
+          "named": true
+        },
+        {
+          "type": "note",
           "named": true
         },
         {
