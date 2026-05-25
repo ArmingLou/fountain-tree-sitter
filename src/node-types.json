@@ -124,6 +124,14 @@
       "required": true,
       "types": [
         {
+          "type": "bold",
+          "named": true
+        },
+        {
+          "type": "bold_italic",
+          "named": true
+        },
+        {
           "type": "boneyard",
           "named": true
         },
@@ -132,7 +140,31 @@
           "named": true
         },
         {
+          "type": "dialogue_inline",
+          "named": true
+        },
+        {
           "type": "dialogue_line_start",
+          "named": true
+        },
+        {
+          "type": "escaped_char",
+          "named": true
+        },
+        {
+          "type": "inline_boneyard",
+          "named": true
+        },
+        {
+          "type": "inline_note",
+          "named": true
+        },
+        {
+          "type": "italic",
+          "named": true
+        },
+        {
+          "type": "literal_char",
           "named": true
         },
         {
@@ -141,6 +173,18 @@
         },
         {
           "type": "parenthetical_line",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        },
+        {
+          "type": "underline",
+          "named": true
+        },
+        {
+          "type": "uppercase_text",
           "named": true
         }
       ]
@@ -551,6 +595,10 @@
   },
   {
     "type": "description",
+    "named": true
+  },
+  {
+    "type": "dialogue_inline",
     "named": true
   },
   {

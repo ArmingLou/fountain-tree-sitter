@@ -616,6 +616,26 @@
                     "members": [
                       {
                         "type": "SYMBOL",
+                        "name": "dialogue_inline"
+                      },
+                      {
+                        "type": "REPEAT1",
+                        "content": {
+                          "type": "SYMBOL",
+                          "name": "_inline_content"
+                        }
+                      },
+                      {
+                        "type": "STRING",
+                        "value": "\n"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
                         "name": "dialogue_line_start"
                       },
                       {
@@ -1343,6 +1363,10 @@
     {
       "type": "SYMBOL",
       "name": "inline_note"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "dialogue_inline"
     }
   ],
   "inline": [],

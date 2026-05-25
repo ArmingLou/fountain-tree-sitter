@@ -22,6 +22,7 @@ enum TokenType {
   DIALOGUE_LINE_START,
   PARENTHETICAL_LINE,
   INLINE_NOTE,
+  DIALOGUE_INLINE,
 };
 
 typedef struct {
@@ -449,6 +450,110 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
       }
     }
     // 不是有效的插入语行，fall through 继续检查其他令牌类型
+  }
+
+  // Try dialogue_inline - 对话行门控（零长度令牌），由语法层用 _inline_content 解析内容
+  if (valid_symbols[DIALOGUE_INLINE]) {
+    // 记录门控位置（内容开始前），后续角色名检测消费内容后 tree-sitter 会回滚到此
+    lexer->mark_end(lexer);
+
+    // 计算行首缩进空格数
+    int indent = 0;
+    while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
+      indent++;
+      lexer->advance(lexer, false);
+    }
+
+    // 延续标记（2+空格后跟换行）
+    if (lexer->lookahead == '\n' || lexer->lookahead == '\0') {
+      if (indent >= 2) {
+        scanner->continuation_active = true;
+        scanner->blank_seen_in_dialogue = false;
+        lexer->result_symbol = DIALOGUE_INLINE;
+        lexer->mark_end(lexer);
+        return true;
+      }
+      scanner->blank_seen_in_dialogue = true;
+      scanner->continuation_active = false;
+      return false;
+    }
+
+    // 非空行开始
+    scanner->blank_seen_in_dialogue = false;
+
+    // 非缩进行：检查特殊字符和角色名
+    if (indent < 2 && !scanner->continuation_active) {
+      // 特殊标记检测
+      if (lexer->lookahead == '.' || lexer->lookahead == '#' || lexer->lookahead == '@' ||
+          lexer->lookahead == '=' || lexer->lookahead == '~' || lexer->lookahead == '>' ||
+          lexer->lookahead == '!') {
+        return false;
+      }
+
+      // 检查独立插入语
+      {
+        int32_t open_paren = 0;
+        int32_t close_paren = 0;
+        if (lexer->lookahead == '(') {
+          open_paren = '(';
+          close_paren = ')';
+        } else if (lexer->lookahead == 0xFF08) {
+          open_paren = 0xFF08;
+          close_paren = 0xFF09;
+        }
+        if (open_paren != 0) {
+          lexer->advance(lexer, false);
+          while (lexer->lookahead != close_paren && lexer->lookahead != '\n' && lexer->lookahead != '\0') {
+            lexer->advance(lexer, false);
+          }
+          if (lexer->lookahead == close_paren) {
+            lexer->advance(lexer, false);
+            while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
+              lexer->advance(lexer, false);
+            }
+            if (lexer->lookahead == '\n' || lexer->lookahead == '\0') {
+              return false;  // 纯插入语，tree-sitter 回滚
+            }
+          }
+        }
+      }
+
+      // 角色名检测（消费内容检查，若为角色名则 tree-sitter 回滚）
+      {
+        int32_t first = lexer->lookahead;
+        if (first >= 'A' && first <= 'Z') {
+          bool all_valid_chars = true;
+          int32_t last_char = first;
+          int32_t ch;
+
+          lexer->advance(lexer, false);
+
+          while ((ch = lexer->lookahead) != '\n' && ch != '\0') {
+            last_char = ch;
+            if (!((ch >= 'A' && ch <= 'Z') ||
+                  (ch >= '0' && ch <= '9') ||
+                  ch == ' ' || ch == '(' || ch == ')' ||
+                  ch == '.' || ch == '\'')) {
+              all_valid_chars = false;
+              break;
+            }
+            lexer->advance(lexer, false);
+          }
+
+          if (all_valid_chars &&
+              ((last_char >= 'A' && last_char <= 'Z') ||
+               (last_char >= '0' && last_char <= '9') ||
+               last_char == ')' || last_char == '.')) {
+            return false;  // 角色名，tree-sitter 回滚
+          }
+        }
+      }
+    }
+
+    // 门控通过，返回零长度令牌（词法位置由 mark_end 回滚到内容开始前）
+    scanner->continuation_active = false;
+    lexer->result_symbol = DIALOGUE_INLINE;
+    return true;
   }
 
   // Try dialogue_line_start - matches if we're at the start of a non-blank line

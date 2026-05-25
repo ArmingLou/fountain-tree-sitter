@@ -29,7 +29,8 @@ module.exports = grammar({
     $.blank_line,
     $.dialogue_line_start,
     $.parenthetical_line,
-    $.inline_note
+    $.inline_note,
+    $.dialogue_inline
   ],
 
   rules: {
@@ -183,6 +184,7 @@ module.exports = grammar({
         $.note,
         $.boneyard,
         seq($.parenthetical_line, '\n'),
+        seq($.dialogue_inline, repeat1($._inline_content), '\n'),
         seq($.dialogue_line_start, '\n')
       )))
     )),
