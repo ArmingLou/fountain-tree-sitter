@@ -3,6 +3,7 @@
 
 module.exports = grammar({
   name: "fountain",
+
   conflicts: $ => [
     [$.title_page_field, $.action],
     [$.scene_block],
@@ -221,7 +222,7 @@ module.exports = grammar({
 
     section_heading: $ => prec(7, seq(
       $.section_start,
-      optional(seq(' ', $.description)),
+      optional(seq(optional(' '), $.description)),
       '\n'
     )),
 

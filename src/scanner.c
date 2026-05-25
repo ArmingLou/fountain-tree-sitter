@@ -23,11 +23,15 @@ enum TokenType {
 
 typedef struct {
   bool in_title_page;
+  bool blank_seen_in_dialogue;
+  bool continuation_active;
 } Scanner;
 
 void *tree_sitter_fountain_external_scanner_create() {
   Scanner *scanner = (Scanner *)malloc(sizeof(Scanner));
-  scanner->in_title_page = true;  // Start assuming we're in title page
+  scanner->in_title_page = true;
+  scanner->blank_seen_in_dialogue = false;
+  scanner->continuation_active = false;
   return scanner;
 }
 
@@ -41,6 +45,12 @@ static bool match_keyword(TSLexer *lexer, const char *keyword) {
 
 bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, const bool *valid_symbols) {
   Scanner *scanner = (Scanner *)payload;
+
+  // 如果不是在对话/插入语上下文中，重置空白行标志
+  if (!valid_symbols[DIALOGUE_LINE_START] && !valid_symbols[PARENTHETICAL_LINE]) {
+    scanner->blank_seen_in_dialogue = false;
+    scanner->continuation_active = false;
+  }
 
   // Try title continuation (indented line: 3+ spaces or tab at start of line)
   if (valid_symbols[TITLE_CONTINUATION] && scanner->in_title_page) {
@@ -251,8 +261,11 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
   }
 
   // Try parenthetical_line - matches standalone (text) lines within dialogue blocks
-  // Consumes the entire parenthetical content to prevent paren_text from matching it
+  // 如果空白行标志已设置，拒绝匹配以终止对话块
   if (valid_symbols[PARENTHETICAL_LINE]) {
+    if (scanner->blank_seen_in_dialogue) {
+      return false;
+    }
     // Count leading whitespace
     while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
       lexer->advance(lexer, false);
@@ -277,7 +290,6 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
 
         // Must be at end of line (pure parenthetical)
         if (lexer->lookahead == '\n' || lexer->lookahead == '\0') {
-          // Don't consume the newline - grammar handles that
           lexer->result_symbol = PARENTHETICAL_LINE;
           lexer->mark_end(lexer);
           return true;
@@ -288,93 +300,118 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
   }
 
   // Try dialogue_line_start - matches if we're at the start of a non-blank line
-  // This prevents dialogue from matching blank lines or lines after blank lines
-  // Consumes the entire line content so the dialogue block can't extend past non-dialogue markers
-  if (valid_symbols[DIALOGUE_LINE_START]) {    // Count leading whitespace
+  if (valid_symbols[DIALOGUE_LINE_START]) {
+    // 计算行首缩进空格数
+    int indent = 0;
     while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
+      indent++;
       lexer->advance(lexer, false);
     }
 
-    // If we hit a newline or EOF, this is NOT a dialogue line (it's blank)
+    // 如果到行尾，判断是否为延续标记（2+空格）还是空行（0-1空格）
     if (lexer->lookahead == '\n' || lexer->lookahead == '\0') {
+      if (indent >= 2) {
+        // 2+空格后跟换行 = 对话延续标记，不消费换行（由语法规则处理）
+        // 设置延续标志，使下一行的特殊字符被忽略
+        scanner->continuation_active = true;
+        scanner->blank_seen_in_dialogue = false;
+        lexer->result_symbol = DIALOGUE_LINE_START;
+        lexer->mark_end(lexer);
+        return true;
+      }
+      // 0-1空格空行，设置标志以终止后续对话行匹配
+      scanner->blank_seen_in_dialogue = true;
+      scanner->continuation_active = false;
       return false;
     }
 
-    // 检查是否是Fountain特殊标记：场景、章节、强制角色、梗概、歌词、转场/居中、强制动作
-    // 对话行不应以这些字符开头（备注[[和注释/*由语法层面的更高优先级来处理）
-    if (lexer->lookahead == '.' || lexer->lookahead == '#' || lexer->lookahead == '@' ||
-        lexer->lookahead == '=' || lexer->lookahead == '~' || lexer->lookahead == '>' ||
-        lexer->lookahead == '!') {
+    // 如果空白行标志已设置，拒绝匹配（空行后不应出现对话行）
+    if (scanner->blank_seen_in_dialogue) {
       return false;
     }
 
-    // 检查是否是独立括号行：排除纯插入语 `(text)` 开头且行尾无其他内容的行
-    // 纯粹的插入语应由语法层面的 parenthetical 规则匹配
-    // 括号后有其他文字的行（如 `(停顿) 继续说话`）仍作为对话行处理
-    if (lexer->lookahead == '(') {
-      lexer->advance(lexer, false);  // 跳过 '('
-
-      // 扫描寻找匹配的 ')'
-      while (lexer->lookahead != ')' && lexer->lookahead != '\n' && lexer->lookahead != '\0') {
-        lexer->advance(lexer, false);
+    // 非缩进行（少于2个空格）：检查特殊字符和角色名
+    // 缩进行（2+空格）或延续激活：直接作为对话延续，跳过所有特殊字符检查
+    if (indent < 2 && !scanner->continuation_active) {
+      // 检查是否是Fountain特殊标记：场景、章节、强制角色、梗概、歌词、转场/居中、强制动作
+      // 对话行不应以这些字符开头（备注[[和注释/*由语法层面的更高优先级来处理）
+      if (lexer->lookahead == '.' || lexer->lookahead == '#' || lexer->lookahead == '@' ||
+          lexer->lookahead == '=' || lexer->lookahead == '~' || lexer->lookahead == '>' ||
+          lexer->lookahead == '!') {
+        return false;
       }
 
-      if (lexer->lookahead == ')') {
-        lexer->advance(lexer, false);  // 跳过 ')'
+      // 检查是否是独立括号行：排除纯插入语 `(text)` 开头且行尾无其他内容的行
+      // 纯粹的插入语应由 parenthetical_line 规则匹配
+      // 括号后有其他文字的行（如 `(停顿) 继续说话`）仍作为对话行处理
+      if (lexer->lookahead == '(') {
+        lexer->advance(lexer, false);  // 跳过 '('
 
-        // 跳过尾部空格
-        while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
+        // 扫描寻找匹配的 ')'
+        while (lexer->lookahead != ')' && lexer->lookahead != '\n' && lexer->lookahead != '\0') {
           lexer->advance(lexer, false);
         }
 
-        // 如果到行尾（\n 或 \0），这是纯插入语，拒绝以让语法层匹配 parenthetical
-        if (lexer->lookahead == '\n' || lexer->lookahead == '\0') {
-          return false;
-        }
-      }
-      // 不是纯插入语：括号后有其他内容 或 没有找到闭合括号
-      // 此时 lexer 已前进了若干字符，继续 fall through 消费剩余行
-    }
+        if (lexer->lookahead == ')') {
+          lexer->advance(lexer, false);  // 跳过 ')'
 
-    // Check if this line looks like a character name (all uppercase with valid chars)
-    // Character pattern: [A-Z][A-Z0-9 ()\\.']*[A-Z0-9)\\.]
-    // Reject so parent grammar can handle it as a new character starting a dialogue_block
-    {
-      int32_t first = lexer->lookahead;
-      if (first >= 'A' && first <= 'Z') {
-        // Scan the rest of the line to check character name pattern
-        // Must contain only character-valid chars and end with character-valid ending
-        bool all_valid_chars = true;
-        int32_t last_char = first;
-        int32_t ch;
-
-        // We need to peek ahead without permanently consuming
-        // Tree-sitter will rollback lexer position if we return false
-        lexer->advance(lexer, false);
-
-        while ((ch = lexer->lookahead) != '\n' && ch != '\0') {
-          last_char = ch;
-          if (!((ch >= 'A' && ch <= 'Z') ||
-                (ch >= '0' && ch <= '9') ||
-                ch == ' ' || ch == '(' || ch == ')' ||
-                ch == '.' || ch == '\'')) {
-            all_valid_chars = false;
-            break;
+          // 跳过尾部空格
+          while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
+            lexer->advance(lexer, false);
           }
-          lexer->advance(lexer, false);
-        }
 
-        // Must end with uppercase letter, digit, ) or .
-        if (all_valid_chars &&
-            ((last_char >= 'A' && last_char <= 'Z') ||
-             (last_char >= '0' && last_char <= '9') ||
-             last_char == ')' || last_char == '.')) {
-          return false;  // Looks like a character name, reject
+          // 如果到行尾（\n 或 \0），这是纯插入语，拒绝以让语法层匹配 parenthetical
+          if (lexer->lookahead == '\n' || lexer->lookahead == '\0') {
+            return false;
+          }
+        }
+        // 不是纯插入语：括号后有其他内容 或 没有找到闭合括号
+        // 此时 lexer 已前进了若干字符，继续 fall through 消费剩余行
+      }
+
+      // Check if this line looks like a character name (all uppercase with valid chars)
+      // Character pattern: [A-Z][A-Z0-9 ()\\.']*[A-Z0-9)\\.]
+      // Reject so parent grammar can handle it as a new character starting a dialogue_block
+      {
+        int32_t first = lexer->lookahead;
+        if (first >= 'A' && first <= 'Z') {
+          // Scan the rest of the line to check character name pattern
+          // Must contain only character-valid chars and end with character-valid ending
+          bool all_valid_chars = true;
+          int32_t last_char = first;
+          int32_t ch;
+
+          // We need to peek ahead without permanently consuming
+          // Tree-sitter will rollback lexer position if we return false
+          lexer->advance(lexer, false);
+
+          while ((ch = lexer->lookahead) != '\n' && ch != '\0') {
+            last_char = ch;
+            if (!((ch >= 'A' && ch <= 'Z') ||
+                  (ch >= '0' && ch <= '9') ||
+                  ch == ' ' || ch == '(' || ch == ')' ||
+                  ch == '.' || ch == '\'')) {
+              all_valid_chars = false;
+              break;
+            }
+            lexer->advance(lexer, false);
+          }
+
+          // Must end with uppercase letter, digit, ) or .
+          if (all_valid_chars &&
+              ((last_char >= 'A' && last_char <= 'Z') ||
+               (last_char >= '0' && last_char <= '9') ||
+               last_char == ')' || last_char == '.')) {
+            return false;  // Looks like a character name, reject
+          }
         }
       }
     }
 
-    // Consume the entire line (but NOT the newline - grammar handles that)
+    // 消费一行后重置延续标志
+    scanner->continuation_active = false;
+
+    // 消费整行内容（不消费行尾换行符，由语法规则处理）
     while (lexer->lookahead != '\n' && lexer->lookahead != '\0') {
       lexer->advance(lexer, false);
     }
@@ -384,7 +421,6 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
     lexer->mark_end(lexer);
     return true;
   }
-
 // Try blank line - detects when we're at the start of an empty line (or EOF)
 // This ends dialogue blocks. Only 0 or 1 space ends dialogue (truly empty or single space).
 // 2+ spaces means indented line (continuation or title continuation)
@@ -420,16 +456,22 @@ unsigned tree_sitter_fountain_external_scanner_serialize(void *payload, char *bu
   Scanner *scanner = (Scanner *)payload;
   if (scanner && buffer) {
     buffer[0] = scanner->in_title_page ? 1 : 0;
-    return 1;
+    buffer[1] = scanner->blank_seen_in_dialogue ? 1 : 0;
+    buffer[2] = scanner->continuation_active ? 1 : 0;
+    return 3;
   }
   return 0;
 }
 
 void tree_sitter_fountain_external_scanner_deserialize(void *payload, const char *buffer, unsigned length) {
   Scanner *scanner = (Scanner *)payload;
-  if (scanner && buffer && length > 0) {
+  if (scanner && buffer && length >= 3) {
     scanner->in_title_page = buffer[0] != 0;
+    scanner->blank_seen_in_dialogue = buffer[1] != 0;
+    scanner->continuation_active = buffer[2] != 0;
   } else if (scanner) {
-    scanner->in_title_page = true;  // Default to true if no state
+    scanner->in_title_page = true;
+    scanner->blank_seen_in_dialogue = false;
+    scanner->continuation_active = false;
   }
 }
