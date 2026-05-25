@@ -176,12 +176,12 @@ module.exports = grammar({
 
     dialogue_block: $ => prec(5, seq(
       $.character,
-      repeat(choice(
+      prec.right(repeat(choice(
         $.note,
         $.boneyard,
         seq($.parenthetical_line, '\n'),
         seq($.dialogue_line_start, '\n')
-      ))
+      )))
     )),
 
 

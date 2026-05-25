@@ -80,36 +80,30 @@
               "type": "dialogue_line_start",
               "children": [],
               "text": "Anyone home?"
-            }
-          ],
-          "text": "STEEL\n[[whisper this line]]\nAnyone home?\n\n"
-        },
-        {
-          "type": "note",
-          "children": [
-            {
-              "type": "note_start",
-              "children": [],
-              "text": "[["
             },
             {
-              "type": "note_content",
-              "children": [],
-              "text": "Remember to add sound effects here"
-            }
-          ],
-          "text": "[[Remember to add sound effects here]]\n\n"
-        },
-        {
-          "type": "action",
-          "children": [
+              "type": "note",
+              "children": [
+                {
+                  "type": "note_start",
+                  "children": [],
+                  "text": "[["
+                },
+                {
+                  "type": "note_content",
+                  "children": [],
+                  "text": "Remember to add sound effects here"
+                }
+              ],
+              "text": "[[Remember to add sound effects here]]\n\n"
+            },
             {
-              "type": "text",
+              "type": "dialogue_line_start",
               "children": [],
               "text": "The door creaks open."
             }
           ],
-          "text": "The door creaks open.\n"
+          "text": "STEEL\n[[whisper this line]]\nAnyone home?\n\n[[Remember to add sound effects here]]\n\nThe door creaks open.\n"
         }
       ],
       "text": "EXT. ABANDONED WAREHOUSE - NIGHT\n\n[[This scene should feel tense and claustrophobic]]\n\nSteel approaches the door cautiously.\n\nSTEEL\n[[whisper this line]]\nAnyone home?\n\n[[Remember to add sound effects here]]\n\nThe door creaks open.\n"

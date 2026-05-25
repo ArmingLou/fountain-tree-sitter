@@ -857,41 +857,41 @@
               "type": "dialogue_line_start",
               "children": [],
               "text": "Sure enough, it’s Brick and Steel, roughing up their favorite usual suspect."
-            }
-          ],
-          "text": "COGNITO\nWoah woah woah, Brick and Steel!\n\nSure enough, it’s Brick and Steel, roughing up their favorite usual suspect.\n\n"
-        },
-        {
-          "type": "boneyard",
-          "children": [
-            {
-              "type": "boneyard_start",
-              "children": [],
-              "text": "/*"
             },
             {
-              "type": "boneyard_content",
-              "children": [],
-              "text": " do we have a boneyard "
-            }
-          ],
-          "text": "/* do we have a boneyard */\n\n"
-        },
-        {
-          "type": "boneyard",
-          "children": [
-            {
-              "type": "boneyard_start",
-              "children": [],
-              "text": "/*"
+              "type": "boneyard",
+              "children": [
+                {
+                  "type": "boneyard_start",
+                  "children": [],
+                  "text": "/*"
+                },
+                {
+                  "type": "boneyard_content",
+                  "children": [],
+                  "text": " do we have a boneyard "
+                }
+              ],
+              "text": "/* do we have a boneyard */\n\n"
             },
             {
-              "type": "boneyard_content",
-              "children": [],
-              "text": " yes, we do "
+              "type": "boneyard",
+              "children": [
+                {
+                  "type": "boneyard_start",
+                  "children": [],
+                  "text": "/*"
+                },
+                {
+                  "type": "boneyard_content",
+                  "children": [],
+                  "text": " yes, we do "
+                }
+              ],
+              "text": "/* yes, we do */\n\n"
             }
           ],
-          "text": "/* yes, we do */\n\n"
+          "text": "COGNITO\nWoah woah woah, Brick and Steel!\n\nSure enough, it’s Brick and Steel, roughing up their favorite usual suspect.\n\n/* do we have a boneyard */\n\n/* yes, we do */\n\n"
         },
         {
           "type": "dialogue_block",
