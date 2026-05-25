@@ -34,7 +34,7 @@
               "text": "MAYA\n"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(frustrated!)"
             },
@@ -55,7 +55,7 @@
               "text": "JAMES\n"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(laughing!)"
             },
@@ -76,7 +76,7 @@
               "text": "MAYA\n"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(suddenly decisive!)"
             },

@@ -137,7 +137,7 @@ for (const file of fountainFiles) {
   // Parse using tree-sitter CLI (ignore exit code as it may fail on parse errors)
   let output;
   try {
-    output = execSync(`npx --yes tree-sitter parse "${fountainPath}" 2>&1`, { encoding: 'utf8' });
+    output = execSync(`npx tree-sitter parse "${fountainPath}" 2>&1`, { encoding: 'utf8' });
   } catch (err) {
     output = err.stdout || err.output?.join('') || '';
   }

@@ -122,6 +122,10 @@
         {
           "type": "dialogue_line_start",
           "named": true
+        },
+        {
+          "type": "parenthetical_line",
+          "named": true
         }
       ]
     }
@@ -273,6 +277,10 @@
         },
         {
           "type": "note",
+          "named": true
+        },
+        {
+          "type": "page_break",
           "named": true
         },
         {
@@ -578,6 +586,10 @@
   },
   {
     "type": "paren_text",
+    "named": true
+  },
+  {
+    "type": "parenthetical_line",
     "named": true
   },
   {

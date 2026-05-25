@@ -23,7 +23,8 @@ module.exports = grammar({
     $.boneyard_start,
     $.title_continuation,
     $.blank_line,
-    $.dialogue_line_start
+    $.dialogue_line_start,
+    $.parenthetical_line
   ],
 
   rules: {
@@ -88,7 +89,8 @@ module.exports = grammar({
       $.lyric,
       $.note,
       $.boneyard,
-      $.synopsis
+      $.synopsis,
+      $.page_break
     ),
 
     // Title page field supports multi-line values via indented continuation lines
@@ -172,8 +174,12 @@ module.exports = grammar({
 
     dialogue_block: $ => prec(5, seq(
       $.character,
-      repeat(seq($.dialogue_line_start, '\n'))
+      repeat(choice(
+        seq($.parenthetical_line, '\n'),
+        seq($.dialogue_line_start, '\n')
+      ))
     )),
+
 
     dialogue: $ => prec.right(seq(
       repeat1($._inline_content),

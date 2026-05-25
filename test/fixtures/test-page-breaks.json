@@ -40,20 +40,20 @@
             }
           ],
           "text": "BRICK emerges from the water, his skin glistening.\n\n"
-        }
-      ],
-      "text": "EXT. BRICK'S POOL - DAY\n\nBRICK emerges from the water, his skin glistening.\n\n"
-    },
-    {
-      "type": "page_break",
-      "children": [
+        },
         {
-          "type": "page_break_marker",
-          "children": [],
-          "text": "==="
+          "type": "page_break",
+          "children": [
+            {
+              "type": "page_break_marker",
+              "children": [],
+              "text": "==="
+            }
+          ],
+          "text": "===\n\n"
         }
       ],
-      "text": "===\n\n"
+      "text": "EXT. BRICK'S POOL - DAY\n\nBRICK emerges from the water, his skin glistening.\n\n===\n\n"
     },
     {
       "type": "scene_block",
@@ -115,41 +115,41 @@
             }
           ],
           "text": ">**End of Act One**<\n\n"
-        }
-      ],
-      "text": "INT. STEEL'S APARTMENT - NIGHT\n\nSTEEL paces the room, looking worried.\n\n>**End of Act One**<\n\n"
-    },
-    {
-      "type": "page_break",
-      "children": [
-        {
-          "type": "page_break_marker",
-          "children": [],
-          "text": "==="
-        }
-      ],
-      "text": "===\n\n"
-    },
-    {
-      "type": "centered",
-      "children": [
-        {
-          "type": "centered_start",
-          "children": [],
-          "text": ">"
         },
         {
-          "type": "centered_text",
-          "children": [],
-          "text": "**Act Two**"
+          "type": "page_break",
+          "children": [
+            {
+              "type": "page_break_marker",
+              "children": [],
+              "text": "==="
+            }
+          ],
+          "text": "===\n\n"
         },
         {
-          "type": "centered_end",
-          "children": [],
-          "text": "<"
+          "type": "centered",
+          "children": [
+            {
+              "type": "centered_start",
+              "children": [],
+              "text": ">"
+            },
+            {
+              "type": "centered_text",
+              "children": [],
+              "text": "**Act Two**"
+            },
+            {
+              "type": "centered_end",
+              "children": [],
+              "text": "<"
+            }
+          ],
+          "text": ">**Act Two**<\n\n"
         }
       ],
-      "text": ">**Act Two**<\n\n"
+      "text": "INT. STEEL'S APARTMENT - NIGHT\n\nSTEEL paces the room, looking worried.\n\n>**End of Act One**<\n\n===\n\n>**Act Two**<\n\n"
     },
     {
       "type": "scene_block",

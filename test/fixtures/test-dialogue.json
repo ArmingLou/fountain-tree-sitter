@@ -77,7 +77,7 @@
               "text": "SARAH\n"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(angry)"
             },
@@ -98,7 +98,7 @@
               "text": "JOHN\n"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(defensively)"
             },
@@ -124,7 +124,7 @@
               "text": "You always say that."
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(softening)"
             },
@@ -145,7 +145,7 @@
               "text": "JOHN\n"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(smiling)"
             },

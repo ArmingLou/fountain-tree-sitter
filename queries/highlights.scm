@@ -1,7 +1,10 @@
 ;; Fountain 语法高亮定义
 
-(dialogue) @string
+(dialogue_line_start) @string
 (action) @text
+
+;; Parenthetical lines (wrylies)
+(parenthetical_line) @type
 
 ;; Emphasis in dialogue and action (bold but same color)
 (italic) @emphasis.strong
@@ -12,8 +15,6 @@
 ;; Uppercase key words/props in action lines
 (uppercase_text) @emphasis.strong
 (action (uppercase_text) @emphasis.strong)
-
-(parenthetical) @type
 
 ;; Title page - subtle highlighting
 (title_key) @keyword

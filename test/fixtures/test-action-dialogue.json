@@ -100,7 +100,7 @@
               "text": "BRICK\n"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(appearing from nowhere)"
             },
@@ -121,7 +121,7 @@
               "text": "STEEL\n"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(defensive)"
             },
@@ -147,7 +147,7 @@
               "text": "Sure you weren't."
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(grinning)"
             },

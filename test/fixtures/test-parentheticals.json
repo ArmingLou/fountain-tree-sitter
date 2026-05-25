@@ -50,7 +50,7 @@
               "text": "They're coming out of the woodwork!"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(pause)"
             },
@@ -60,7 +60,7 @@
               "text": "No, everybody we've put away!"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(pause)"
             },

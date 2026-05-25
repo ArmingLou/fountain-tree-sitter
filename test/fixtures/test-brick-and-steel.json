@@ -285,7 +285,7 @@
                   "text": "STEEL\n"
                 },
                 {
-                  "type": "dialogue_line_start",
+                  "type": "parenthetical_line",
                   "children": [],
                   "text": "(beer raised)"
                 },
@@ -459,7 +459,7 @@
               "text": "JACK\n"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(in Vietnamese, subtitled)"
             },
@@ -554,7 +554,7 @@
               "text": "They’re coming out of the woodwork!"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(pause)"
             },
@@ -564,7 +564,7 @@
               "text": "No, everybody we’ve put away!"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(pause)"
             },
@@ -659,7 +659,7 @@
               "text": "STEEL\n"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(oh crap)"
             },
@@ -1059,7 +1059,7 @@
               "text": "STEEL\n"
             },
             {
-              "type": "dialogue_line_start",
+              "type": "parenthetical_line",
               "children": [],
               "text": "(starting the engine)"
             },
