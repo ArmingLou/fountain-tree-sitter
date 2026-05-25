@@ -171,6 +171,8 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
 
   // Try note start ([[)
   if (valid_symbols[NOTE_START] && match_keyword(lexer, "[[")) {
+    // 对话块内遇到空行后，不应该再匹配备注（让其在外层匹配）
+    if (scanner->blank_seen_in_dialogue) return false;
     lexer->result_symbol = NOTE_START;
     lexer->mark_end(lexer);
     return true;
@@ -186,6 +188,11 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
 
   // Try forced character (@)
   if (valid_symbols[FORCED_CHARACTER_START] && lexer->lookahead == '@') {
+    // 延续模式下，@ 不作为新角色，让其作为对话内容
+    if (scanner->continuation_active) return false;
+    // 新角色开始，重置对话上下文标志
+    scanner->blank_seen_in_dialogue = false;
+    scanner->continuation_active = false;
     lexer->advance(lexer, false);
     lexer->result_symbol = FORCED_CHARACTER_START;
     lexer->mark_end(lexer);
@@ -255,6 +262,8 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
 
   // Try boneyard (/*)
   if (valid_symbols[BONEYARD_START] && match_keyword(lexer, "/*")) {
+    // 对话块内遇到空行后，不应该再匹配注释（让其在外层匹配）
+    if (scanner->blank_seen_in_dialogue) return false;
     lexer->result_symbol = BONEYARD_START;
     lexer->mark_end(lexer);
     return true;
@@ -336,10 +345,8 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
       return false;
     }
 
-    // 如果空白行标志已设置，拒绝匹配（空行后不应出现对话行）
-    if (scanner->blank_seen_in_dialogue) {
-      return false;
-    }
+    // 非空行开始，重置空白行标志（新的对话上下文）
+    scanner->blank_seen_in_dialogue = false;
 
     // 非缩进行（少于2个空格）：检查特殊字符和角色名
     // 缩进行（2+空格）或延续激活：直接作为对话延续，跳过所有特殊字符检查
@@ -441,23 +448,58 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
     // It's a valid dialogue line - return the entire line content
     lexer->result_symbol = DIALOGUE_LINE_START;
     lexer->mark_end(lexer);
+
+    // 前瞻窥探：mark_end后主动向前看，检测后续空白行类型
+    // 此时extras尚未介入，\n字符可见
+    if (lexer->lookahead == '\n') {
+      lexer->advance(lexer, false);  // 跳过当前行尾的 \n
+
+      int space_count = 0;
+      while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
+        space_count++;
+        lexer->advance(lexer, false);
+      }
+
+      if (lexer->lookahead == '\n') {
+        if (space_count < 2) {
+          // 0-1空格空行：终止对话
+          scanner->blank_seen_in_dialogue = true;
+          scanner->continuation_active = false;
+        } else {
+          // 2+空格延续标记：保持对话开放
+          scanner->continuation_active = true;
+          scanner->blank_seen_in_dialogue = false;
+        }
+      }
+      // tree-sitter会在函数返回后将lexer回滚到mark_end位罿
+    }
+
     return true;
   }
-// Try blank line - detects when we're at the start of an empty line (or EOF)
-// This ends dialogue blocks. Only 0 or 1 space ends dialogue (truly empty or single space).
-// 2+ spaces means indented line (continuation or title continuation)
+// Try blank line - actively scan for blank lines (0-1 space then \n)
+// Even when \n is in extras, the scanner can advance through it with skip=false
 if (valid_symbols[BLANK_LINE]) {
-    // Count leading whitespace (spaces/tabs)
+    // Count leading whitespace including any unconsumed extras
     int space_count = 0;
     while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
       space_count++;
       lexer->advance(lexer, false);
     }
 
-    // Only 0 or 1 spaces is a blank line (ends dialogue)
-    // 2+ spaces means indented line, not blank
-    if (space_count < 2 && lexer->lookahead == '\n') {
-      lexer->advance(lexer, false);  // Consume the newline
+    // Actively scan for newline characters (they may be unconsumed extras)
+    int newline_seen = 0;
+    while (lexer->lookahead == '\n') {
+      newline_seen++;
+      lexer->advance(lexer, false);
+    }
+
+    // Match if we found a newline with 0-1 spaces
+    if (newline_seen >= 1 && space_count < 2) {
+      // 在对话上下文中设置空白行标志，阻止后续对话行匹配
+      if (valid_symbols[DIALOGUE_LINE_START]) {
+        scanner->blank_seen_in_dialogue = true;
+        scanner->continuation_active = false;
+      }
       lexer->result_symbol = BLANK_LINE;
       lexer->mark_end(lexer);
       return true;

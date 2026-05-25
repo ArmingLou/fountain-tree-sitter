@@ -150,14 +150,30 @@
           "type": "character",
           "children": [],
           "text": "BRICK\n"
-        },
-        {
-          "type": "dialogue_line_start",
-          "children": [],
-          "text": "And you're Steel. I've heard about you."
         }
       ],
-      "text": "BRICK\nAnd you're Steel. I've heard about you.\n\n"
+      "text": "BRICK\n"
+    },
+    {
+      "type": "action",
+      "children": [
+        {
+          "type": "text",
+          "children": [],
+          "text": "And you're "
+        },
+        {
+          "type": "text",
+          "children": [],
+          "text": "Steel. "
+        },
+        {
+          "type": "text",
+          "children": [],
+          "text": "I've heard about you."
+        }
+      ],
+      "text": "And you're Steel. I've heard about you.\n\n"
     },
     {
       "type": "section_block",

@@ -141,14 +141,30 @@
               "type": "dialogue_line_start",
               "children": [],
               "text": "That was close!"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": "He checks the VITAL DOCUMENT in the glove compartment."
             }
           ],
-          "text": "DRIVER\nThat was close!\n\nHe checks the VITAL DOCUMENT in the glove compartment.\n"
+          "text": "DRIVER\nThat was close!\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "He checks the "
+            },
+            {
+              "type": "uppercase_text",
+              "children": [],
+              "text": "VITAL DOCUMENT"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": " in the glove compartment."
+            }
+          ],
+          "text": "He checks the VITAL DOCUMENT in the glove compartment.\n"
         }
       ],
       "text": "EXT. CITY STREET - DAY\n\nA BRICK falls from the building.\n\nThe PORSCHE speeds by, narrowly missing the BRICK.\n\nInside the car, we see a KEY PROP on the dashboard.\n\nThe driver notices the DANGER and swerves to avoid the BRICK AND STEEL falling from above.\n\nDRIVER\nThat was close!\n\nHe checks the VITAL DOCUMENT in the glove compartment.\n"

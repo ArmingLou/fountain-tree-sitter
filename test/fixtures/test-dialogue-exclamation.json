@@ -53,19 +53,31 @@
               "type": "character",
               "children": [],
               "text": "JAMES\n"
-            },
+            }
+          ],
+          "text": "JAMES\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "parenthetical_line",
+              "type": "paren_text",
               "children": [],
               "text": "(laughing!)"
-            },
+            }
+          ],
+          "text": "(laughing!)\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "What happened?"
             }
           ],
-          "text": "JAMES\n(laughing!)\nWhat happened?\n\n"
+          "text": "What happened?\n\n"
         },
         {
           "type": "dialogue_block",
@@ -74,19 +86,31 @@
               "type": "character",
               "children": [],
               "text": "MAYA\n"
-            },
+            }
+          ],
+          "text": "MAYA\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "parenthetical_line",
+              "type": "paren_text",
               "children": [],
               "text": "(suddenly decisive!)"
-            },
+            }
+          ],
+          "text": "(suddenly decisive!)\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "Let's go!"
             }
           ],
-          "text": "MAYA\n(suddenly decisive!)\nLet's go!\n"
+          "text": "Let's go!\n"
         }
       ],
       "text": "EXT. STREET - DAY\n\nMAYA\n(frustrated!)\nPerfect!\n\nJAMES\n(laughing!)\nWhat happened?\n\nMAYA\n(suddenly decisive!)\nLet's go!\n"

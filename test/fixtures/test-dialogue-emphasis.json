@@ -48,14 +48,30 @@
               "type": "character",
               "children": [],
               "text": "SUSPECT\n"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": "I *really* don't know what you're talking about."
             }
           ],
-          "text": "SUSPECT\nI *really* don't know what you're talking about.\n\n"
+          "text": "SUSPECT\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "I "
+            },
+            {
+              "type": "italic",
+              "children": [],
+              "text": "*really*"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": " don't know what you're talking about."
+            }
+          ],
+          "text": "I *really* don't know what you're talking about.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -64,19 +80,31 @@
               "type": "character",
               "children": [],
               "text": "DETECTIVE\n"
-            },
+            }
+          ],
+          "text": "DETECTIVE\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "parenthetical_line",
+              "type": "paren_text",
               "children": [],
               "text": "(**firmly**)"
-            },
+            }
+          ],
+          "text": "(**firmly**)\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "Don't lie to me."
             }
           ],
-          "text": "DETECTIVE\n(**firmly**)\nDon't lie to me.\n\n"
+          "text": "Don't lie to me.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -85,19 +113,41 @@
               "type": "character",
               "children": [],
               "text": "SUSPECT\n"
-            },
-            {
-              "type": "parenthetical_line",
-              "children": [],
-              "text": "(standing up)"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": "I want my _lawyer_."
             }
           ],
-          "text": "SUSPECT\n(standing up)\nI want my _lawyer_.\n\n"
+          "text": "SUSPECT\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "paren_text",
+              "children": [],
+              "text": "(standing up)"
+            }
+          ],
+          "text": "(standing up)\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "I want my "
+            },
+            {
+              "type": "underline",
+              "children": [],
+              "text": "_lawyer_"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "."
+            }
+          ],
+          "text": "I want my _lawyer_.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -106,14 +156,35 @@
               "type": "character",
               "children": [],
               "text": "DETECTIVE\n"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": "Fine. But you'll **regret** this."
             }
           ],
-          "text": "DETECTIVE\nFine. But you'll **regret** this.\n"
+          "text": "DETECTIVE\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Fine. "
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "But you'll "
+            },
+            {
+              "type": "bold",
+              "children": [],
+              "text": "**regret**"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": " this."
+            }
+          ],
+          "text": "Fine. But you'll **regret** this.\n"
         }
       ],
       "text": "INT. INTERROGATION ROOM - NIGHT\n\nDETECTIVE\nYou're going to tell me everything.\n\nSUSPECT\nI *really* don't know what you're talking about.\n\nDETECTIVE\n(**firmly**)\nDon't lie to me.\n\nSUSPECT\n(standing up)\nI want my _lawyer_.\n\nDETECTIVE\nFine. But you'll **regret** this.\n"

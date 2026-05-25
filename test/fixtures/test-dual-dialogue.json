@@ -37,34 +37,64 @@
               "type": "dialogue_line_start",
               "children": [],
               "text": "Where were you on the night of the 15th?"
-            },
+            }
+          ],
+          "text": "DETECTIVE MORSE\nWhere were you on the night of the 15th?\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "character",
               "children": [],
-              "text": "SUSPECT ^"
-            },
+              "text": "SUSPECT ^\n"
+            }
+          ],
+          "text": "SUSPECT ^\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "I was at home."
-            },
+            }
+          ],
+          "text": "I was at home.\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "character",
               "children": [],
-              "text": "DETECTIVE MORSE ^"
-            },
+              "text": "DETECTIVE MORSE ^\n"
+            }
+          ],
+          "text": "DETECTIVE MORSE ^\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "That's not what your neighbor said."
-            },
+            }
+          ],
+          "text": "That's not what your neighbor said.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "They lock eyes, neither backing down."
             }
           ],
-          "text": "DETECTIVE MORSE\nWhere were you on the night of the 15th?\n\nSUSPECT ^\nI was at home.\n\nDETECTIVE MORSE ^\nThat's not what your neighbor said.\n\nThey lock eyes, neither backing down.\n\n"
+          "text": "They lock eyes, neither backing down.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -73,29 +103,53 @@
               "type": "character",
               "children": [],
               "text": "BRICK\n"
-            },
+            }
+          ],
+          "text": "BRICK\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "Screw retirement."
-            },
+            }
+          ],
+          "text": "Screw retirement.\n\n"
+        },
+        {
+          "type": "dialogue_block",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "character",
               "children": [],
-              "text": "STEEL ^"
-            },
+              "text": "STEEL ^\n"
+            }
+          ],
+          "text": "STEEL ^\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "Screw retirement."
-            },
+            }
+          ],
+          "text": "Screw retirement.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "The room falls silent."
             }
           ],
-          "text": "BRICK\nScrew retirement.\n\nSTEEL ^\nScrew retirement.\n\nThe room falls silent.\n"
+          "text": "The room falls silent.\n"
         }
       ],
       "text": "INT. INTERROGATION ROOM - NIGHT\n\nDETECTIVE MORSE\nWhere were you on the night of the 15th?\n\nSUSPECT ^\nI was at home.\n\nDETECTIVE MORSE ^\nThat's not what your neighbor said.\n\nThey lock eyes, neither backing down.\n\nBRICK\nScrew retirement.\n\nSTEEL ^\nScrew retirement.\n\nThe room falls silent.\n"

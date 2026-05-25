@@ -110,14 +110,30 @@
               "type": "dialogue_line_start",
               "children": [],
               "text": "This contract is *very* important. The terms are **non-negotiable** and ***absolutely final***."
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": "The lawyer points to the _signature line_ at the bottom."
             }
           ],
-          "text": "STEEL\nThis contract is *very* important. The terms are **non-negotiable** and ***absolutely final***.\n\nThe lawyer points to the _signature line_ at the bottom.\n"
+          "text": "STEEL\nThis contract is *very* important. The terms are **non-negotiable** and ***absolutely final***.\n\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "The lawyer points to the "
+            },
+            {
+              "type": "underline",
+              "children": [],
+              "text": "_signature line_"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": " at the bottom."
+            }
+          ],
+          "text": "The lawyer points to the _signature line_ at the bottom.\n"
         }
       ],
       "text": "EXT. MOVIE SET - DAY\n\nThe director yells *action* and the scene begins.\n\nSteel enters wearing **bold sunglasses** and a ***bold italic jacket***.\n\nHe notices the _underlined contract_ on the table.\n\nSTEEL\nThis contract is *very* important. The terms are **non-negotiable** and ***absolutely final***.\n\nThe lawyer points to the _signature line_ at the bottom.\n"

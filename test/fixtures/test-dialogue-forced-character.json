@@ -54,14 +54,30 @@
               "type": "character",
               "children": [],
               "text": "HANS GRUBER\n"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": "Mr. McClane, how nice to hear from you."
             }
           ],
-          "text": "HANS GRUBER\nMr. McClane, how nice to hear from you.\n\n"
+          "text": "HANS GRUBER\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "Mr. "
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "Mc"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "Clane, how nice to hear from you."
+            }
+          ],
+          "text": "Mr. McClane, how nice to hear from you.\n\n"
         },
         {
           "type": "dialogue_block",

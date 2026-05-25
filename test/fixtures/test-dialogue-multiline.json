@@ -58,19 +58,31 @@
               "type": "character",
               "children": [],
               "text": "YOUNG WOMAN\n"
-            },
+            }
+          ],
+          "text": "YOUNG WOMAN\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "parenthetical_line",
+              "type": "paren_text",
               "children": [],
               "text": "(listening intently)"
-            },
+            }
+          ],
+          "text": "(listening intently)\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "Tell me more about that time."
             }
           ],
-          "text": "YOUNG WOMAN\n(listening intently)\nTell me more about that time.\n\n"
+          "text": "Tell me more about that time.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -79,29 +91,53 @@
               "type": "character",
               "children": [],
               "text": "ELDERLY MAN\n"
-            },
+            }
+          ],
+          "text": "ELDERLY MAN\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "Well, for starters..."
-            },
+            }
+          ],
+          "text": "Well, for starters...\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "We used to write letters."
-            },
+            }
+          ],
+          "text": "We used to write letters.\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "Real letters, with pen and paper."
-            },
+            }
+          ],
+          "text": "Real letters, with pen and paper.\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "Can you imagine that?"
             }
           ],
-          "text": "ELDERLY MAN\nWell, for starters...\nWe used to write letters.\nReal letters, with pen and paper.\nCan you imagine that?\n\n"
+          "text": "Can you imagine that?\n\n"
         },
         {
           "type": "dialogue_block",
@@ -110,14 +146,20 @@
               "type": "character",
               "children": [],
               "text": "YOUNG WOMAN\n"
-            },
+            }
+          ],
+          "text": "YOUNG WOMAN\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "That sounds lovely."
             }
           ],
-          "text": "YOUNG WOMAN\nThat sounds lovely.\n"
+          "text": "That sounds lovely.\n"
         }
       ],
       "text": "EXT. PARK BENCH - AFTERNOON\n\nELDERLY MAN\nWhen I was young, things were different.\nWe didn't have all these gadgets.\nWe talked to each other, face to face.\n\nYOUNG WOMAN\n(listening intently)\nTell me more about that time.\n\nELDERLY MAN\nWell, for starters...\nWe used to write letters.\nReal letters, with pen and paper.\nCan you imagine that?\n\nYOUNG WOMAN\nThat sounds lovely.\n"

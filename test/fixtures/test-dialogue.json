@@ -59,14 +59,25 @@
               "type": "character",
               "children": [],
               "text": "JOHN\n"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": "What was I supposed to do?"
             }
           ],
-          "text": "JOHN\nWhat was I supposed to do?\n\n"
+          "text": "JOHN\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "What was "
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "I supposed to do?"
+            }
+          ],
+          "text": "What was I supposed to do?\n\n"
         },
         {
           "type": "dialogue_block",
@@ -75,19 +86,31 @@
               "type": "character",
               "children": [],
               "text": "SARAH\n"
-            },
+            }
+          ],
+          "text": "SARAH\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "parenthetical_line",
+              "type": "paren_text",
               "children": [],
               "text": "(angry)"
-            },
+            }
+          ],
+          "text": "(angry)\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "Tell the truth!"
             }
           ],
-          "text": "SARAH\n(angry)\nTell the truth!\n\n"
+          "text": "Tell the truth!\n\n"
         },
         {
           "type": "dialogue_block",
@@ -96,19 +119,31 @@
               "type": "character",
               "children": [],
               "text": "JOHN\n"
-            },
+            }
+          ],
+          "text": "JOHN\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "parenthetical_line",
+              "type": "paren_text",
               "children": [],
               "text": "(defensively)"
-            },
+            }
+          ],
+          "text": "(defensively)\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "I was trying to protect you."
             }
           ],
-          "text": "JOHN\n(defensively)\nI was trying to protect you.\n\n"
+          "text": "I was trying to protect you.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -117,24 +152,47 @@
               "type": "character",
               "children": [],
               "text": "SARAH\n"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": "You always say that."
-            },
-            {
-              "type": "parenthetical_line",
-              "children": [],
-              "text": "(softening)"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": "But I appreciate it."
             }
           ],
-          "text": "SARAH\nYou always say that.\n(softening)\nBut I appreciate it.\n\n"
+          "text": "SARAH\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "You always say that."
+            }
+          ],
+          "text": "You always say that.\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "paren_text",
+              "children": [],
+              "text": "(softening)"
+            }
+          ],
+          "text": "(softening)\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "But "
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "I appreciate it."
+            }
+          ],
+          "text": "But I appreciate it.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -143,19 +201,31 @@
               "type": "character",
               "children": [],
               "text": "JOHN\n"
-            },
+            }
+          ],
+          "text": "JOHN\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "parenthetical_line",
+              "type": "paren_text",
               "children": [],
               "text": "(smiling)"
-            },
+            }
+          ],
+          "text": "(smiling)\n"
+        },
+        {
+          "type": "action",
+          "children": [
             {
-              "type": "dialogue_line_start",
+              "type": "text",
               "children": [],
               "text": "I know you do."
             }
           ],
-          "text": "JOHN\n(smiling)\nI know you do.\n"
+          "text": "I know you do.\n"
         }
       ],
       "text": "INT. COFFEE SHOP - DAY\n\nA typical coffee shop scene.\n\nSARAH\nI can't believe you did that!\n\nJOHN\nWhat was I supposed to do?\n\nSARAH\n(angry)\nTell the truth!\n\nJOHN\n(defensively)\nI was trying to protect you.\n\nSARAH\nYou always say that.\n(softening)\nBut I appreciate it.\n\nJOHN\n(smiling)\nI know you do.\n"

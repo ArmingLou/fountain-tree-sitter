@@ -53,14 +53,35 @@
               "type": "character",
               "children": [],
               "text": "JAMES\n"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": "This is *amazing. The asterisk here has no closing pair."
             }
           ],
-          "text": "JAMES\nThis is *amazing. The asterisk here has no closing pair.\n\n"
+          "text": "JAMES\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "This is "
+            },
+            {
+              "type": "literal_char",
+              "children": [],
+              "text": "*"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "amazing. "
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "The asterisk here has no closing pair."
+            }
+          ],
+          "text": "This is *amazing. The asterisk here has no closing pair.\n\n"
         },
         {
           "type": "dialogue_block",
@@ -69,14 +90,40 @@
               "type": "character",
               "children": [],
               "text": "MAYA\n"
-            },
-            {
-              "type": "dialogue_line_start",
-              "children": [],
-              "text": "But *this is italic* while *that was literal."
             }
           ],
-          "text": "MAYA\nBut *this is italic* while *that was literal.\n"
+          "text": "MAYA\n"
+        },
+        {
+          "type": "action",
+          "children": [
+            {
+              "type": "text",
+              "children": [],
+              "text": "But "
+            },
+            {
+              "type": "italic",
+              "children": [],
+              "text": "*this is italic*"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": " while "
+            },
+            {
+              "type": "literal_char",
+              "children": [],
+              "text": "*"
+            },
+            {
+              "type": "text",
+              "children": [],
+              "text": "that was literal."
+            }
+          ],
+          "text": "But *this is italic* while *that was literal.\n"
         }
       ],
       "text": "EXT. CLASSROOM - DAY\n\nELENA\n(tracing verb forms on whiteboard)\n\\*Leǵ-, \\*bʰer-, *h₁es-... We've been teaching PIE since yesterday's breakthrough. No permission requested.\n\nJAMES\nThis is *amazing. The asterisk here has no closing pair.\n\nMAYA\nBut *this is italic* while *that was literal.\n"
