@@ -875,6 +875,46 @@
         ]
       }
     },
+    "inline_boneyard": {
+      "type": "IMMEDIATE_TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 15,
+        "content": {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "/*"
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "PATTERN",
+                    "value": "[^\\/\\*\\n]+"
+                  },
+                  {
+                    "type": "STRING",
+                    "value": "/"
+                  },
+                  {
+                    "type": "PATTERN",
+                    "value": "\\*[^\\/\\n]"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "STRING",
+              "value": "*/"
+            }
+          ]
+        }
+      }
+    },
     "page_break": {
       "type": "PREC",
       "value": 10,
@@ -974,6 +1014,22 @@
         "type": "CHOICE",
         "members": [
           {
+            "type": "PREC",
+            "value": 15,
+            "content": {
+              "type": "SYMBOL",
+              "name": "inline_note"
+            }
+          },
+          {
+            "type": "PREC",
+            "value": 15,
+            "content": {
+              "type": "SYMBOL",
+              "name": "inline_boneyard"
+            }
+          },
+          {
             "type": "SYMBOL",
             "name": "escaped_char"
           },
@@ -1022,6 +1078,22 @@
       "content": {
         "type": "CHOICE",
         "members": [
+          {
+            "type": "PREC",
+            "value": 15,
+            "content": {
+              "type": "SYMBOL",
+              "name": "inline_note"
+            }
+          },
+          {
+            "type": "PREC",
+            "value": 15,
+            "content": {
+              "type": "SYMBOL",
+              "name": "inline_boneyard"
+            }
+          },
           {
             "type": "SYMBOL",
             "name": "escaped_char"
@@ -1159,7 +1231,7 @@
     },
     "text": {
       "type": "PATTERN",
-      "value": "[^A-Z*_\\n()\\\\@]+|[A-Z][^A-Z*_\\n()\\\\@]+"
+      "value": "[^A-Z*_\\n()\\\\@\\[\\]\\/]+|[A-Z][^A-Z*_\\n()\\\\@\\[\\]\\/]+"
     },
     "line": {
       "type": "TOKEN",
@@ -1267,6 +1339,10 @@
     {
       "type": "SYMBOL",
       "name": "parenthetical_line"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "inline_note"
     }
   ],
   "inline": [],

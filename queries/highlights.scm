@@ -42,6 +42,9 @@
 (note_start) @comment
 (note_content_nested) @comment
 
+;; 行内备注 [[text]]，用于 action/dialogue 行内
+(inline_note) @comment
+
 ;; Forced elements
 (forced_action_start) @comment
 (forced_character_start) @comment
@@ -67,3 +70,6 @@
 (boneyard) @comment
 (boneyard_start) @comment
 (boneyard_content_nested) @comment
+
+;; 行内注释 /*...*/，用于 action/dialogue 行内
+(inline_boneyard) @comment

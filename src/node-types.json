@@ -24,6 +24,14 @@
           "named": true
         },
         {
+          "type": "inline_boneyard",
+          "named": true
+        },
+        {
+          "type": "inline_note",
+          "named": true
+        },
+        {
           "type": "italic",
           "named": true
         },
@@ -563,6 +571,14 @@
   },
   {
     "type": "forced_transition_start",
+    "named": true
+  },
+  {
+    "type": "inline_boneyard",
+    "named": true
+  },
+  {
+    "type": "inline_note",
     "named": true
   },
   {

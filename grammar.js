@@ -28,7 +28,8 @@ module.exports = grammar({
     $.title_continuation,
     $.blank_line,
     $.dialogue_line_start,
-    $.parenthetical_line
+    $.parenthetical_line,
+    $.inline_note
   ],
 
   rules: {
@@ -244,6 +245,17 @@ module.exports = grammar({
       '\n'
     )),
 
+    // 行内注释 (/*...*/)，不跨行，用 token.immediate 限制不跨越 token 边界
+    inline_boneyard: $ => token.immediate(prec(15, seq(
+      '/*',
+      repeat(choice(
+        /[^\/\*\n]+/,
+        '/',
+        /\*[^\/\n]/
+      )),
+      '*/'
+    ))),
+
     // Page breaks (===)
     page_break: $ => prec(10, seq(
       $.page_break_marker,
@@ -280,6 +292,8 @@ module.exports = grammar({
     // Order matters: more specific patterns first
     // literal_char must come LAST as fallback for unmatched * or _
     _action_inline_content: $ => prec.left(choice(
+      prec(15, $.inline_note),
+      prec(15, $.inline_boneyard),
       $.escaped_char,
       $.bold_italic,
       $.bold,
@@ -293,6 +307,8 @@ module.exports = grammar({
 
     // Dialogue inline content: excludes paren_text (parentheticals are standalone lines)
     _inline_content: $ => prec.left(choice(
+      prec(15, $.inline_note),
+      prec(15, $.inline_boneyard),
       $.escaped_char,
       $.bold_italic,
       $.bold,
@@ -349,8 +365,8 @@ module.exports = grammar({
 
     // Regular text - everything else
     // Matches: lowercase, digits, punctuation, title-case words (capital + lowercase+)
-    // Excludes: parentheses, emphasis markers, backslash, @ (for forced character)
-    text: $ => /[^A-Z*_\n()\\@]+|[A-Z][^A-Z*_\n()\\@]+/,
+    // Excludes: parentheses, emphasis markers, backslash, @, [ ], / (for inline notes/boneyard)
+    text: $ => /[^A-Z*_\n()\\@\[\]\/]+|[A-Z][^A-Z*_\n()\\@\[\]\/]+/,
 
     line: $ => token(prec(-1, /[^\n]+/)),  // Lower precedence so specific patterns match first
 

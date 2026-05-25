@@ -21,6 +21,7 @@ enum TokenType {
   BLANK_LINE,
   DIALOGUE_LINE_START,
   PARENTHETICAL_LINE,
+  INLINE_NOTE,
 };
 
 typedef struct {
@@ -350,6 +351,54 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
       lexer->advance(lexer, false);
     }
     return false;
+  }
+
+  // Try inline note ([[...]]) - 行内备注，消费到行尾或备注结束
+  if (valid_symbols[INLINE_NOTE]) {
+    // 只在 [[ 开头时才匹配
+    if (lexer->lookahead == '[') {
+      lexer->advance(lexer, false);
+      if (lexer->lookahead == '[') {
+        int nest_level = 0;  // 已消费了 opening [[
+
+        while (lexer->lookahead != '\0') {
+          // 检测 [[
+          if (lexer->lookahead == '[') {
+            lexer->advance(lexer, false);
+            if (lexer->lookahead == '[') {
+              lexer->advance(lexer, false);
+              nest_level++;
+              continue;
+            }
+            continue;
+          }
+
+          // 检测 ]]
+          if (lexer->lookahead == ']') {
+            lexer->advance(lexer, false);
+            if (lexer->lookahead == ']') {
+              lexer->advance(lexer, false);
+              if (nest_level == 0) {
+                lexer->result_symbol = INLINE_NOTE;
+                lexer->mark_end(lexer);
+                return true;
+              }
+              nest_level--;
+              continue;
+            }
+            continue;
+          }
+
+          // 遇到换行也结束（行内备注不能跨行）
+          if (lexer->lookahead == '\n') {
+            return false;
+          }
+
+          lexer->advance(lexer, false);
+        }
+        return false;
+      }
+    }
   }
 
   // Try parenthetical_line - matches standalone (text) or （中文括号） lines within dialogue blocks
