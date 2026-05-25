@@ -40,7 +40,7 @@
 ;; Notes [[text]]
 (note) @comment
 (note_start) @comment
-(note_content) @comment
+(note_content_nested) @comment
 
 ;; Forced elements
 (forced_action_start) @comment
@@ -66,3 +66,4 @@
 ;; Boneyard /* ... */
 (boneyard) @comment
 (boneyard_start) @comment
+(boneyard_content_nested) @comment
