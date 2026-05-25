@@ -52,7 +52,7 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
   Scanner *scanner = (Scanner *)payload;
 
   // 如果不是在对话/插入语上下文中，重置空白行标志
-  if (!valid_symbols[DIALOGUE_LINE_START] && !valid_symbols[PARENTHETICAL_LINE]) {
+  if (!valid_symbols[DIALOGUE_LINE_START] && !valid_symbols[PARENTHETICAL_LINE] && !valid_symbols[DIALOGUE_INLINE]) {
     scanner->blank_seen_in_dialogue = false;
     scanner->continuation_active = false;
   }
@@ -603,8 +603,37 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
       }
     }
 
-    // 门控通过，返回零长度令牌
+    // 门控通过，前瞻窥探下一行设置标志位
     scanner->continuation_active = false;
+
+    // 消费当前行内容（用于前瞻窥探，不消费换行符）
+    while (lexer->lookahead != '\n' && lexer->lookahead != '\0') {
+      lexer->advance(lexer, false);
+    }
+
+    // 前瞻窥探下一行
+    if (lexer->lookahead == '\n') {
+      lexer->advance(lexer, false);  // 跳过当前行尾 \n
+
+      int space_count = 0;
+      while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
+        space_count++;
+        lexer->advance(lexer, false);
+      }
+
+      if (lexer->lookahead == '\n') {
+        if (space_count < 2) {
+          // 0-1空格空行：终止对话
+          scanner->blank_seen_in_dialogue = true;
+          scanner->continuation_active = false;
+        } else {
+          // 2+空格延续标记：保持对话开放
+          scanner->continuation_active = true;
+          scanner->blank_seen_in_dialogue = false;
+        }
+      }
+    }
+
     lexer->result_symbol = DIALOGUE_INLINE;
     return true;
   }
@@ -635,136 +664,8 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
       return false;
     }
 
-    // 非空行开始，重置空白行标志（新的对话上下文）
-    scanner->blank_seen_in_dialogue = false;
-
-    // 非缩进行（少于2个空格）：检查特殊字符和角色名
-    // 缩进行（2+空格）或延续激活：直接作为对话延续，跳过所有特殊字符检查
-    if (indent < 2 && !scanner->continuation_active) {
-      // 检查是否是Fountain特殊标记：场景、章节、强制角色、梗概、歌词、转场/居中、强制动作
-      // 对话行不应以这些字符开头（备注[[和注释/*由语法层面的更高优先级来处理）
-      if (lexer->lookahead == '.' || lexer->lookahead == '#' || lexer->lookahead == '@' ||
-          lexer->lookahead == '=' || lexer->lookahead == '~' || lexer->lookahead == '>' ||
-          lexer->lookahead == '!') {
-        return false;
-      }
-
-      // 检查是否是独立括号行：排除纯插入语 `(text)` 或中文 `（text）` 开头且行尾无其他内容的行
-      // 纯粹的插入语应由 parenthetical_line 规则匹配
-      // 括号后有其他文字的行（如 `(停顿) 继续说话`）仍作为对话行处理
-      {
-        int32_t open_paren = 0;
-        int32_t close_paren = 0;
-        if (lexer->lookahead == '(') {
-          open_paren = '(';
-          close_paren = ')';
-    } else if (lexer->lookahead == 0xFF08) {  // fullwidth left parenthesis U+FF08
-      open_paren = 0xFF08;
-      close_paren = 0xFF09;  // fullwidth right parenthesis U+FF09
-        }
-        if (open_paren != 0) {
-          lexer->advance(lexer, false);  // 跳过开括号
-
-          // 扫描寻找匹配的闭括号
-          while (lexer->lookahead != close_paren && lexer->lookahead != '\n' && lexer->lookahead != '\0') {
-            lexer->advance(lexer, false);
-          }
-
-          if (lexer->lookahead == close_paren) {
-            lexer->advance(lexer, false);  // 跳过闭括号
-
-            // 跳过尾部空格
-            while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-              lexer->advance(lexer, false);
-            }
-
-            // 如果到行尾（\n 或 \0），这是纯插入语，拒绝以让语法层匹配 parenthetical
-            if (lexer->lookahead == '\n' || lexer->lookahead == '\0') {
-              return false;
-            }
-          }
-          // 不是纯插入语：括号后有其他内容 或 没有找到闭合括号
-          // 此时 lexer 已前进了若干字符，继续 fall through 消费剩余行
-        }
-      }
-
-      // Check if this line looks like a character name (all uppercase with valid chars)
-      // Character pattern: [A-Z][A-Z0-9 ()\\.']*[A-Z0-9)\\.]
-      // Reject so parent grammar can handle it as a new character starting a dialogue_block
-      {
-        int32_t first = lexer->lookahead;
-        if (first >= 'A' && first <= 'Z') {
-          // Scan the rest of the line to check character name pattern
-          // Must contain only character-valid chars and end with character-valid ending
-          bool all_valid_chars = true;
-          int32_t last_char = first;
-          int32_t ch;
-
-          // We need to peek ahead without permanently consuming
-          // Tree-sitter will rollback lexer position if we return false
-          lexer->advance(lexer, false);
-
-          while ((ch = lexer->lookahead) != '\n' && ch != '\0') {
-            last_char = ch;
-            if (!((ch >= 'A' && ch <= 'Z') ||
-                  (ch >= '0' && ch <= '9') ||
-                  ch == ' ' || ch == '(' || ch == ')' ||
-                  ch == '.' || ch == '\'')) {
-              all_valid_chars = false;
-              break;
-            }
-            lexer->advance(lexer, false);
-          }
-
-          // Must end with uppercase letter, digit, ) or .
-          if (all_valid_chars &&
-              ((last_char >= 'A' && last_char <= 'Z') ||
-               (last_char >= '0' && last_char <= '9') ||
-               last_char == ')' || last_char == '.')) {
-            return false;  // Looks like a character name, reject
-          }
-        }
-      }
-    }
-
-    // 消费一行后重置延续标志
-    scanner->continuation_active = false;
-
-    // 消费整行内容（不消费行尾换行符，由语法规则处理）
-    while (lexer->lookahead != '\n' && lexer->lookahead != '\0') {
-      lexer->advance(lexer, false);
-    }
-
-    // It's a valid dialogue line - return the entire line content
-    lexer->result_symbol = DIALOGUE_LINE_START;
-    lexer->mark_end(lexer);
-
-    // 前瞻窥探：mark_end后主动向前看，检测后续空白行类型
-    // 此时extras尚未介入，\n字符可见
-    if (lexer->lookahead == '\n') {
-      lexer->advance(lexer, false);  // 跳过当前行尾的 \n
-
-      int space_count = 0;
-      while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
-        space_count++;
-        lexer->advance(lexer, false);
-      }
-
-      if (lexer->lookahead == '\n') {
-        if (space_count < 2) {
-          // 0-1空格空行：终止对话
-          scanner->blank_seen_in_dialogue = true;
-          scanner->continuation_active = false;
-        } else {
-          // 2+空格延续标记：保持对话开放
-          scanner->continuation_active = true;
-          scanner->blank_seen_in_dialogue = false;
-        }
-      }
-      // tree-sitter会在函数返回后将lexer回滚到mark_end位罿
-    }
-
-    return true;
+    // 内容行交由 dialogue_text（dialogue_inline 门控）处理
+    return false;
   }
 // Try blank line - actively scan for blank lines (0-1 space then \n)
 // Even when \n is in extras, the scanner can advance through it with skip=false

@@ -188,8 +188,8 @@ dialogue_block: $ => prec(5, seq(
       $.note,
       $.boneyard,
       seq($.parenthetical_line, '\n'),
-      seq($.dialogue_text, '\n'),
-      seq($.dialogue_line_start, '\n')
+      seq($.dialogue_line_start, '\n'),
+      seq($.dialogue_text, '\n')
     ),
 
     dialogue_text: $ => seq(

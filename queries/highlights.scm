@@ -2,7 +2,7 @@
 
 (dialogue_line_start) @string
 (dialogue_inline) @string
-(dialogue_block (text) @string)
+(dialogue_text (text) @string)
 (action) @text
 
 ;; Parenthetical lines (wrylies)

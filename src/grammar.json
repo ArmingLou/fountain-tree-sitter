@@ -625,7 +625,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "dialogue_text"
+              "name": "dialogue_line_start"
             },
             {
               "type": "STRING",
@@ -638,7 +638,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "dialogue_line_start"
+              "name": "dialogue_text"
             },
             {
               "type": "STRING",
