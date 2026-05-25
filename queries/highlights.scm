@@ -1,6 +1,8 @@
 ;; Fountain 语法高亮定义
 
 (dialogue_line_start) @string
+(dialogue_inline) @string
+(dialogue_block (text) @string)
 (action) @text
 
 ;; Parenthetical lines (wrylies)

@@ -586,142 +586,83 @@
             "type": "PREC_RIGHT",
             "value": 0,
             "content": {
-              "type": "REPEAT",
+              "type": "REPEAT1",
               "content": {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "note"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "boneyard"
-                  },
-                  {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "parenthetical_line"
-                      },
-                      {
-                        "type": "STRING",
-                        "value": "\n"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "dialogue_inline"
-                      },
-                      {
-                        "type": "REPEAT1",
-                        "content": {
-                          "type": "SYMBOL",
-                          "name": "_inline_content"
-                        }
-                      },
-                      {
-                        "type": "STRING",
-                        "value": "\n"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "dialogue_line_start"
-                      },
-                      {
-                        "type": "STRING",
-                        "value": "\n"
-                      }
-                    ]
-                  }
-                ]
+                "type": "SYMBOL",
+                "name": "_dialogue_item"
               }
             }
           }
         ]
       }
     },
-    "dialogue": {
-      "type": "PREC_RIGHT",
-      "value": 0,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "REPEAT1",
-            "content": {
+    "_dialogue_item": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "note"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "boneyard"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
               "type": "SYMBOL",
-              "name": "_inline_content"
-            }
-          },
-          {
-            "type": "IMMEDIATE_TOKEN",
-            "content": {
+              "name": "parenthetical_line"
+            },
+            {
               "type": "STRING",
               "value": "\n"
             }
-          }
-        ]
-      }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "dialogue_text"
+            },
+            {
+              "type": "STRING",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "dialogue_line_start"
+            },
+            {
+              "type": "STRING",
+              "value": "\n"
+            }
+          ]
+        }
+      ]
     },
-    "parenthetical": {
-      "type": "PREC_RIGHT",
-      "value": 10,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "PATTERN",
-                "value": " +"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "STRING",
-            "value": "("
-          },
-          {
-            "type": "PATTERN",
-            "value": "[^)]+"
-          },
-          {
-            "type": "STRING",
-            "value": ")"
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "PATTERN",
-                "value": " +"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "STRING",
-            "value": "\n"
+    "dialogue_text": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "dialogue_inline"
+        },
+        {
+          "type": "REPEAT1",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_inline_content"
           }
-        ]
-      }
+        }
+      ]
     },
     "action": {
       "type": "PREC",
@@ -893,46 +834,6 @@
             "value": "\n"
           }
         ]
-      }
-    },
-    "inline_boneyard": {
-      "type": "IMMEDIATE_TOKEN",
-      "content": {
-        "type": "PREC",
-        "value": 15,
-        "content": {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "/*"
-            },
-            {
-              "type": "REPEAT",
-              "content": {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "PATTERN",
-                    "value": "[^\\/\\*\\n]+"
-                  },
-                  {
-                    "type": "STRING",
-                    "value": "/"
-                  },
-                  {
-                    "type": "PATTERN",
-                    "value": "\\*[^\\/\\n]"
-                  }
-                ]
-              }
-            },
-            {
-              "type": "STRING",
-              "value": "*/"
-            }
-          ]
-        }
       }
     },
     "page_break": {
@@ -1363,6 +1264,10 @@
     {
       "type": "SYMBOL",
       "name": "inline_note"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "inline_boneyard"
     },
     {
       "type": "SYMBOL",

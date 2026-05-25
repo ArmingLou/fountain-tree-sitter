@@ -30,6 +30,7 @@ module.exports = grammar({
     $.dialogue_line_start,
     $.parenthetical_line,
     $.inline_note,
+    $.inline_boneyard,
     $.dialogue_inline
   ],
 
@@ -178,31 +179,23 @@ module.exports = grammar({
       )
     ),
 
-    dialogue_block: $ => prec(5, seq(
+dialogue_block: $ => prec(5, seq(
       $.character,
-      prec.right(repeat(choice(
-        $.note,
-        $.boneyard,
-        seq($.parenthetical_line, '\n'),
-        seq($.dialogue_inline, repeat1($._inline_content), '\n'),
-        seq($.dialogue_line_start, '\n')
-      )))
+      prec.right(repeat1($._dialogue_item))
     )),
 
+    _dialogue_item: $ => choice(
+      $.note,
+      $.boneyard,
+      seq($.parenthetical_line, '\n'),
+      seq($.dialogue_text, '\n'),
+      seq($.dialogue_line_start, '\n')
+    ),
 
-    dialogue: $ => prec.right(seq(
-      repeat1($._inline_content),
-      token.immediate('\n')
-    )),
-
-    parenthetical: $ => prec.right(10, seq(  // Higher precedence than dialogue
-      optional(/ +/),  // Optional leading spaces
-      '(',
-      /[^)]+/,
-      ')',
-      optional(/ +/),  // Optional trailing spaces
-      '\n'
-    )),
+    dialogue_text: $ => seq(
+      $.dialogue_inline,
+      repeat1($._inline_content)
+    ),
 
     action: $ => prec(1, choice(  // Lowest precedence - action is fallback
       seq(
@@ -246,17 +239,6 @@ module.exports = grammar({
       $.boneyard_content_nested,
       '\n'
     )),
-
-    // 行内注释 (/*...*/)，不跨行，用 token.immediate 限制不跨越 token 边界
-    inline_boneyard: $ => token.immediate(prec(15, seq(
-      '/*',
-      repeat(choice(
-        /[^\/\*\n]+/,
-        '/',
-        /\*[^\/\n]/
-      )),
-      '*/'
-    ))),
 
     // Page breaks (===)
     page_break: $ => prec(10, seq(

@@ -22,6 +22,7 @@ enum TokenType {
   DIALOGUE_LINE_START,
   PARENTHETICAL_LINE,
   INLINE_NOTE,
+  INLINE_BONEYARD,
   DIALOGUE_INLINE,
 };
 
@@ -402,6 +403,54 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
     }
   }
 
+  // Try inline boneyard (/*...*/) - 行内注释，支持嵌套，不跨行
+  if (valid_symbols[INLINE_BONEYARD]) {
+    // 只在 /* 开头时才匹配
+    if (lexer->lookahead == '/') {
+      lexer->advance(lexer, false);
+      if (lexer->lookahead == '*') {
+        int nest_level = 0;  // 已消费了 opening /*
+
+        while (lexer->lookahead != '\0') {
+          // 检测 /*
+          if (lexer->lookahead == '/') {
+            lexer->advance(lexer, false);
+            if (lexer->lookahead == '*') {
+              lexer->advance(lexer, false);
+              nest_level++;
+              continue;
+            }
+            continue;
+          }
+
+          // 检测 */
+          if (lexer->lookahead == '*') {
+            lexer->advance(lexer, false);
+            if (lexer->lookahead == '/') {
+              lexer->advance(lexer, false);
+              if (nest_level == 0) {
+                lexer->result_symbol = INLINE_BONEYARD;
+                lexer->mark_end(lexer);
+                return true;
+              }
+              nest_level--;
+              continue;
+            }
+            continue;
+          }
+
+          // 遇到换行也结束（行内注释不能跨行）
+          if (lexer->lookahead == '\n') {
+            return false;
+          }
+
+          lexer->advance(lexer, false);
+        }
+        return false;
+      }
+    }
+  }
+
   // Try parenthetical_line - matches standalone (text) or （中文括号） lines within dialogue blocks
   // 如果空白行标志已设置，拒绝匹配以终止对话块
   if (valid_symbols[PARENTHETICAL_LINE]) {
@@ -481,8 +530,12 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
     // 非空行开始
     scanner->blank_seen_in_dialogue = false;
 
-    // 非缩进行：检查特殊字符和角色名
+    // 非缩进行：检查空白标志和特殊字符
     if (indent < 2 && !scanner->continuation_active) {
+      // 如果已检测到空行，拒绝后续行以终止对话块
+      if (scanner->blank_seen_in_dialogue) {
+        return false;
+      }
       // 特殊标记检测
       if (lexer->lookahead == '.' || lexer->lookahead == '#' || lexer->lookahead == '@' ||
           lexer->lookahead == '=' || lexer->lookahead == '~' || lexer->lookahead == '>' ||
@@ -550,7 +603,7 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
       }
     }
 
-    // 门控通过，返回零长度令牌（词法位置由 mark_end 回滚到内容开始前）
+    // 门控通过，返回零长度令牌
     scanner->continuation_active = false;
     lexer->result_symbol = DIALOGUE_INLINE;
     return true;
@@ -733,7 +786,7 @@ if (valid_symbols[BLANK_LINE]) {
     // Match if we found a newline with 0-1 spaces
     if (newline_seen >= 1 && space_count < 2) {
       // 在对话上下文中设置空白行标志，阻止后续对话行匹配
-      if (valid_symbols[DIALOGUE_LINE_START]) {
+      if (valid_symbols[DIALOGUE_LINE_START] || valid_symbols[DIALOGUE_INLINE]) {
         scanner->blank_seen_in_dialogue = true;
         scanner->continuation_active = false;
       }

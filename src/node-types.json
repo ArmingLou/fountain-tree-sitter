@@ -124,14 +124,6 @@
       "required": true,
       "types": [
         {
-          "type": "bold",
-          "named": true
-        },
-        {
-          "type": "bold_italic",
-          "named": true
-        },
-        {
           "type": "boneyard",
           "named": true
         },
@@ -140,11 +132,42 @@
           "named": true
         },
         {
-          "type": "dialogue_inline",
+          "type": "dialogue_line_start",
           "named": true
         },
         {
-          "type": "dialogue_line_start",
+          "type": "dialogue_text",
+          "named": true
+        },
+        {
+          "type": "note",
+          "named": true
+        },
+        {
+          "type": "parenthetical_line",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dialogue_text",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "bold",
+          "named": true
+        },
+        {
+          "type": "bold_italic",
+          "named": true
+        },
+        {
+          "type": "dialogue_inline",
           "named": true
         },
         {
@@ -165,14 +188,6 @@
         },
         {
           "type": "literal_char",
-          "named": true
-        },
-        {
-          "type": "note",
-          "named": true
-        },
-        {
-          "type": "parenthetical_line",
           "named": true
         },
         {
