@@ -59,7 +59,7 @@
       "required": true,
       "types": [
         {
-          "type": "boneyard_content",
+          "type": "boneyard_content_nested",
           "named": true
         },
         {
@@ -226,7 +226,7 @@
       "required": true,
       "types": [
         {
-          "type": "note_content",
+          "type": "note_content_nested",
           "named": true
         },
         {
@@ -502,19 +502,11 @@
     "named": false
   },
   {
-    "type": "*/",
-    "named": false
-  },
-  {
     "type": "-",
     "named": false
   },
   {
     "type": ".",
-    "named": false
-  },
-  {
-    "type": "]]",
     "named": false
   },
   {
@@ -530,7 +522,7 @@
     "named": true
   },
   {
-    "type": "boneyard_content",
+    "type": "boneyard_content_nested",
     "named": true
   },
   {
@@ -586,7 +578,7 @@
     "named": true
   },
   {
-    "type": "note_content",
+    "type": "note_content_nested",
     "named": true
   },
   {

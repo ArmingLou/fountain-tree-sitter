@@ -15,6 +15,7 @@ module.exports = grammar({
     $.scene_start,
     $.section_start,
     $.note_start,
+    $.note_content_nested,
     $.forced_action_start,
     $.forced_character_start,
     $.forced_transition_start,
@@ -23,6 +24,7 @@ module.exports = grammar({
     $.page_break_marker,
     $.synopsis_start,
     $.boneyard_start,
+    $.boneyard_content_nested,
     $.title_continuation,
     $.blank_line,
     $.dialogue_line_start,
@@ -231,25 +233,16 @@ module.exports = grammar({
 
     note: $ => prec(2, seq(  // Higher precedence than action (prec 1)
       $.note_start,
-      $.note_content,
-      ']]',
+      $.note_content_nested,
       '\n'
     )),
 
-    note_content: $ => /[^\]]+/,
-
-    // Boneyard comments (/* ... */)
+    // Boneyard comments (/* ... */)，支持嵌套
     boneyard: $ => prec(10, seq(
       $.boneyard_start,
-      $.boneyard_content,
-      '*/',
+      $.boneyard_content_nested,
       '\n'
     )),
-
-    boneyard_content: $ => token(prec(-1, repeat(choice(
-      /[^*]+/,  // Any character except *
-      /\*[^\/]/  // * not followed by /
-    )))),
 
     // Page breaks (===)
     page_break: $ => prec(10, seq(

@@ -1036,9 +1036,9 @@
               "text": "/*"
             },
             {
-              "type": "boneyard_content",
+              "type": "boneyard_content_nested",
               "children": [],
-              "text": " do we have a boneyard "
+              "text": " do we have a boneyard */"
             }
           ],
           "text": "/* do we have a boneyard */\n\n"
@@ -1052,9 +1052,9 @@
               "text": "/*"
             },
             {
-              "type": "boneyard_content",
+              "type": "boneyard_content_nested",
               "children": [],
-              "text": " yes, we do "
+              "text": " yes, we do */"
             }
           ],
           "text": "/* yes, we do */\n\n"

@@ -50,9 +50,9 @@
               "text": "/*"
             },
             {
-              "type": "boneyard_content",
+              "type": "boneyard_content_nested",
               "children": [],
-              "text": " This entire scene should be ignored\nINT. GARAGE - DAY\n\nBRICK and STEEL get into Mom's PORSCHE.\n\nSTEEL\nLet's go!\n\nThey speed off. To destiny!\n"
+              "text": " This entire scene should be ignored\nINT. GARAGE - DAY\n\nBRICK and STEEL get into Mom's PORSCHE.\n\nSTEEL\nLet's go!\n\nThey speed off. To destiny!\n*/"
             }
           ],
           "text": "/* This entire scene should be ignored\nINT. GARAGE - DAY\n\nBRICK and STEEL get into Mom's PORSCHE.\n\nSTEEL\nLet's go!\n\nThey speed off. To destiny!\n*/\n\n"

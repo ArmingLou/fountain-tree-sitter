@@ -845,11 +845,7 @@
           },
           {
             "type": "SYMBOL",
-            "name": "note_content"
-          },
-          {
-            "type": "STRING",
-            "value": "]]"
+            "name": "note_content_nested"
           },
           {
             "type": "STRING",
@@ -857,10 +853,6 @@
           }
         ]
       }
-    },
-    "note_content": {
-      "type": "PATTERN",
-      "value": "[^\\]]+"
     },
     "boneyard": {
       "type": "PREC",
@@ -874,40 +866,13 @@
           },
           {
             "type": "SYMBOL",
-            "name": "boneyard_content"
-          },
-          {
-            "type": "STRING",
-            "value": "*/"
+            "name": "boneyard_content_nested"
           },
           {
             "type": "STRING",
             "value": "\n"
           }
         ]
-      }
-    },
-    "boneyard_content": {
-      "type": "TOKEN",
-      "content": {
-        "type": "PREC",
-        "value": -1,
-        "content": {
-          "type": "REPEAT",
-          "content": {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "PATTERN",
-                "value": "[^*]+"
-              },
-              {
-                "type": "PATTERN",
-                "value": "\\*[^\\/]"
-              }
-            ]
-          }
-        }
       }
     },
     "page_break": {
@@ -1249,6 +1214,10 @@
     },
     {
       "type": "SYMBOL",
+      "name": "note_content_nested"
+    },
+    {
+      "type": "SYMBOL",
       "name": "forced_action_start"
     },
     {
@@ -1278,6 +1247,10 @@
     {
       "type": "SYMBOL",
       "name": "boneyard_start"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "boneyard_content_nested"
     },
     {
       "type": "SYMBOL",

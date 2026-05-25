@@ -7,6 +7,7 @@ enum TokenType {
   SCENE_START,
   SECTION_START,
   NOTE_START,
+  NOTE_NESTED,
   FORCED_ACTION_START,
   FORCED_CHARACTER_START,
   FORCED_TRANSITION_START,
@@ -15,6 +16,7 @@ enum TokenType {
   PAGE_BREAK_MARKER,
   SYNOPSIS_START,
   BONEYARD_START,
+  BONEYARD_NESTED,
   TITLE_CONTINUATION,
   BLANK_LINE,
   DIALOGUE_LINE_START,
@@ -178,6 +180,47 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
     return true;
   }
 
+  // Try note_content_nested - 消费 [[...]] 内容，支持嵌套
+  if (valid_symbols[NOTE_NESTED]) {
+    int nest_level = 1;  // 已消费了 opening [[
+    lexer->mark_end(lexer);
+
+    while (lexer->lookahead != '\0') {
+      // 检测 [[
+      if (lexer->lookahead == '[') {
+        lexer->advance(lexer, false);
+        if (lexer->lookahead == '[') {
+          lexer->advance(lexer, false);
+          nest_level++;
+          continue;
+        }
+        // 单独的 [ 作为内容
+        continue;
+      }
+
+      // 检测 ]]
+      if (lexer->lookahead == ']') {
+        lexer->advance(lexer, false);
+        if (lexer->lookahead == ']') {
+          lexer->advance(lexer, false);
+          nest_level--;
+          if (nest_level == 0) {
+            lexer->result_symbol = NOTE_NESTED;
+            lexer->mark_end(lexer);
+            return true;
+          }
+          continue;
+        }
+        // 单独的 ] 作为内容
+        continue;
+      }
+
+      // 普通字符或换行
+      lexer->advance(lexer, false);
+    }
+    return false;
+  }
+
   // Try forced action (!)
   if (valid_symbols[FORCED_ACTION_START] && lexer->lookahead == '!') {
     lexer->advance(lexer, false);
@@ -267,6 +310,46 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
     lexer->result_symbol = BONEYARD_START;
     lexer->mark_end(lexer);
     return true;
+  }
+
+  // Try boneyard_nested - 消费 /*...*/ 内容，支持嵌套
+  if (valid_symbols[BONEYARD_NESTED]) {
+    int nest_level = 1;  // 已消费了 opening /*
+
+    while (lexer->lookahead != '\0') {
+      // 检测 /*
+      if (lexer->lookahead == '/') {
+        lexer->advance(lexer, false);
+        if (lexer->lookahead == '*') {
+          lexer->advance(lexer, false);
+          nest_level++;
+          continue;
+        }
+        // 单独的 / 作为内容
+        continue;
+      }
+
+      // 检测 */
+      if (lexer->lookahead == '*') {
+        lexer->advance(lexer, false);
+        if (lexer->lookahead == '/') {
+          lexer->advance(lexer, false);
+          nest_level--;
+          if (nest_level == 0) {
+            lexer->result_symbol = BONEYARD_NESTED;
+            lexer->mark_end(lexer);
+            return true;
+          }
+          continue;
+        }
+        // 单独的 * 作为内容
+        continue;
+      }
+
+      // 普通字符或换行
+      lexer->advance(lexer, false);
+    }
+    return false;
   }
 
   // Try parenthetical_line - matches standalone (text) or （中文括号） lines within dialogue blocks

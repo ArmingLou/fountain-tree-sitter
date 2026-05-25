@@ -34,9 +34,9 @@
               "text": "[["
             },
             {
-              "type": "note_content",
+              "type": "note_content_nested",
               "children": [],
-              "text": "This scene should feel tense and claustrophobic"
+              "text": "This scene should feel tense and claustrophobic]]"
             }
           ],
           "text": "[[This scene should feel tense and claustrophobic]]\n\n"
@@ -69,9 +69,9 @@
                   "text": "[["
                 },
                 {
-                  "type": "note_content",
+                  "type": "note_content_nested",
                   "children": [],
-                  "text": "whisper this line"
+                  "text": "whisper this line]]"
                 }
               ],
               "text": "[[whisper this line]]\n"
