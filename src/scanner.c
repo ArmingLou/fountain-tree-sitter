@@ -172,8 +172,6 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
 
   // Try note start ([[)
   if (valid_symbols[NOTE_START] && match_keyword(lexer, "[[")) {
-    // 对话块内遇到空行后，不应该再匹配备注（让其在外层匹配）
-    if (scanner->blank_seen_in_dialogue) return false;
     lexer->result_symbol = NOTE_START;
     lexer->mark_end(lexer);
     return true;
@@ -263,8 +261,6 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
 
   // Try boneyard (/*)
   if (valid_symbols[BONEYARD_START] && match_keyword(lexer, "/*")) {
-    // 对话块内遇到空行后，不应该再匹配注释（让其在外层匹配）
-    if (scanner->blank_seen_in_dialogue) return false;
     lexer->result_symbol = BONEYARD_START;
     lexer->mark_end(lexer);
     return true;
