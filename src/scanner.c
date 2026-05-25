@@ -19,6 +19,7 @@ enum TokenType {
   BLANK_LINE,
   DIALOGUE_LINE_START,
   PARENTHETICAL_LINE,
+  INLINE_NOTE,
 };
 
 typedef struct {
@@ -317,6 +318,29 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
       }
     }
     // 不是有效的插入语行，fall through 继续检查其他令牌类型
+  }
+
+  // Try inline note ([[...]]) - 行内备注，不跨行
+  if (valid_symbols[INLINE_NOTE]) {
+    if (lexer->lookahead == '[') {
+      lexer->advance(lexer, false);
+      if (lexer->lookahead == '[') {
+        while (lexer->lookahead != '\n' && lexer->lookahead != '\0') {
+          if (lexer->lookahead == ']') {
+            lexer->advance(lexer, false);
+            if (lexer->lookahead == ']') {
+              lexer->advance(lexer, false);
+              lexer->result_symbol = INLINE_NOTE;
+              lexer->mark_end(lexer);
+              return true;
+            }
+            continue;
+          }
+          lexer->advance(lexer, false);
+        }
+        return false;
+      }
+    }
   }
 
   // Try dialogue_line_start - matches if we're at the start of a non-blank line

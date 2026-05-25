@@ -873,18 +873,34 @@
             "name": "boneyard_start"
           },
           {
-            "type": "SYMBOL",
-            "name": "boneyard_content"
-          },
-          {
-            "type": "STRING",
-            "value": "*/"
-          },
-          {
-            "type": "STRING",
-            "value": "\n"
+            "type": "PATTERN",
+            "value": "[^\\n]+\\n"
           }
         ]
+      }
+    },
+    "inline_boneyard": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": 10,
+        "content": {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "/*"
+            },
+            {
+              "type": "PATTERN",
+              "value": "[^*\\n]+"
+            },
+            {
+              "type": "STRING",
+              "value": "*/"
+            }
+          ]
+        }
       }
     },
     "boneyard_content": {
@@ -1008,6 +1024,22 @@
       "content": {
         "type": "CHOICE",
         "members": [
+          {
+            "type": "PREC",
+            "value": 10,
+            "content": {
+              "type": "SYMBOL",
+              "name": "inline_note"
+            }
+          },
+          {
+            "type": "PREC",
+            "value": 10,
+            "content": {
+              "type": "SYMBOL",
+              "name": "inline_boneyard"
+            }
+          },
           {
             "type": "SYMBOL",
             "name": "escaped_char"
@@ -1194,7 +1226,7 @@
     },
     "text": {
       "type": "PATTERN",
-      "value": "[^A-Z*_\\n()\\\\@]+|[A-Z][^A-Z*_\\n()\\\\@]+"
+      "value": "[^A-Z*_\\n()\\\\@\\[\\]\\/]+|[A-Z][^A-Z*_\\n()\\\\@\\[\\]\\/]+"
     },
     "line": {
       "type": "TOKEN",
@@ -1294,6 +1326,10 @@
     {
       "type": "SYMBOL",
       "name": "parenthetical_line"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "inline_note"
     }
   ],
   "inline": [],

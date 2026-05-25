@@ -26,7 +26,8 @@ module.exports = grammar({
     $.title_continuation,
     $.blank_line,
     $.dialogue_line_start,
-    $.parenthetical_line
+    $.parenthetical_line,
+    $.inline_note
   ],
 
   rules: {
@@ -239,12 +240,17 @@ module.exports = grammar({
     note_content: $ => /[^\]]+/,
 
     // Boneyard comments (/* ... */)
-    boneyard: $ => prec(10, seq(
+boneyard: $ => prec(10, seq(
       $.boneyard_start,
-      $.boneyard_content,
-      '*/',
-      '\n'
+      /[^\n]+\n/
     )),
+
+    // 行内注释 (/*...*/)，不跨行，不支持嵌套
+    inline_boneyard: $ => token(prec(10, seq(
+      '/*',
+      /[^*\n]+/,
+      '*/'
+    ))),
 
     boneyard_content: $ => token(prec(-1, repeat(choice(
       /[^*]+/,  // Any character except *
@@ -287,6 +293,8 @@ module.exports = grammar({
     // Order matters: more specific patterns first
     // literal_char must come LAST as fallback for unmatched * or _
     _action_inline_content: $ => prec.left(choice(
+      prec(10, $.inline_note),
+      prec(10, $.inline_boneyard),
       $.escaped_char,
       $.bold_italic,
       $.bold,
@@ -357,7 +365,7 @@ module.exports = grammar({
     // Regular text - everything else
     // Matches: lowercase, digits, punctuation, title-case words (capital + lowercase+)
     // Excludes: parentheses, emphasis markers, backslash, @ (for forced character)
-    text: $ => /[^A-Z*_\n()\\@]+|[A-Z][^A-Z*_\n()\\@]+/,
+    text: $ => /[^A-Z*_\n()\\@\[\]\/]+|[A-Z][^A-Z*_\n()\\@\[\]\/]+/,
 
     line: $ => token(prec(-1, /[^\n]+/)),  // Lower precedence so specific patterns match first
 
