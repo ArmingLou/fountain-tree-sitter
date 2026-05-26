@@ -303,8 +303,10 @@ note: $ => prec(2, seq(  // Higher precedence than action (prec 1)
       prec(-1, $.literal_char)  // Lowest precedence
     )),
 
-    // Dialogue inline content - 简化版本，移除bold/italic
+    // Dialogue inline content - 支持行内注释
     _inline_content: $ => prec.left(choice(
+      prec(20, $.inline_boneyard),
+      prec(20, $.inline_note),
       $.escaped_char,
       $.underline,
       $.uppercase_text,

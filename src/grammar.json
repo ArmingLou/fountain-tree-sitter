@@ -1093,6 +1093,22 @@
         "type": "CHOICE",
         "members": [
           {
+            "type": "PREC",
+            "value": 20,
+            "content": {
+              "type": "SYMBOL",
+              "name": "inline_boneyard"
+            }
+          },
+          {
+            "type": "PREC",
+            "value": 20,
+            "content": {
+              "type": "SYMBOL",
+              "name": "inline_note"
+            }
+          },
+          {
             "type": "SYMBOL",
             "name": "escaped_char"
           },

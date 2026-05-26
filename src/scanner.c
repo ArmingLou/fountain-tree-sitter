@@ -48,9 +48,10 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
   Scanner *scanner = (Scanner *)payload;
 
   // 如果不是在对话/插入语上下文中，重置空白行标志
+  // 但不要重置 continuation_active，因为它需要跨行保持
   if (!valid_symbols[DIALOGUE_LINE_START] && !valid_symbols[PARENTHETICAL_LINE]) {
     scanner->blank_seen_in_dialogue = false;
-    scanner->continuation_active = false;
+    // scanner->continuation_active = false;
   }
 
   // Try title continuation (indented line: 3+ spaces or tab at start of line)
@@ -237,7 +238,9 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
   }
 
   // Try forced transition or centered (>)
+  // 如果 continuation_active 为 true，跳过 transition 检查，让对话延续
   if ((valid_symbols[FORCED_TRANSITION_START] || valid_symbols[CENTERED_START]) && lexer->lookahead == '>') {
+    if (scanner->continuation_active) return false;
     lexer->advance(lexer, false);
     // Mark the end right after the '>' symbol
     lexer->mark_end(lexer);
@@ -534,9 +537,6 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
       }
     }
 
-    // 消费一行后重置延续标志
-    scanner->continuation_active = false;
-
     // 消费整行内容（不消费行尾换行符，由语法规则处理）
     while (lexer->lookahead != '\n' && lexer->lookahead != '\0') {
       lexer->advance(lexer, false);
@@ -593,9 +593,10 @@ if (valid_symbols[BLANK_LINE]) {
     // Match if we found a newline with 0-1 spaces
     if (newline_seen >= 1 && space_count < 2) {
       // 在对话上下文中设置空白行标志，阻止后续对话行匹配
+      // 但不要重置 continuation_active，让对话可以正确延续
       if (valid_symbols[DIALOGUE_LINE_START]) {
         scanner->blank_seen_in_dialogue = true;
-        scanner->continuation_active = false;
+        // scanner->continuation_active = false;
       }
       lexer->result_symbol = BLANK_LINE;
       lexer->mark_end(lexer);
