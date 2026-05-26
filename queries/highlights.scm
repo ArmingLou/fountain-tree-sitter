@@ -7,9 +7,6 @@
 (parenthetical_line) @type
 
 ;; Emphasis in dialogue and action (bold but same color)
-(italic) @emphasis.strong
-(bold) @emphasis.strong
-(bold_italic) @emphasis.strong
 (underline) @emphasis.strong
 
 ;; Uppercase key words/props in action lines
@@ -40,7 +37,6 @@
 ;; Notes [[text]]
 (note) @comment
 (note_start) @comment
-(note_content) @comment
 
 ;; 行内备注 [[text]]，用于 action 行内
 (inline_note) @comment
