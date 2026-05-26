@@ -44,6 +44,7 @@ module.exports = grammar({
     title_page: $ => prec(20, repeat1($.title_page_field)),
 
     // Top-level elements: order matters! scene/section/character/transition before action
+    // boneyard 已移除，通过 inline_boneyard 在 action 行内匹配 /* */
     _element: $ => choice(
       $.section_block,
       $.scene_block,
@@ -53,7 +54,6 @@ module.exports = grammar({
       $.synopsis,
       $.lyric,
       $.centered,
-      $.boneyard,
       $.page_break,
       $.action  // Action LAST - it's the fallback
     ),
@@ -230,25 +230,25 @@ module.exports = grammar({
       '\n'
     )),
 
-    note: $ => prec(2, seq(  // Higher precedence than action (prec 1)
+note: $ => prec(2, seq(  // Higher precedence than action (prec 1)
       $.note_start,
-      $.note_content,
+      token.immediate(repeat1(/[^\]]|\*[^/]/)),  // 匹配到 ]] 之前的所有内容
       ']]',
       '\n'
     )),
 
-    note_content: $ => /[^\]]+/,
-
-    // Boneyard comments (/* ... */)
-boneyard: $ => prec(10, seq(
+    // Boneyard comments (/* ... */) - 统一匹配，从 /* 到 */
+    boneyard: $ => prec(10, seq(
       $.boneyard_start,
-      /[^\n]+\n/
+      token.immediate(repeat1(/[^*]|\*[^/]/)),  // 匹配到 */ 之前的所有内容
+      '*/',
+      '\n'
     )),
 
-    // 行内注释 (/*...*/)，不跨行，不支持嵌套
+    // 行内注释 - 与 boneyard 相同模式
     inline_boneyard: $ => token(prec(10, seq(
       '/*',
-      /[^*\n]+/,
+      repeat1(/[^*]|\*[^/]/),  // 支持跨行
       '*/'
     ))),
 
@@ -289,59 +289,51 @@ boneyard: $ => prec(10, seq(
 
     centered_end: $ => '<',
 
-    // Action inline content: includes paren_text for inline parens like "MAYA (28)"
-    // Order matters: more specific patterns first
-    // literal_char must come LAST as fallback for unmatched * or _
+    // Action inline content - 行内注释和备注优先
+    // inline_boneyard 和 inline_note 有最高优先级(20)确保 /* */ 和 [[ ]] 正确匹配
+    // 支持跨行的行内注释如：xxx[[sdf\nsdfsdf]]是内容
     _action_inline_content: $ => prec.left(choice(
-      prec(10, $.inline_note),
-      prec(10, $.inline_boneyard),
+      prec(20, $.inline_boneyard),
+      prec(20, $.inline_note),
       $.escaped_char,
-      $.bold_italic,
-      $.bold,
-      $.italic,
       $.underline,
       $.uppercase_text,
       $.paren_text,
       $.text,
-      prec(-1, $.literal_char)  // Lowest precedence - only match if nothing else works
+      prec(-1, $.literal_char)  // Lowest precedence
     )),
 
-    // Dialogue inline content: excludes paren_text (parentheticals are standalone lines)
+    // Dialogue inline content - 简化版本，移除bold/italic
     _inline_content: $ => prec.left(choice(
       $.escaped_char,
-      $.bold_italic,
-      $.bold,
-      $.italic,
       $.underline,
       $.uppercase_text,
       $.text,
-      prec(-1, $.literal_char)  // Lowest precedence - only match if nothing else works
+      prec(-1, $.literal_char)
     )),
 
     // Escaped characters - backslash followed by special char renders literally
     // Must come before emphasis markers to prevent \* from being parsed as italic
     escaped_char: $ => /\\[*_\[\]()\\]/,
 
-    // Emphasis markers - these have higher precedence
-    // Using token() to make matching atomic - either match completely or not at all
-    // This prevents partial matches that would consume opening delimiters
-    bold_italic: $ => token(seq(
-      '***',
-      /[^*\n]+/,
-      '***'
-    )),
+    // Emphasis markers - 已禁用以避免与 /* */ 冲突
+    // bold_italic: $ => token(seq(
+    //   '***',
+    //   /[^*\n]+/,
+    //   '***'
+    // )),
 
-    bold: $ => token(seq(
-      '**',
-      /[^*\n]+/,
-      '**'
-    )),
+    // bold: $ => token(seq(
+    //   '**',
+    //   /[^*\n]+/,
+    //   '**'
+    // )),
 
-    italic: $ => token(seq(
-      '*',
-      /[^*\n]+/,
-      '*'
-    )),
+    // italic: $ => token(seq(
+    //   '*',
+    //   /[^*\n]+/,
+    //   '*'
+    // )),
 
     underline: $ => token(seq(
       '_',
@@ -365,7 +357,8 @@ boneyard: $ => prec(10, seq(
     // Regular text - everything else
     // Matches: lowercase, digits, punctuation, title-case words (capital + lowercase+)
     // Excludes: parentheses, emphasis markers, backslash, @ (for forced character)
-    text: $ => /[^A-Z*_\n()\\@\[\]\/]+|[A-Z][^A-Z*_\n()\\@\[\]\/]+/,
+    // Note: / is allowed - it's a normal character in Fountain
+    text: $ => /[^A-Z*_\n()\\@\[\]]+|[A-Z][^A-Z*_\n()\\@\[\]]+/,
 
     line: $ => token(prec(-1, /[^\n]+/)),  // Lower precedence so specific patterns match first
 

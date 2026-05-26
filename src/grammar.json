@@ -91,10 +91,6 @@
         },
         {
           "type": "SYMBOL",
-          "name": "boneyard"
-        },
-        {
-          "type": "SYMBOL",
           "name": "page_break"
         },
         {
@@ -844,8 +840,14 @@
             "name": "note_start"
           },
           {
-            "type": "SYMBOL",
-            "name": "note_content"
+            "type": "IMMEDIATE_TOKEN",
+            "content": {
+              "type": "REPEAT1",
+              "content": {
+                "type": "PATTERN",
+                "value": "[^\\]]|\\*[^/]"
+              }
+            }
           },
           {
             "type": "STRING",
@@ -858,10 +860,6 @@
         ]
       }
     },
-    "note_content": {
-      "type": "PATTERN",
-      "value": "[^\\]]+"
-    },
     "boneyard": {
       "type": "PREC",
       "value": 10,
@@ -873,8 +871,22 @@
             "name": "boneyard_start"
           },
           {
-            "type": "PATTERN",
-            "value": "[^\\n]+\\n"
+            "type": "IMMEDIATE_TOKEN",
+            "content": {
+              "type": "REPEAT1",
+              "content": {
+                "type": "PATTERN",
+                "value": "[^*]|\\*[^/]"
+              }
+            }
+          },
+          {
+            "type": "STRING",
+            "value": "*/"
+          },
+          {
+            "type": "STRING",
+            "value": "\n"
           }
         ]
       }
@@ -892,8 +904,11 @@
               "value": "/*"
             },
             {
-              "type": "PATTERN",
-              "value": "[^*\\n]+"
+              "type": "REPEAT1",
+              "content": {
+                "type": "PATTERN",
+                "value": "[^*]|\\*[^/]"
+              }
             },
             {
               "type": "STRING",
@@ -1026,35 +1041,23 @@
         "members": [
           {
             "type": "PREC",
-            "value": 10,
-            "content": {
-              "type": "SYMBOL",
-              "name": "inline_note"
-            }
-          },
-          {
-            "type": "PREC",
-            "value": 10,
+            "value": 20,
             "content": {
               "type": "SYMBOL",
               "name": "inline_boneyard"
             }
           },
           {
+            "type": "PREC",
+            "value": 20,
+            "content": {
+              "type": "SYMBOL",
+              "name": "inline_note"
+            }
+          },
+          {
             "type": "SYMBOL",
             "name": "escaped_char"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "bold_italic"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "bold"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "italic"
           },
           {
             "type": "SYMBOL",
@@ -1095,18 +1098,6 @@
           },
           {
             "type": "SYMBOL",
-            "name": "bold_italic"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "bold"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "italic"
-          },
-          {
-            "type": "SYMBOL",
             "name": "underline"
           },
           {
@@ -1131,66 +1122,6 @@
     "escaped_char": {
       "type": "PATTERN",
       "value": "\\\\[*_\\[\\]()\\\\]"
-    },
-    "bold_italic": {
-      "type": "TOKEN",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "STRING",
-            "value": "***"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[^*\\n]+"
-          },
-          {
-            "type": "STRING",
-            "value": "***"
-          }
-        ]
-      }
-    },
-    "bold": {
-      "type": "TOKEN",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "STRING",
-            "value": "**"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[^*\\n]+"
-          },
-          {
-            "type": "STRING",
-            "value": "**"
-          }
-        ]
-      }
-    },
-    "italic": {
-      "type": "TOKEN",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "STRING",
-            "value": "*"
-          },
-          {
-            "type": "PATTERN",
-            "value": "[^*\\n]+"
-          },
-          {
-            "type": "STRING",
-            "value": "*"
-          }
-        ]
-      }
     },
     "underline": {
       "type": "TOKEN",
@@ -1226,7 +1157,7 @@
     },
     "text": {
       "type": "PATTERN",
-      "value": "[^A-Z*_\\n()\\\\@\\[\\]\\/]+|[A-Z][^A-Z*_\\n()\\\\@\\[\\]\\/]+"
+      "value": "[^A-Z*_\\n()\\\\@\\[\\]]+|[A-Z][^A-Z*_\\n()\\\\@\\[\\]]+"
     },
     "line": {
       "type": "TOKEN",

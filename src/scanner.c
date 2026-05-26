@@ -170,11 +170,49 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
     }
   }
 
-  // Try note start ([[)
-  if (valid_symbols[NOTE_START] && match_keyword(lexer, "[[")) {
-    lexer->result_symbol = NOTE_START;
-    lexer->mark_end(lexer);
-    return true;
+  // Try note start ([[) - 前瞻检查：先遇到 ]] 则为行内注释，先遇到 \n 则为多行注释
+  if (valid_symbols[NOTE_START] && lexer->lookahead == '[') {
+    // 临时消费 [ 检查下一个是否是 [
+    lexer->advance(lexer, false);
+    if (lexer->lookahead == '[') {
+      // 找到了 [[，现在开始前瞻检查
+      // 消费第一个 [
+      lexer->advance(lexer, false);
+      
+      // 向后扫描，检查先遇到 ]] 还是先遇到 \n
+      bool found_close = false;  // 是否先找到了 ]]
+      bool found_newline = false;  // 是否先遇到了换行
+      
+      while (lexer->lookahead != '\0') {
+        if (lexer->lookahead == ']') {
+          lexer->advance(lexer, false);
+          if (lexer->lookahead == ']') {
+            // 找到了 ]]
+            found_close = true;
+            break;
+          }
+          // 不是 ]]，继续
+        } else if (lexer->lookahead == '\n') {
+          // 遇到了换行，说明是多行注释
+          found_newline = true;
+          break;
+        } else {
+          lexer->advance(lexer, false);
+        }
+      }
+      
+      if (found_close && !found_newline) {
+        // 同一行内先找到 ]]，这是行内注释，返回 false 让 grammar 处理
+        return false;
+      }
+      
+      // 先遇到换行或者是文件结束（多行注释），返回 NOTE_START
+      lexer->result_symbol = NOTE_START;
+      lexer->mark_end(lexer);
+      return true;
+    }
+    // 不是 [[，回退
+    lexer->lookahead = '[';
   }
 
   // Try forced action (!)
@@ -259,11 +297,49 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
     }
   }
 
-  // Try boneyard (/*)
-  if (valid_symbols[BONEYARD_START] && match_keyword(lexer, "/*")) {
-    lexer->result_symbol = BONEYARD_START;
-    lexer->mark_end(lexer);
-    return true;
+// Try boneyard (/*) - 前瞻检查：先遇到 */ 则为行内注释，先遇到 \n 则为多行块注释
+  if (valid_symbols[BONEYARD_START] && lexer->lookahead == '/') {
+    // 临时消费 / 检查下一个是否是 *
+    lexer->advance(lexer, false);
+    if (lexer->lookahead == '*') {
+      // 找到了 /*，现在开始前瞻检查
+      // 消费第一个 *
+      lexer->advance(lexer, false);
+      
+      // 向后扫描，检查先遇到 */ 还是先遇到 \n
+      bool found_close = false;  // 是否先找到了 */
+      bool found_newline = false;  // 是否先遇到了换行
+      
+      while (lexer->lookahead != '\0') {
+        if (lexer->lookahead == '*') {
+          lexer->advance(lexer, false);
+          if (lexer->lookahead == '/') {
+            // 找到了 */
+            found_close = true;
+            break;
+          }
+          // 不是 */，继续
+        } else if (lexer->lookahead == '\n') {
+          // 遇到了换行，说明是多行注释
+          found_newline = true;
+          break;
+        } else {
+          lexer->advance(lexer, false);
+        }
+      }
+      
+      if (found_close && !found_newline) {
+        // 同一行内先找到 */，这是行内注释，返回 false 让 grammar 处理
+        return false;
+      }
+      
+      // 先遇到换行或者是文件结束（多行注释），返回 BONEYARD_START
+      lexer->result_symbol = BONEYARD_START;
+      lexer->mark_end(lexer);
+      return true;
+    }
+    // 不是 /*，回退
+    lexer->lookahead = '/';
   }
 
   // Try parenthetical_line - matches standalone (text) or （中文括号） lines within dialogue blocks
@@ -316,12 +392,13 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
     // 不是有效的插入语行，fall through 继续检查其他令牌类型
   }
 
-  // Try inline note ([[...]]) - 行内备注，不跨行
+  // Try inline note ([[...]]) - 支持跨行
   if (valid_symbols[INLINE_NOTE]) {
     if (lexer->lookahead == '[') {
       lexer->advance(lexer, false);
       if (lexer->lookahead == '[') {
-        while (lexer->lookahead != '\n' && lexer->lookahead != '\0') {
+        // 支持跨行的行内注释，如 xxx[[note\nmultiline]]text
+        while (lexer->lookahead != '\0') {
           if (lexer->lookahead == ']') {
             lexer->advance(lexer, false);
             if (lexer->lookahead == ']') {

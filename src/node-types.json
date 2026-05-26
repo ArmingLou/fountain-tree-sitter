@@ -8,14 +8,6 @@
       "required": true,
       "types": [
         {
-          "type": "bold",
-          "named": true
-        },
-        {
-          "type": "bold_italic",
-          "named": true
-        },
-        {
           "type": "escaped_char",
           "named": true
         },
@@ -29,10 +21,6 @@
         },
         {
           "type": "inline_note",
-          "named": true
-        },
-        {
-          "type": "italic",
           "named": true
         },
         {
@@ -160,10 +148,6 @@
           "named": true
         },
         {
-          "type": "boneyard",
-          "named": true
-        },
-        {
           "type": "centered",
           "named": true
         },
@@ -226,13 +210,9 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
-        {
-          "type": "note_content",
-          "named": true
-        },
         {
           "type": "note_start",
           "named": true
@@ -506,6 +486,10 @@
     "named": false
   },
   {
+    "type": "*/",
+    "named": false
+  },
+  {
     "type": "-",
     "named": false
   },
@@ -519,14 +503,6 @@
   },
   {
     "type": "blank_line",
-    "named": true
-  },
-  {
-    "type": "bold",
-    "named": true
-  },
-  {
-    "type": "bold_italic",
     "named": true
   },
   {
@@ -578,19 +554,11 @@
     "named": true
   },
   {
-    "type": "italic",
-    "named": true
-  },
-  {
     "type": "literal_char",
     "named": true
   },
   {
     "type": "lyric_start",
-    "named": true
-  },
-  {
-    "type": "note_content",
     "named": true
   },
   {
