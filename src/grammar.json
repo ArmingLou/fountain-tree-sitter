@@ -581,78 +581,6 @@
         ]
       }
     },
-    "dialogue": {
-      "type": "PREC_RIGHT",
-      "value": 0,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "REPEAT1",
-            "content": {
-              "type": "SYMBOL",
-              "name": "_inline_content"
-            }
-          },
-          {
-            "type": "IMMEDIATE_TOKEN",
-            "content": {
-              "type": "STRING",
-              "value": "\n"
-            }
-          }
-        ]
-      }
-    },
-    "parenthetical": {
-      "type": "PREC_RIGHT",
-      "value": 10,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "PATTERN",
-                "value": " +"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "STRING",
-            "value": "("
-          },
-          {
-            "type": "PATTERN",
-            "value": "[^)]+"
-          },
-          {
-            "type": "STRING",
-            "value": ")"
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "PATTERN",
-                "value": " +"
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          },
-          {
-            "type": "STRING",
-            "value": "\n"
-          }
-        ]
-      }
-    },
     "action": {
       "type": "PREC",
       "value": 1,
@@ -1195,15 +1123,7 @@
     },
     {
       "type": "SYMBOL",
-      "name": "dialogue_line_start"
-    },
-    {
-      "type": "SYMBOL",
       "name": "dialogue_body"
-    },
-    {
-      "type": "SYMBOL",
-      "name": "parenthetical_line"
     },
     {
       "type": "SYMBOL",

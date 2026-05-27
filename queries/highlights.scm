@@ -7,11 +7,11 @@
 ;; Action行（包含行内内容）
 (action) @text
 
-;; 括号内文本（action/dialogue_body注入后使用）
-(paren_text) @type
+;; 括号内文本（action行内，非parenthetical）
+(paren_text) @text
 
-;; Parenthetical lines
-(parenthetical_line) @type
+;; Parenthetical lines（已弃用，保留兼容）
+;; (parenthetical_line) @type
 
 ;; Emphasis
 (underline) @emphasis.strong
