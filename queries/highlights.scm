@@ -1,10 +1,7 @@
 ;; Fountain 语法高亮定义
 
-;; 对话体（如注入不生效，回退到string统一高亮）
+;; 对话体（统一高亮为string，tree-sitter无法细分子字符串着色）
 (dialogue_body) @string
-
-;; 对话行（细粒度节点，由dialogue_block repeat产生）
-(dialogue_line_start) @string
 
 ;; Action行（包含行内内容）
 (action) @text
