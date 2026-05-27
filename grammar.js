@@ -11,6 +11,8 @@ module.exports = grammar({
     [$.dialogue_block]
   ],
 
+  extras: $ => [/\n/],
+
   externals: $ => [
     $.scene_start,
     $.section_start,
@@ -178,7 +180,7 @@ module.exports = grammar({
       )
     ),
 
-    dialogue_block: $ => prec(20, seq(
+    dialogue_block: $ => prec(100, seq(
       $.character,
       $.dialogue_body
     )),

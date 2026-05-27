@@ -29,6 +29,20 @@ test4
 [[note bug]]
 我应该是action
 
+
+@阿毛
+test4
+  
+[[note bug]]
+我应该是对话
+
+
+
+@阿毛
+test4
+  
+>我应该是对话
+
 @阿过
 test5
 
@@ -37,8 +51,10 @@ test5
 @阿空
 test6
   
->我还是对话
-
+(我是对话的Parenthetical)
+对话
+(我是对话的Parenthetical)
+对话
 
 @阿咯
 test5
@@ -47,6 +63,7 @@ test5
 我是action
 
 @阿莫
+(我是对话的Parenthetical)
 /* 我是注释 */
 我应该是对话
 /* 我是注释 */

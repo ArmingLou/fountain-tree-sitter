@@ -1,74 +1,74 @@
 ;; Fountain 语法高亮定义
 
-;; 对话体（取代dialogue_line_start，包含所有对话行、延续标记等）
+;; 对话体（包含所有对话行、延续标记、行内note/注释 - 统一高亮为string）
+;; 内部细化高亮通过injection查询处理
 (dialogue_body) @string
 
-;; 保留旧token兼容
-(dialogue_line_start) @string
+;; Action行（包含行内内容）
 (action) @text
 
-;; Parenthetical lines (wrylies)
+;; 括号内文本（action/dialogue_body注入后使用）
+(paren_text) @type
+
+;; Parenthetical lines
 (parenthetical_line) @type
 
-;; Emphasis in dialogue and action (bold but same color)
+;; Emphasis
 (underline) @emphasis.strong
-
-;; Uppercase key words/props in action lines
 (uppercase_text) @emphasis.strong
-(action (uppercase_text) @emphasis.strong)
 
-;; Title page - subtle highlighting
+;; Title page
 (title_key) @keyword
 
 ;; Character names
 (character) @number
 
-;; Transitions (normal and forced >)
+;; Transitions
 (transition) @attribute
 (forced_transition_start) @comment
 
-;; Scene headings with scene numbers
+;; Scene headings
 (scene_heading) @keyword
 (scene_start) @function
 (scene_location) @keyword
 (scene_time) @function
 (scene_number) @attribute
 
-;; Section headings (# markers)
+;; Section headings
 (section_heading) @constant
 (section_start) @comment
 
-;; Notes [[text]]
+;; 独立Notes [[text]]（顶级元素）
 (note) @comment
 (note_start) @comment
 
-;; 行内备注 [[text]]，用于 action 行内
+;; 行内Notes（action行内）
 (inline_note) @comment
 
 ;; Forced elements
 (forced_action_start) @comment
 (forced_character_start) @comment
 
-;; Lyrics ~text
+;; Lyrics
 (lyric_start) @type
 (lyric) @string.special
 
-;; Centered text >text<
+;; Centered text
 (centered_start) @comment
 (centered) @type
 (centered_end) @comment
 
-;; Page breaks ===
+;; Page breaks
 (page_break) @keyword
 (page_break_marker) @keyword
 
-;; Synopses = text
+;; Synopses
 (synopsis_start) @comment
 (synopsis) @comment.doc
 
-;; Boneyard /* ... */
+;; 独立Boneyard /* ... */（顶级元素）
 (boneyard) @comment
 (boneyard_start) @comment
 
-;; 行内注释 /*...*/，用于 action 行内
+;; 行内Boneyard（action行内）
 (inline_boneyard) @comment

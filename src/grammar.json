@@ -566,7 +566,7 @@
     },
     "dialogue_block": {
       "type": "PREC",
-      "value": 20,
+      "value": 100,
       "content": {
         "type": "SEQ",
         "members": [
@@ -1121,7 +1121,7 @@
   "extras": [
     {
       "type": "PATTERN",
-      "value": "\\s"
+      "value": "\\n"
     }
   ],
   "conflicts": [
