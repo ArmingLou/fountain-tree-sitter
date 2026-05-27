@@ -108,23 +108,11 @@
       "required": true,
       "types": [
         {
-          "type": "boneyard",
-          "named": true
-        },
-        {
           "type": "character",
           "named": true
         },
         {
-          "type": "dialogue_line_start",
-          "named": true
-        },
-        {
-          "type": "note",
-          "named": true
-        },
-        {
-          "type": "parenthetical_line",
+          "type": "dialogue_body",
           "named": true
         }
       ]
@@ -340,6 +328,10 @@
           "named": true
         },
         {
+          "type": "blank_line",
+          "named": true
+        },
+        {
           "type": "boneyard",
           "named": true
         },
@@ -526,7 +518,7 @@
     "named": true
   },
   {
-    "type": "dialogue_line_start",
+    "type": "dialogue_body",
     "named": true
   },
   {
@@ -571,10 +563,6 @@
   },
   {
     "type": "paren_text",
-    "named": true
-  },
-  {
-    "type": "parenthetical_line",
     "named": true
   },
   {

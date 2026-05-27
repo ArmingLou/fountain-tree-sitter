@@ -20,23 +20,15 @@
         {
           "type": "REPEAT",
           "content": {
-            "type": "SEQ",
+            "type": "CHOICE",
             "members": [
-              {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "blank_line"
-                  },
-                  {
-                    "type": "BLANK"
-                  }
-                ]
-              },
               {
                 "type": "SYMBOL",
                 "name": "_element"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "blank_line"
               }
             ]
           }
@@ -114,6 +106,10 @@
             "content": {
               "type": "CHOICE",
               "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "blank_line"
+                },
                 {
                   "type": "SYMBOL",
                   "name": "scene_block"
@@ -570,7 +566,7 @@
     },
     "dialogue_block": {
       "type": "PREC",
-      "value": 5,
+      "value": 20,
       "content": {
         "type": "SEQ",
         "members": [
@@ -579,50 +575,8 @@
             "name": "character"
           },
           {
-            "type": "PREC_RIGHT",
-            "value": 0,
-            "content": {
-              "type": "REPEAT",
-              "content": {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "note"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "boneyard"
-                  },
-                  {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "parenthetical_line"
-                      },
-                      {
-                        "type": "STRING",
-                        "value": "\n"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "SYMBOL",
-                        "name": "dialogue_line_start"
-                      },
-                      {
-                        "type": "STRING",
-                        "value": "\n"
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
+            "type": "SYMBOL",
+            "name": "dialogue_body"
           }
         ]
       }
@@ -891,33 +845,6 @@
         ]
       }
     },
-    "inline_boneyard": {
-      "type": "TOKEN",
-      "content": {
-        "type": "PREC",
-        "value": 10,
-        "content": {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "/*"
-            },
-            {
-              "type": "REPEAT1",
-              "content": {
-                "type": "PATTERN",
-                "value": "[^*]|\\*[^/]"
-              }
-            },
-            {
-              "type": "STRING",
-              "value": "*/"
-            }
-          ]
-        }
-      }
-    },
     "boneyard_content": {
       "type": "TOKEN",
       "content": {
@@ -1169,11 +1096,11 @@
     },
     "literal_char": {
       "type": "PATTERN",
-      "value": "[*_]"
+      "value": "[*_\\/]"
     },
     "text": {
       "type": "PATTERN",
-      "value": "[^A-Z*_\\n()\\\\@\\[\\]]+|[A-Z][^A-Z*_\\n()\\\\@\\[\\]]+"
+      "value": "[^A-Z*\\/_\\n()\\\\@\\[\\]]+|[A-Z][^A-Z*\\/_\\n()\\\\@\\[\\]]+"
     },
     "line": {
       "type": "TOKEN",
@@ -1272,11 +1199,19 @@
     },
     {
       "type": "SYMBOL",
+      "name": "dialogue_body"
+    },
+    {
+      "type": "SYMBOL",
       "name": "parenthetical_line"
     },
     {
       "type": "SYMBOL",
       "name": "inline_note"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "inline_boneyard"
     }
   ],
   "inline": [],

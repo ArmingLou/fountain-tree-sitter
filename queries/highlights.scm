@@ -1,5 +1,9 @@
 ;; Fountain 语法高亮定义
 
+;; 对话体（取代dialogue_line_start，包含所有对话行、延续标记等）
+(dialogue_body) @string
+
+;; 保留旧token兼容
 (dialogue_line_start) @string
 (action) @text
 

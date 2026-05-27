@@ -26,16 +26,18 @@ module.exports = grammar({
     $.title_continuation,
     $.blank_line,
     $.dialogue_line_start,
+    $.dialogue_body,
     $.parenthetical_line,
-    $.inline_note
+    $.inline_note,
+    $.inline_boneyard
   ],
 
   rules: {
     document: $ => seq(
       optional($.title_page),
-      repeat(seq(
-        optional($.blank_line),
-        $._element
+      repeat(choice(
+        $._element,
+        $.blank_line
       ))
     ),
 
@@ -63,6 +65,7 @@ module.exports = grammar({
     section_block: $ => prec(8, seq(  // Highest precedence for top-level elements
       $.section_heading,
       repeat(choice(
+        $.blank_line,
         $.scene_block,
         $.dialogue_block,
         $.action,
@@ -175,14 +178,9 @@ module.exports = grammar({
       )
     ),
 
-    dialogue_block: $ => prec(5, seq(
+    dialogue_block: $ => prec(20, seq(
       $.character,
-      prec.right(repeat(choice(
-        $.note,
-        $.boneyard,
-        seq($.parenthetical_line, '\n'),
-        seq($.dialogue_line_start, '\n')
-      )))
+      $.dialogue_body
     )),
 
 
@@ -237,20 +235,13 @@ note: $ => prec(2, seq(  // Higher precedence than action (prec 1)
       '\n'
     )),
 
-    // Boneyard comments (/* ... */) - 统一匹配，从 /* 到 */
+    // Boneyard comments (/* ... */) - 从 /* 到 */
     boneyard: $ => prec(10, seq(
       $.boneyard_start,
-      token.immediate(repeat1(/[^*]|\*[^/]/)),  // 匹配到 */ 之前的所有内容
+      token.immediate(repeat1(/[^*]|\*[^/]/)),
       '*/',
       '\n'
     )),
-
-    // 行内注释 - 与 boneyard 相同模式
-    inline_boneyard: $ => token(prec(10, seq(
-      '/*',
-      repeat1(/[^*]|\*[^/]/),  // 支持跨行
-      '*/'
-    ))),
 
     boneyard_content: $ => token(prec(-1, repeat(choice(
       /[^*]+/,  // Any character except *
@@ -352,15 +343,15 @@ note: $ => prec(2, seq(  // Higher precedence than action (prec 1)
     paren_text: $ => /\([^)\n]+\)/,
 
     // Literal emphasis characters that aren't part of formatting
-    // Matches single * or _ that can't be paired for emphasis
+    // Matches single * _ or / that can't be paired for formatting
     // Must come after emphasis rules attempt to match, as fallback
-    literal_char: $ => /[*_]/,
+    literal_char: $ => /[*_\/]/,
 
     // Regular text - everything else
     // Matches: lowercase, digits, punctuation, title-case words (capital + lowercase+)
-    // Excludes: parentheses, emphasis markers, backslash, @ (for forced character)
-    // Note: / is allowed - it's a normal character in Fountain
-    text: $ => /[^A-Z*_\n()\\@\[\]]+|[A-Z][^A-Z*_\n()\\@\[\]]+/,
+    // Excludes: parentheses, emphasis markers, backslash, @ (for forced character), / (for inline_boneyard)
+    // Note: [] excluded for inline_note
+    text: $ => /[^A-Z*\/_\n()\\@\[\]]+|[A-Z][^A-Z*\/_\n()\\@\[\]]+/,
 
     line: $ => token(prec(-1, /[^\n]+/)),  // Lower precedence so specific patterns match first
 
