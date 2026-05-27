@@ -1,7 +1,7 @@
 ;; Fountain 语法高亮定义
 
-;; 对话体（基底）和普通文本节点
-(dialogue_body) @string
+;; 对话体（基底）和普通文本节点。 不能指定，否则注入的高亮不起作用
+;; (dialogue_body) @string
 
 ;; Action行
 (action) @text
