@@ -27,7 +27,9 @@ module.exports = grammar({
     $.boneyard_start,
     $.title_continuation,
     $.blank_line,
+    $.dialogue_line_start,
     $.dialogue_body,
+    $.parenthetical_line,
     $.inline_note,
     $.inline_boneyard
   ],
@@ -183,6 +185,20 @@ module.exports = grammar({
       $.dialogue_body
     )),
 
+
+    dialogue: $ => prec.right(seq(
+      repeat1($._inline_content),
+      token.immediate('\n')
+    )),
+
+    parenthetical: $ => prec.right(10, seq(  // Higher precedence than dialogue
+      optional(/ +/),  // Optional leading spaces
+      '(',
+      /[^)]+/,
+      ')',
+      optional(/ +/),  // Optional trailing spaces
+      '\n'
+    )),
 
     action: $ => prec(1, choice(  // Lowest precedence - action is fallback
       seq(
