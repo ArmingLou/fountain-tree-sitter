@@ -427,11 +427,7 @@ bool tree_sitter_fountain_external_scanner_scan(void *payload, TSLexer *lexer, c
   }
 
   // Try parenthetical_line - matches standalone (text) or （中文括号） lines
-  // 如果空白行标志已设置，拒绝匹配以终止对话块
   if (valid_symbols[PARENTHETICAL_LINE]) {
-    if (scanner->blank_seen_in_dialogue) {
-      return false;
-    }
     // Count leading whitespace
     while (lexer->lookahead == ' ' || lexer->lookahead == '\t') {
       lexer->advance(lexer, false);
