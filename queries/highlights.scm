@@ -1,17 +1,14 @@
 ;; Fountain 语法高亮定义
 
-;; 对话体（基底） 和 普通文本节点
+;; 对话体（基底）和普通文本节点
 (dialogue_body) @string
 
-;; Action行（注入后对话文本也会走进此规则）
+;; Action行
 (action) @text
 
-;; 括号内文本 - 不单独着色，继承父节点颜色
-;; (paren_text) @text
-;; fountain-inline 就绪后可改为: (paren_text) @type 以区分对话中括号
-
-;; Parenthetical lines（已弃用，保留兼容）
-;; (parenthetical_line) @type
+;; fountain_inline 注入后的高亮（由 languages/fountain_inline/queries/highlights.scm 处理）
+(inline_note) @comment
+(inline_boneyard) @comment
 
 ;; Emphasis
 (underline) @emphasis.strong
@@ -42,9 +39,6 @@
 (note) @comment
 (note_start) @comment
 
-;; 行内Notes（action行内）
-(inline_note) @comment
-
 ;; Forced elements
 (forced_action_start) @comment
 (forced_character_start) @comment
@@ -69,6 +63,3 @@
 ;; 独立Boneyard /* ... */（顶级元素）
 (boneyard) @comment
 (boneyard_start) @comment
-
-;; 行内Boneyard（action行内）
-(inline_boneyard) @comment
