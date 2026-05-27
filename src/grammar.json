@@ -799,7 +799,7 @@
               "type": "REPEAT1",
               "content": {
                 "type": "PATTERN",
-                "value": "[^\\]]|\\*[^/]"
+                "value": "[^\\]]|\\*[^\\/\\]]"
               }
             }
           },

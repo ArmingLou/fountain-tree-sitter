@@ -230,9 +230,9 @@ module.exports = grammar({
       '\n'
     )),
 
-note: $ => prec(2, seq(  // Higher precedence than action (prec 1)
+note: $ => prec(2, seq(  // 比action(prec 1)优先级高
       $.note_start,
-      token.immediate(repeat1(/[^\]]|\*[^/]/)),  // 匹配到 ]] 之前的所有内容
+      token.immediate(repeat1(/[^\]]|\*[^\/\]]/)),  // 匹配到 ]] 之前的内容，*后跟/或]时不消费
       ']]',
       '\n'
     )),

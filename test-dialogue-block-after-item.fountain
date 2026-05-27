@@ -81,13 +81,14 @@ test5
 
 @阿婆
 [[ 我是note ]]
-我应该是对话[[xdfs]]dsf
+我应该是对话[[xdfs]]dsfsd
 [[ 我是note ]]
 我应该是对话/*dffg*/
 
+
 我应该是action
 
-我应该是action[[xdfs]]我应该是action
+我应该是action[[xdfs*]]我应该是action
 
 我应该是action/*是对方*/我应该是action
 
@@ -95,6 +96,7 @@ test5
 是对方
 fs]]我应该是action
 
+[[*是劳动纠纷*]]
 我应该是action/*是对
 是对方
 方*/我应该是action
