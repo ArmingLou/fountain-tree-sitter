@@ -1,7 +1,7 @@
 {
   "grammars": [
     {
-      "name": "fountain-inline",
+      "name": "fountain_inline",
       "path": ".",
       "scope": "source.fountain-inline"
     }
